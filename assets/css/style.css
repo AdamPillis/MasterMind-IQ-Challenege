@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fleur+De+Leah&display=swap');
+
+/* default settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(1, 1, 2, 0.541);
+    font-family: 'Architects Daughter', cursive;  /*'Fleur De Leah', cursive; */
+    text-align: center;
+}

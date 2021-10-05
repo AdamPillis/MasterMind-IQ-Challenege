@@ -37,10 +37,10 @@ header p {
 }
 .div-box {
     background-color: red;
-    height: 80vh;
+    height: 85vh;
     width: 70%;
     max-width: 1000px;
-    max-height: 600px;
+    max-height: 650px;
     margin: 5vh auto;
     padding: 1%;
 }
@@ -56,9 +56,23 @@ header p {
     margin: 0 auto;
 }
 .question-area {
-    height: 20vh;
+    height: 10vh;
     width: 100%;
     margin: auto;
     font-size: 1.5rem;
+}
+.answers-area {
+    height: 60vh;
+    width: 60%;
+    background-color: black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.game-button {
+    width: 80%;
+    height: 10vh;
+    margin: auto;
+    border-radius: 8px;
 }
 

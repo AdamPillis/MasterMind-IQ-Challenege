@@ -8,6 +8,32 @@
     <title>MasterMindsIQ</title>
 </head>
 <body>
+    <!-- start screen section -->
+<section class="section-area">
+    <header>
+
+        <p>MasterMindsIQ</p>
+
+    </header>
+
+    <h1 class="h1-text">Welcome to MasterMindsIQ!</h1>
+
+    <p class="paragraph-text">Are you ready to test your general knowledge?</p>
+
+    <form>
+        <div class="playername">
+            
+            <label for="playername">Player Name</label>
+
+            <input id="playername" name="playername" type="text" required>
+
+            <button id="start-button"><i class="fas fa-sign-out-alt"></i></button>
+
+        </div>
+    </form>
+
+</section>
+    <!-- in-game screen section -->
 <section id="game-screen" class="section-area">
     <header>
         <p>MasterMindsIQ</p>
@@ -17,7 +43,7 @@
     </header>
     
     <div class="div-box">
-
+        <!-- score board and timer -->
         <div class="score-area">
 
             <div class="info-div">
@@ -33,13 +59,13 @@
             </div>
 
         </div>
-
+        <!-- to display question -->
         <div class="question-area">
 
             <h1><span id="question">question</span></h1>
 
         </div>
-
+        <!-- display 4 possible answers in each button -->
         <div class="answers-area">
     
                 <button class="game-button answer-a">A</button>

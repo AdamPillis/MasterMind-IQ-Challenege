@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- start screen section -->
-<section class="section-area">
+<section id="start-screen" class="section-area">
     <header>
 
         <p>MasterMindsIQ</p>
@@ -24,7 +24,7 @@
         <div class="playername">
             
             <label for="playername">Player Name</label>
-
+            <!-- user enters their player name which is then used in welcome message of #menu-screen -->
             <input id="playername" name="playername" type="text" required>
 
             <button id="start-button"><i class="fas fa-sign-out-alt"></i></button>
@@ -32,6 +32,26 @@
         </div>
     </form>
 
+</section>
+    <!-- menu-screen section -->
+<section id="menu-screen" class="section-area">
+    <header>
+
+        <p>MasterMindsIQ</p>
+
+    </header>
+
+    <div class="div-box">
+        <h1>welcome message</h1>
+
+        <p>Please chose your difficulty level below, followed by a category</p>
+
+        <div>
+            <button class="level-button" id="easy-button">Easy</button>
+            <button class="level-button" id="easy-button">Medium</button>
+            <button class="level-button" id="easy-button">Hard</button>
+        </div>
+    </div>
 </section>
     <!-- in-game screen section -->
 <section id="game-screen" class="section-area">

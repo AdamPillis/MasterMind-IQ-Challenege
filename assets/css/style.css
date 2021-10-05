@@ -6,11 +6,31 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     height: 100vh;
     width: 100vw;
     background-color: rgba(1, 1, 2, 0.541);
     font-family: 'Architects Daughter', cursive;  /*'Fleur De Leah', cursive; */
     text-align: center;
+}
+.section-area {
+    height: 100vh;
+    width: 100vw;
+}
+header {
+    height: 5vh;
+    width: 100%;
+    background-color: black;
+}
+header p {
+    font-size: 1.5rem;
+    float: left;
+    padding-left: 5px;
+    color: white;
+}
+.header-icon {
+    width: 50px;
+    height: 5vh;
+    margin-right: 5px;
+    float: right;
 }

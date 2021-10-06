@@ -119,7 +119,7 @@ header p {
 }
 /* set display for rules screen to none */
 #rules-screen {
-    display: none;
+    display: none; 
 }
 /* style for rules-screen before game starts */
 .rules-box {
@@ -179,9 +179,11 @@ header p {
     margin: auto;
     border-radius: 8px;
 }
-/* in-game screen section to display questions and answers set to hide */
-
-/* styling for in-game screen only */
+/* exit-screen section to display questions and answers set to hide */
+#door-screen {
+    display: none;
+}
+/* styling for exit-screen section only */
 .exit-text{
     font-size: 1.5rem;
     margin-top: 150px;
@@ -199,4 +201,40 @@ header p {
     width: 30%;
     font-size: 1rem;
 }
+/* in-game screen section to display questions and answers set to hide */
 
+/* styling for in-game screen only */
+.end-text {
+    font-size: 2rem;
+    margin: 20px 0;
+
+}
+.smiley-image {
+    height: 30vh;
+    width: 250px;
+    margin: 40px auto;
+}
+.smiley-image img {
+    width: 100%;
+    height: 100%;
+}
+.end-feedback {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.end-feedback span {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#end-button {
+    width: 20%;
+    padding: 1%;
+    margin: 0 auto;
+    font-size: 1rem;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}

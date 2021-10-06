@@ -47,7 +47,7 @@ header p {
 }
 /* setting default for start-screen section */
 #start-screen {
-    display: none;
+    display: unset;
 }
 /* styling #start-screen section */
 .h1-text {
@@ -83,7 +83,7 @@ header p {
 }
 #start-button {
     height: 40px;
-    width: 80px;
+    width: 120px;
     margin: 20px auto;
     background: transparent;
 }
@@ -202,7 +202,9 @@ header p {
     font-size: 1rem;
 }
 /* in-game screen section to display questions and answers set to hide */
-
+#end-screen {
+    display: none;
+}
 /* styling for in-game screen only */
 .end-text {
     font-size: 2rem;

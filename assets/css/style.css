@@ -38,7 +38,7 @@ header p {
 }
 .div-box {
     background-color: red;
-    height: 85vh;
+    height: 89vh;
     width: 70%;
     max-width: 1000px;
     max-height: 650px;
@@ -88,7 +88,32 @@ header p {
     background: transparent;
 }
 /* menu-screen section which comes after player name submition */
-
+.welcome-message {
+    margin: 10px auto;
+    font-style: 'Fleur De Leah', cursive;
+}
+.menu-message {
+    padding: 1%;
+}
+.level-buttons-div {
+    width: 50%;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+}
+.level-button {
+    margin: 0 auto;
+    padding: 1%;
+    width: 30%;
+    border-radius: 10px;
+}
+.category-button {
+    height: 15%;
+    margin: auto 0;
+    font-style: 'Architects Daughter', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
 /* in-game screen section to display questions and answers set to hide */
 #game-screen {
     display: none;

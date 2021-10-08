@@ -86,6 +86,14 @@ function hideRules() {
     rulesScreen.style.display = 'none';
     gameScreen.style.display = 'unset';
 }
+function runGame() {
+    let question = document.getElementById('question');
+    let optionA = document.getElementById('option-a');
+    let optionB = document.getElementById('option-b');
+    let optionC = document.getElementById('option-c');
+    let optionD = document.getElementById('option-d');
+
+}
 /**
  * displayEasyMovies function displays easy movies questions in order
  */

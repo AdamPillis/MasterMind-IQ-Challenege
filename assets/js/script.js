@@ -71,7 +71,7 @@ function displayRules() {
     let rulesScreen = document.getElementById('rules-screen');
     let rulesButton = document.getElementById('rules-button');
     let gameScreen = document.getElementById('game-screen');
-    rulesButton.addEventListener('click', )
+    rulesButton.addEventListener('click')
 
      menuScreen.style.display = 'none';
      rulesScreen.style.display = 'unset';

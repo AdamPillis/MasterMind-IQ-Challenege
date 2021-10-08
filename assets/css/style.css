@@ -142,7 +142,7 @@ header p {
     height: 10vh;
     margin: 10px 0;
 }
-.rules-button {
+#rules-button {
     width: 20%;
     margin: 0 auto;
     padding: 1%;

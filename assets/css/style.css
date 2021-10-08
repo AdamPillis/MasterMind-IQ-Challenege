@@ -111,7 +111,9 @@ header p {
     margin: 0 auto;
     padding: 1%;
     width: 30%;
-    border-radius: 10px;
+}
+#level-type input[type='radio']:checked+label {
+    box-shadow: 0px 0px 20px 4px black;
 }
 .category-button {
     height: 15%;

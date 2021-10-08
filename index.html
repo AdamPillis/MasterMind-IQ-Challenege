@@ -48,9 +48,22 @@
         <p class="menu-message">Please select your difficulty level followed by a category below.</p>
 
         <div class="level-buttons-div">
-            <button class="level-button" id="easy-button" data-type="easy">Easy</button>
-            <button class="level-button" id="medium-button" data-type="medium">Medium</button>
-            <button class="level-button" id="hard-button" data-type="hard">Hard</button>
+            
+            <div class="level-button">
+                <label for="easy-level">Easy</label>
+                <input type="radio" name="level-type" id="easy-level" value="easy" checked>
+            </div>
+        
+            <div class="level-button">
+                <label for="medium-level">Medium</label>
+                <input type="radio" name="level-type" id="medium-level" value="medium">
+            </div>
+
+            <div class="level-button">
+                <label for="hard-level">Hard</label>
+                <input type="radio" name="level-type" id="hard-level" value="hard">
+            </div>
+    
         </div>
 
         <div class="answers-area">

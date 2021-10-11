@@ -177,6 +177,12 @@ function displayEasyMovies() {
         },
     ];
 
+    let questionNumber = document.getElementById('question-number').innerHTML;
+    questionNumber = 0;
+    questionNumber++;
+
+    
+
     let question = document.getElementById('question');
     let optionA = document.getElementById('option-one-label');
     let optionB = document.getElementById('option-two-label');

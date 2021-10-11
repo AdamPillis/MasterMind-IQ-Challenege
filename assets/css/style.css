@@ -152,7 +152,7 @@ header p {
 /* in-game screen section to display questions and answers set to hide */
 #game-screen {
     display: none;
-}
+} 
 /* styling for in-game screen only */
 .score-area {
     height: 10vh;
@@ -166,10 +166,10 @@ header p {
     margin: 0 auto;
 }
 .question-area {
-    height: 10vh;
+    height: 15vh;
     width: 100%;
     margin: auto;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .answers-area {
     height: 60vh;
@@ -194,14 +194,17 @@ header p {
     cursor: pointer;
     transition: transform 0.4s;
     color: orange;
+    padding: 1%;
+    font-size: 2rem;
+    margin: auto 0;
 }
 .option-label:hover {
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
     color: green;
 }
-input[type="radio"] {
+.game-button input[type="radio"] {
     position: relative;
     display: none;
 }

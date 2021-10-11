@@ -52,9 +52,11 @@ function checkMoviesLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-
+        
         displayRules();
-        displayEasyMovies();
+
+        displayEasyMovies()
+
     } else if (difficultyLevel == 'medium') {
             alert('You chose medium movies');
         } else if (difficultyLevel == 'hard') {
@@ -90,15 +92,16 @@ function hideRules() {
 /**
  * displayEasyMovies function displays easy movies questions in order
  */
+
 function displayEasyMovies() {
-    let easyMovieQuestions = [
+    let questions = [
         {
             question: "Which film won the Oscar for ‘best picture’ in 2019?",
             optionA: "A Star is Born",
             optionB: "Vice",
             optionC: "Green Book",
             optionD: "The Favourite",
-            Answer: "Green Book"
+            answer: "optionC"
         },
         {
             question: "Jurassic Park is based on the novel by which author?",
@@ -106,7 +109,7 @@ function displayEasyMovies() {
             optionB: "John Grisham",
             optionC: "Michael Crichton",
             optionD: "Harlan Coben",
-            Answer: "Michael Crichton"
+            answer: "optionC"
         },
         {
             question: "Home Alone is set in which city?",
@@ -114,7 +117,7 @@ function displayEasyMovies() {
             optionB: "New York",
             optionC: "Chicago",
             optionD: "Pittsburgh",
-            Answer: "Chicago"
+            answer: "optionC"
         },
         {
             question: "The gang members in Reservoir Dogs were given names based on what?",
@@ -122,7 +125,7 @@ function displayEasyMovies() {
             optionB: "Numbers",
             optionC: "Presidents",
             optionD: "Colours",
-            Answer: "Colours"
+            answer: "optionD"
         },
         {
             question: "When was the first Star Wars film released?",
@@ -130,7 +133,7 @@ function displayEasyMovies() {
             optionB: 1977,
             optionC: 1985,
             optionD: 1991,
-            Answer: 1977
+            answer: "optionB"
         },
         {
             question: "Who directed the film Alien?",
@@ -138,7 +141,7 @@ function displayEasyMovies() {
             optionB: "James Cameron",
             optionC: "Brian De Palma",
             optionD: "Oliver Stone",
-            Answer: "Ridley Scott"
+            answer: "optionA"
         },
         {
             question: "Uma Thurman and John Travolta had an iconic dance scene in which movie?",
@@ -146,7 +149,7 @@ function displayEasyMovies() {
             optionB: "Face Off",
             optionC: "Pulp Fiction",
             optionD: "Kill Bill",
-            Answer: "Pulp Fiction"
+            answer: "optionC"
         },
         {
             question: "Who played James Bond in ‘You Only Live Twice’?",
@@ -154,7 +157,7 @@ function displayEasyMovies() {
             optionB: "Roger Moore",
             optionC: "Timothy Dalton",
             optionD: "George Lazenby",
-            Answer: "Sean Connery"
+            answer: "optionA"
         },
         {
             question: "For what movie did Tom Hanks get his first Academy Award nomination?",
@@ -162,7 +165,7 @@ function displayEasyMovies() {
             optionB: "Big",
             optionC: "Forrest Gump",
             optionD: "Cast Away",
-            Answer: "Big"
+            answer: "optionB"
         },
         {
             question: "In which year was ‘E.T the Extra Terrestrial’ released?",
@@ -170,20 +173,21 @@ function displayEasyMovies() {
             optionB: 1972,
             optionC: 1982,
             optionD: 1992,
-            Answer: 1982
+            Answer: "optionC"
         },
     ];
+
     let question = document.getElementById('question');
-    let optionA = document.getElementById('option-a');
-    let optionB = document.getElementById('option-b');
-    let optionC = document.getElementById('option-c');
-    let optionD = document.getElementById('option-d');
+    let optionA = document.getElementById('option-one-label');
+    let optionB = document.getElementById('option-two-label');
+    let optionC = document.getElementById('option-three-label');
+    let optionD = document.getElementById('option-four-label');
 
-    question.innerHTML = easyMovieQuestions.question[0];
-    optionA.innerText = easyMovieQuestion[1].innerText;
-    optionB.innerText = easyMovieQuestion[2].innerText;
-    optionC.innerText = easyMovieQuestion[3].innerText;
-    optionD.innerText = easyMovieQuestion[4].innerText;
-    }
+    
+    question.innerHTML = `${questions[0].question}`;
+    optionA.innerHTML = `${questions[0].optionA}`;
+    optionB.innerHTML = `${questions[0].optionB}`;
+    optionC.innerHTML = `${questions[0].optionC}`;
+    optionD.innerHTML = `${questions[0].optionD}`;
 
-
+}

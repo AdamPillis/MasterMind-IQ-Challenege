@@ -54,6 +54,7 @@ function checkMoviesLevel() {
     if (difficultyLevel == 'easy') {
 
         displayRules();
+        displayEasyMovies();
     } else if (difficultyLevel == 'medium') {
             alert('You chose medium movies');
         } else if (difficultyLevel == 'hard') {
@@ -85,14 +86,6 @@ function hideRules() {
 
     rulesScreen.style.display = 'none';
     gameScreen.style.display = 'unset';
-}
-function runGame() {
-    let question = document.getElementById('question');
-    let optionA = document.getElementById('option-a');
-    let optionB = document.getElementById('option-b');
-    let optionC = document.getElementById('option-c');
-    let optionD = document.getElementById('option-d');
-
 }
 /**
  * displayEasyMovies function displays easy movies questions in order
@@ -180,6 +173,17 @@ function displayEasyMovies() {
             Answer: 1982
         },
     ];
-}
+    let question = document.getElementById('question');
+    let optionA = document.getElementById('option-a');
+    let optionB = document.getElementById('option-b');
+    let optionC = document.getElementById('option-c');
+    let optionD = document.getElementById('option-d');
+
+    question.innerHTML = easyMovieQuestions.question[0];
+    optionA.innerText = easyMovieQuestion[1].innerText;
+    optionB.innerText = easyMovieQuestion[2].innerText;
+    optionC.innerText = easyMovieQuestion[3].innerText;
+    optionD.innerText = easyMovieQuestion[4].innerText;
+    }
 
 

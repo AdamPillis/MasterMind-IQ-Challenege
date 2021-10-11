@@ -125,19 +125,31 @@
         <!-- to display question -->
         <div class="question-area">
 
-            <h1><span id="question">question</span></h1>
+            <h1 id="question"></h1>
 
         </div>
         <!-- display 4 possible answers in each button -->
         <div class="answers-area">
-    
-                <button class="game-button">A <span id="option-a"></span></button>
-     
-                <button class="game-button">B <span id="option-b"></span></button>
+            
+            <div class="game-button">
+                <input type="radio" name="option" class="radio-option" id="option-one" value="optionA">
+                <label for="option-one" class="option-label" id="option-one-label"></label>
+            </div>
 
-                <button class="game-button">C <span id="option-c"></span></button>
+            <div class="game-button">
+                <input type="radio" name="option" class="radio-option" id="option-two" value="optionB">
+                <label for="option-two" class="option-label" id="option-two-label"></label>
+            </div>
 
-                <button class="game-button">D <span id="option-d"></span></button>
+            <div class="game-button">
+                <input type="radio" name="option" class="radio-option" id="option-three" value="optionC">
+                <label for="option-three" class="option-label" id="option-three-label"></label>
+            </div>
+
+            <div class="game-button">
+                <input type="radio" name="option" class="radio-option" id="option-four" value="optionD">
+                <label for="option-four" class="option-label" id="option-four-label"></label>
+            </div>
         
         </div>
 

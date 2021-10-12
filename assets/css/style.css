@@ -154,6 +154,11 @@ header p {
     display: none;
 } 
 /* styling for in-game screen only */
+.div-box {
+    margin: 0 auto;
+    height: 95vh;
+    max-height: 690px;
+}
 .score-area {
     height: 10vh;
     width: 100%;
@@ -210,6 +215,12 @@ header p {
 }
 input[type=radio]:checked ~ .option {
     background: lightseagreen;
+}
+.next-button {
+    width: 120px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 /* exit-screen section to display questions and answers set to hide */
 #door-screen {

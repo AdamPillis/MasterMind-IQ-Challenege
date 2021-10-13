@@ -187,13 +187,20 @@ function hideRules() {
     let optionButtons = document.getElementById('option-buttons');
 
     let nextButton = document.getElementById('next-button');
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++;
+
+        setNextEasyMovieQuestion();
+        
+    })
+
     let finishButton = document.getElementById('finish-button');
 
     let shuffledEasyMovieQuestions, currentQuestionIndex
 
 function startEasyMovieQuestions() {
     //display easy movie questions randomly
-    shuffledEasyMovieQuestions = easyMovieQuestions.sort(() => Math.random() - .5);
+    shuffledEasyMovieQuestions = easyMovieQuestions;
     currentQuestionIndex = 0;
 
     displayRules();
@@ -209,6 +216,7 @@ function setNextEasyMovieQuestion() {
 
     showQuestion(shuffledEasyMovieQuestions[currentQuestionIndex])
 }
+
 function showQuestion(question) {
     questionContainer.textContent = question.question;
     question.answers.forEach(answer => {
@@ -229,11 +237,50 @@ function showQuestion(question) {
  */
 function resetState(){
     nextButton.style.display = 'none';
-
+    
     while (optionButtons.firstChild) {
         optionButtons.removeChild (optionButtons.firstChild)
     }
+    
 }
+/**
+ * checks which button is selected
+ * compares button clicked with correct answer
+ */
 function checkAnswer(event) {
+    let playerAnswer = event.target;
+    let correct = playerAnswer.dataset.correct;
 
+    setBodyClass(document.body, correct)
+    Array.from(optionButtons.children).forEach(button => {
+        setBodyClass(button, button.dataset.correct)
+    })
+    if (currentQuestionIndex <= 8) {
+    nextButton.style.display = 'unset'; 
+    } else {
+        finishButton.style.display = 'unset';
+        nextButton.style.display = 'none';
+    }
+}
+/**
+ * checks if option clicked is correct
+ * if correct, set body class to correct (green)
+ * if incorrect, set body class to incorrect (red)
+ */
+function setBodyClass(element, correct) {
+    
+    clearBodyClass(element);
+
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('incorrect');
+    }
+}
+/**
+ * to clear body class set after next button clicked
+ */
+function clearBodyClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('incorrect');
 }

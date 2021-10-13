@@ -52,11 +52,14 @@ function checkMoviesLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-
+        nextButton.innerText = 'Next Easy Movie Question'
         startEasyMovieQuestions();
 
     } else if (difficultyLevel == 'medium') {
-            alert('You chose medium movies');
+        nextButton.innerText = 'Next Medium Movie Question';
+
+        startMediumMovieQuestions();
+
         } else if (difficultyLevel == 'hard') {
             alert('You chose hard movies');
         } else {
@@ -151,7 +154,7 @@ function closeDoorScreen() {
 }
 
 // variable including Easy Movie Questions
-    let easyMovieQuestions = [
+    let easyMovieQuestionsArray = [
         {
             question: "Which film won the Oscar for ‘best picture’ in 2019?",
             answers: [
@@ -244,7 +247,7 @@ function closeDoorScreen() {
         }
     ];
 // variable including Medium Movie Question
-    let mediumMovieQuestions = [
+    let mediumMovieQuestionsArray = [
         {
             question: "Wadsfhasiophf sifhsaihf  sisfh",
             answers: [
@@ -255,7 +258,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "Jurassic Park is based on the novel by which author?",
+            question: "asdfasfasf sdfas",
             answers: [
                 {text: 'Stephen King', correct: false},
                 {text: 'John Grisham', correct: false},
@@ -273,7 +276,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "The gang members in Reservoir Dogs were given names based on what?",
+            question: "afsafasd on what?",
             answers: [
                 {text: 'Months', correct: false},
                 {text: 'Numbers', correct: false},
@@ -282,7 +285,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "When was the first Star Wars film released?",
+            question: "When wdfsdfdsfsdd?",
             answers: [
                 {text: '1967', correct: false},
                 {text: '1977', correct: true},
@@ -291,7 +294,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "Who directed the film Alien?",
+            question: "Who sfdsdfdsfien?",
             answers: [
                 {text: 'Ridley Scott', correct: true},
                 {text: 'James Cameron', correct: false},
@@ -300,7 +303,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "Uma Thurman and John Travolta had an iconic dance scene in which movie?",
+            question: "Umsdfsdfdsfce scene in which movie?",
             answers: [
                 {text: 'Saturday Night Fever', correct: false},
                 {text: 'Face Off', correct: false},
@@ -309,7 +312,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "Who played James Bond in ‘You Only Live Twice'",
+            question: "Who plsdfsdfy Live Twice'",
             answers: [
                 {text: 'Sean Connery', correct: true},
                 {text: 'Roger Moore', correct: false},
@@ -318,7 +321,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "For what movie did Tom Hanks get his first Academy Award nomination?",
+            question: "For wsdfsdfsdd nomination?",
             answers: [
                 {text: 'Saving Private Ryan', correct: false},
                 {text: 'Big', correct: true},
@@ -327,7 +330,7 @@ function closeDoorScreen() {
             ]
         },
         {
-            question: "In which year was ‘E.T the Extra Terrestrial’ released?",
+            question: "In which sdfsdf’ released?",
             answers: [
                 {text: '1962', correct: false},
                 {text: '1972', correct: false},
@@ -344,22 +347,34 @@ function closeDoorScreen() {
 
     let nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', () => {
+        if(nextButton.innerText === 'Next Easy Movie Question') {
         currentQuestionIndex++;
-
         setNextEasyMovieQuestion();
-        
+        } else if (nextButton.innerText === 'Next Medium Movie Question') {
+        currentQuestionIndex++;
+        setNextMediumMovieQuestion();
+        }
     })
 
-    let shuffledEasyMovieQuestions, currentQuestionIndex
+    let easyMovieQuestions, mediumMovieQuestions, currentQuestionIndex
 
 function startEasyMovieQuestions() {
     //display easy movie questions randomly
-    shuffledEasyMovieQuestions = easyMovieQuestions;
+    easyMovieQuestions = easyMovieQuestionsArray;
     currentQuestionIndex = 0;
 
     displayRules();
 
     setNextEasyMovieQuestion();
+}
+function startMediumMovieQuestions() {
+    //display easy movie questions randomly
+    mediumMovieQuestions = mediumMovieQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextMediumMovieQuestion();
 }
 /**
  * sets next question and optional answers using a random index
@@ -368,7 +383,13 @@ function setNextEasyMovieQuestion() {
 
     resetState();
 
-    showQuestion(shuffledEasyMovieQuestions[currentQuestionIndex])
+    showQuestion(easyMovieQuestionsArray[currentQuestionIndex])
+}
+function setNextMediumMovieQuestion() {
+
+    resetState();
+
+    showQuestion(mediumMovieQuestionsArray[currentQuestionIndex])
 }
 
 function showQuestion(question) {
@@ -411,10 +432,10 @@ function checkAnswer(event) {
     })
     if (currentQuestionIndex <= 8) {
     nextButton.style.display = 'unset'; 
-    } else {
-        finishButton.style.display = 'unset';
-        nextButton.style.display = 'none';
-    }
+        } else {
+            finishButton.style.display = 'unset';
+            nextButton.style.display = 'none';
+            }
 }
 /**
  * checks if option clicked is correct

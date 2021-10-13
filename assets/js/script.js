@@ -19,7 +19,7 @@ function handleSubmit(event) {
      startScreen.style.display = 'none';
      menuScreen.style.display = 'unset';
 }
-// blank variable to which the checkDifficultyLevel put difficulty level
+// blank variable to which the checkDifficultyLevel puts difficulty level
 let difficultyLevel = '';
 /** to check which radio button is 'checked'
  * different string for each level which is placed into the difficultyLevel variable. 
@@ -92,6 +92,8 @@ function hideRules() {
 /**
  * displayEasyMovies function displays easy movies questions in order
  */
+let reveal = document.getElementById('next-question');
+reveal.addEventListener('click', checkAnswer);
 
 function displayEasyMovies() {
     let questions = [
@@ -178,22 +180,34 @@ function displayEasyMovies() {
     ];
 
     let questionNumber = document.getElementById('question-number').innerHTML;
-    questionNumber = 0;
+    questionNumber = 1;
     questionNumber++;
-
-    
 
     let question = document.getElementById('question');
     let optionA = document.getElementById('option-one-label');
     let optionB = document.getElementById('option-two-label');
     let optionC = document.getElementById('option-three-label');
     let optionD = document.getElementById('option-four-label');
+    let answer = questions[0].answer;
 
-    
     question.innerHTML = `${questions[0].question}`;
     optionA.innerHTML = `${questions[0].optionA}`;
     optionB.innerHTML = `${questions[0].optionB}`;
     optionC.innerHTML = `${questions[0].optionC}`;
     optionD.innerHTML = `${questions[0].optionD}`;
+    
+    return answer;
 
+}
+function checkAnswer() {
+    let playerAnswer = document.getElementsByClassName('radio-option');
+    playerAnswer = playerAnswer.checked;
+    let correctAnswer = displayEasyMovies();
+    let isCorrect = playerAnswer === correctAnswer;
+    
+    if (playerAnswer.innerHTML == correctAnswer) {
+        alert('well done');
+    } else {
+        alert('aww, wrong answer');
+    }
 }

@@ -8,6 +8,7 @@
     <title>MasterMindsIQ</title>
 </head>
 <body>
+    <script src="https://kit.fontawesome.com/3986f6a91b.js" crossorigin="anonymous"></script>
     <!-- start screen section -->
 <section id="start-screen" class="section-area">
     <header>
@@ -23,7 +24,7 @@
     <form id="login-form" method="POST" action="/login/">
         <div class="playername">
             
-            <label for="playername">Player Name</label>
+            <label for="playername">Please choose your nickname</label>
             <!-- user enters their player name which is then used in welcome message of #menu-screen -->
             <input id="playername" name="playername" type="text" required>
             
@@ -45,7 +46,7 @@
 
         <h1 class="welcome-message">welcome message</h1>
 
-        <p class="menu-message">Please select your difficulty level followed by a category below.</p>
+        <p class="menu-message">Please select your difficulty level followed by a category below and let's do this!</p>
 
         <div class="level-buttons-div">
 
@@ -110,15 +111,15 @@
         <div class="score-area">
 
             <div class="info-div">
-                <p>Score: <span id="score">0</span></p>
+                <p>Score: <span id="score">0</span>/ 10</p>
             </div>
 
             <div class="info-div">
-                <p>Question Number: <span id="question-number">0</span></p>
+                <p>Question Number: <span id="question-number">1</span>/ 10</p>
             </div>
 
             <div class="info-div">
-                <p>Time: <span id="time">0</span></p>
+                <p>Time: <span id="time">30</span></p>
             </div>
 
         </div>
@@ -200,6 +201,6 @@
 
 </section>
     <script src="assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/3986f6a91b.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>

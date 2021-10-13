@@ -98,6 +98,7 @@ finishButton.addEventListener('click', displayEndScreen);
  * shows a final score and a message with a button to the main menu
  */
 function displayEndScreen() {
+    clearBodyClass(document.body);
     let gameScreen = document.getElementById('game-screen');
     let endScreen = document.getElementById('end-screen');
 
@@ -138,6 +139,7 @@ let noButton = document.getElementById('button-no');
 noButton.addEventListener('click', closeDoorScreen)
 
 function exitGame() {
+    clearBodyClass(document.body);
     let doorScreen = document.getElementById('door-screen');
     let menuScreen = document.getElementById('menu-screen');
 
@@ -436,6 +438,7 @@ function checkAnswer(event) {
             finishButton.style.display = 'unset';
             nextButton.style.display = 'none';
             }
+            
 }
 /**
  * checks if option clicked is correct
@@ -448,9 +451,9 @@ function setBodyClass(element, correct) {
 
     if (correct) {
         element.classList.add('correct');
-    } else {
-        element.classList.add('incorrect');
-    }
+        } else {
+            element.classList.add('incorrect');
+        }
 }
 /**
  * to clear body class set after next button clicked

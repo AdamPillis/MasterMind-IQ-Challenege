@@ -243,6 +243,99 @@ function closeDoorScreen() {
             ]
         }
     ];
+// variable including Medium Movie Question
+    let mediumMovieQuestions = [
+        {
+            question: "Wadsfhasiophf sifhsaihf  sisfh",
+            answers: [
+                {text: 'A Star is Born', correct: false},
+                {text: 'Vice', correct: false},
+                {text: 'Green Book', correct: true},
+                {text: 'The Favourite', correct: false}
+            ]
+        },
+        {
+            question: "Jurassic Park is based on the novel by which author?",
+            answers: [
+                {text: 'Stephen King', correct: false},
+                {text: 'John Grisham', correct: false},
+                {text: 'Michael Crichton', correct: true},
+                {text: '"Harlan Coben', correct: false}
+            ]
+        },
+        {
+            question: "asfasifhasif iashf ",
+            answers: [
+                {text: 'Boston', correct: false},
+                {text: 'New York', correct: false},
+                {text: 'Chicago', correct: true},
+                {text: 'Pittsburgh', correct: false}
+            ]
+        },
+        {
+            question: "The gang members in Reservoir Dogs were given names based on what?",
+            answers: [
+                {text: 'Months', correct: false},
+                {text: 'Numbers', correct: false},
+                {text: 'Presidents', correct: false},
+                {text: 'Colours', correct: true}
+            ]
+        },
+        {
+            question: "When was the first Star Wars film released?",
+            answers: [
+                {text: '1967', correct: false},
+                {text: '1977', correct: true},
+                {text: '1987', correct: false},
+                {text: '1957', correct: false}
+            ]
+        },
+        {
+            question: "Who directed the film Alien?",
+            answers: [
+                {text: 'Ridley Scott', correct: true},
+                {text: 'James Cameron', correct: false},
+                {text: 'Brian De Palma', correct: false},
+                {text: '"Oliver Stone', correct: false}
+            ]
+        },
+        {
+            question: "Uma Thurman and John Travolta had an iconic dance scene in which movie?",
+            answers: [
+                {text: 'Saturday Night Fever', correct: false},
+                {text: 'Face Off', correct: false},
+                {text: 'Pulp Fiction', correct: true},
+                {text: 'Kill Bill', correct: false}
+            ]
+        },
+        {
+            question: "Who played James Bond in ‘You Only Live Twice'",
+            answers: [
+                {text: 'Sean Connery', correct: true},
+                {text: 'Roger Moore', correct: false},
+                {text: 'Timothy Dalton', correct: false},
+                {text: 'George Lazenby', correct: false}
+            ]
+        },
+        {
+            question: "For what movie did Tom Hanks get his first Academy Award nomination?",
+            answers: [
+                {text: 'Saving Private Ryan', correct: false},
+                {text: 'Big', correct: true},
+                {text: 'Forrest Gump', correct: false},
+                {text: 'Cast Away', correct: false}
+            ]
+        },
+        {
+            question: "In which year was ‘E.T the Extra Terrestrial’ released?",
+            answers: [
+                {text: '1962', correct: false},
+                {text: '1972', correct: false},
+                {text: '1982', correct: true},
+                {text: '1992', correct: false}
+            ]
+        }
+    ];
     // variable containing question and answers
     let quizContainer = document.getElementById('quiz-container');
     //setting variables to undefined for now
@@ -297,12 +390,12 @@ function showQuestion(question) {
  * checks if optionButtons have any first children and if so, remove them. 
  */
 function resetState(){
+    clearBodyClass(document.body);
     nextButton.style.display = 'none';
     
     while (optionButtons.firstChild) {
         optionButtons.removeChild (optionButtons.firstChild)
-    }
-    
+    }  
 }
 /**
  * checks which button is selected

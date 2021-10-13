@@ -87,6 +87,69 @@ function hideRules() {
     rulesScreen.style.display = 'none';
     gameScreen.style.display = 'unset';
 }
+// finish button on final question of each game calling function to show end screen
+let finishButton = document.getElementById('finish-button');
+finishButton.addEventListener('click', displayEndScreen);
+/**
+ * called when finish button is clicked on final question
+ * shows a final score and a message with a button to the main menu
+ */
+function displayEndScreen() {
+    let gameScreen = document.getElementById('game-screen');
+    let endScreen = document.getElementById('end-screen');
+
+    gameScreen.style.display = 'none';
+    endScreen.style.display = 'unset';
+}
+// event listener attached to menu button to take user back to main menu
+let menuButton = document.getElementById('end-button');
+menuButton.addEventListener('click', backToMenu)
+/**
+ * function called when Menu button is clicked in end-screen
+ */
+function backToMenu() {
+    let endScreen = document.getElementById('end-screen');
+    let menuScreen = document.getElementById('menu-screen');
+
+    endScreen.style.display = 'none';
+    menuScreen.style.display = 'unset';
+}
+// when button on the right within the header is clicked during game.
+let headerButton = document.getElementById('header-button');
+headerButton.addEventListener('click', displayDoorScreen)
+/**
+ * when headerButton is clicked above
+ * function hides game-screen and shows door-screen section
+ */
+function displayDoorScreen() {
+    let doorScreen = document.getElementById('door-screen');
+    let gameScreen = document.getElementById('game-screen');
+
+    doorScreen.style.display = 'unset';
+    gameScreen.style.display = 'none';
+}
+
+let yesButton = document.getElementById('button-yes');
+yesButton.addEventListener('click', exitGame)
+let noButton = document.getElementById('button-no');
+noButton.addEventListener('click', closeDoorScreen)
+
+function exitGame() {
+    let doorScreen = document.getElementById('door-screen');
+    let menuScreen = document.getElementById('menu-screen');
+
+    doorScreen.style.display = 'none';
+    menuScreen.style.display = 'unset';
+}
+
+function closeDoorScreen() {
+    let doorScreen = document.getElementById('door-screen');
+    let gameScreen = document.getElementById('game-screen');
+
+    doorScreen.style.display = 'none';
+    gameScreen.style.display = 'unset';
+}
+
 // variable including Easy Movie Questions
     let easyMovieQuestions = [
         {
@@ -193,8 +256,6 @@ function hideRules() {
         setNextEasyMovieQuestion();
         
     })
-
-    let finishButton = document.getElementById('finish-button');
 
     let shuffledEasyMovieQuestions, currentQuestionIndex
 

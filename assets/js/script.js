@@ -52,10 +52,8 @@ function checkMoviesLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-        
-        displayRules();
 
-        displayEasyMovies()
+        startEasyMovieQuestions();
 
     } else if (difficultyLevel == 'medium') {
             alert('You chose medium movies');
@@ -89,125 +87,153 @@ function hideRules() {
     rulesScreen.style.display = 'none';
     gameScreen.style.display = 'unset';
 }
-/**
- * displayEasyMovies function displays easy movies questions in order
- */
-let reveal = document.getElementById('next-question');
-reveal.addEventListener('click', checkAnswer);
-
-function displayEasyMovies() {
-    let questions = [
+// variable including Easy Movie Questions
+    let easyMovieQuestions = [
         {
             question: "Which film won the Oscar for ‘best picture’ in 2019?",
-            optionA: "A Star is Born",
-            optionB: "Vice",
-            optionC: "Green Book",
-            optionD: "The Favourite",
-            answer: "optionC"
+            answers: [
+                {text: 'A Star is Born', correct: false},
+                {text: 'Vice', correct: false},
+                {text: 'Green Book', correct: true},
+                {text: 'The Favourite', correct: false}
+            ]
         },
         {
             question: "Jurassic Park is based on the novel by which author?",
-            optionA: "Stephen King",
-            optionB: "John Grisham",
-            optionC: "Michael Crichton",
-            optionD: "Harlan Coben",
-            answer: "optionC"
+            answers: [
+                {text: 'Stephen King', correct: false},
+                {text: 'John Grisham', correct: false},
+                {text: 'Michael Crichton', correct: true},
+                {text: '"Harlan Coben', correct: false}
+            ]
         },
         {
             question: "Home Alone is set in which city?",
-            optionA: "Boston",
-            optionB: "New York",
-            optionC: "Chicago",
-            optionD: "Pittsburgh",
-            answer: "optionC"
+            answers: [
+                {text: 'Boston', correct: false},
+                {text: 'New York', correct: false},
+                {text: 'Chicago', correct: true},
+                {text: 'Pittsburgh', correct: false}
+            ]
         },
         {
             question: "The gang members in Reservoir Dogs were given names based on what?",
-            optionA: "Months",
-            optionB: "Numbers",
-            optionC: "Presidents",
-            optionD: "Colours",
-            answer: "optionD"
+            answers: [
+                {text: 'Months', correct: false},
+                {text: 'Numbers', correct: false},
+                {text: 'Presidents', correct: false},
+                {text: 'Colours', correct: true}
+            ]
         },
         {
             question: "When was the first Star Wars film released?",
-            optionA: 1970,
-            optionB: 1977,
-            optionC: 1985,
-            optionD: 1991,
-            answer: "optionB"
+            answers: [
+                {text: '1967', correct: false},
+                {text: '1977', correct: true},
+                {text: '1987', correct: false},
+                {text: '1957', correct: false}
+            ]
         },
         {
             question: "Who directed the film Alien?",
-            optionA: "Ridley Scott",
-            optionB: "James Cameron",
-            optionC: "Brian De Palma",
-            optionD: "Oliver Stone",
-            answer: "optionA"
+            answers: [
+                {text: 'Ridley Scott', correct: true},
+                {text: 'James Cameron', correct: false},
+                {text: 'Brian De Palma', correct: false},
+                {text: '"Oliver Stone', correct: false}
+            ]
         },
         {
             question: "Uma Thurman and John Travolta had an iconic dance scene in which movie?",
-            optionA: "Saturday Night Fever",
-            optionB: "Face Off",
-            optionC: "Pulp Fiction",
-            optionD: "Kill Bill",
-            answer: "optionC"
+            answers: [
+                {text: 'Saturday Night Fever', correct: false},
+                {text: 'Face Off', correct: false},
+                {text: 'Pulp Fiction', correct: true},
+                {text: 'Kill Bill', correct: false}
+            ]
         },
         {
-            question: "Who played James Bond in ‘You Only Live Twice’?",
-            optionA: "Sean Connery",
-            optionB: "Roger Moore",
-            optionC: "Timothy Dalton",
-            optionD: "George Lazenby",
-            answer: "optionA"
+            question: "Who played James Bond in ‘You Only Live Twice'",
+            answers: [
+                {text: 'Sean Connery', correct: true},
+                {text: 'Roger Moore', correct: false},
+                {text: 'Timothy Dalton', correct: false},
+                {text: 'George Lazenby', correct: false}
+            ]
         },
         {
             question: "For what movie did Tom Hanks get his first Academy Award nomination?",
-            optionA: "Saving Private Ryan",
-            optionB: "Big",
-            optionC: "Forrest Gump",
-            optionD: "Cast Away",
-            answer: "optionB"
+            answers: [
+                {text: 'Saving Private Ryan', correct: false},
+                {text: 'Big', correct: true},
+                {text: 'Forrest Gump', correct: false},
+                {text: 'Cast Away', correct: false}
+            ]
         },
         {
             question: "In which year was ‘E.T the Extra Terrestrial’ released?",
-            optionA: 1962,
-            optionB: 1972,
-            optionC: 1982,
-            optionD: 1992,
-            Answer: "optionC"
-        },
+            answers: [
+                {text: '1962', correct: false},
+                {text: '1972', correct: false},
+                {text: '1982', correct: true},
+                {text: '1992', correct: false}
+            ]
+        }
     ];
+    // variable containing question and answers
+    let quizContainer = document.getElementById('quiz-container');
+    //setting variables to undefined for now
+    let questionContainer = document.getElementById('question');
+    let optionButtons = document.getElementById('option-buttons');
 
-    let questionNumber = document.getElementById('question-number').innerHTML;
-    questionNumber = 1;
-    questionNumber++;
+    let nextButton = document.getElementById('next-button');
+    let finishButton = document.getElementById('finish-button');
 
-    let question = document.getElementById('question');
-    let optionA = document.getElementById('option-one-label');
-    let optionB = document.getElementById('option-two-label');
-    let optionC = document.getElementById('option-three-label');
-    let optionD = document.getElementById('option-four-label');
-    let answer = questions[0].answer;
+    let shuffledEasyMovieQuestions, currentQuestionIndex
 
-    question.innerHTML = `${questions[0].question}`;
-    optionA.innerHTML = `${questions[0].optionA}`;
-    optionB.innerHTML = `${questions[0].optionB}`;
-    optionC.innerHTML = `${questions[0].optionC}`;
-    optionD.innerHTML = `${questions[0].optionD}`;
-    
-    return answer;
+function startEasyMovieQuestions() {
+    //display easy movie questions randomly
+    shuffledEasyMovieQuestions = easyMovieQuestions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
 
+    displayRules();
+
+    setNextEasyMovieQuestion();
 }
-function checkAnswer() {
-    let playerAnswer = document.getElementsByClassName('radio-option');
-    playerAnswer = playerAnswer.checked;
-    let correctAnswer = displayEasyMovies();
-    let isCorrect = playerAnswer === correctAnswer;
-    
-    if (playerAnswer.innerHTML == correctAnswer) {
-        alert('well done');
-    } else {
-        alert('aww, wrong answer');
+/**
+ * sets next question and optional answers using a random index
+ */
+function setNextEasyMovieQuestion() {
+
+    resetState();
+
+    showQuestion(shuffledEasyMovieQuestions[currentQuestionIndex])
+}
+function showQuestion(question) {
+    questionContainer.textContent = question.question;
+    question.answers.forEach(answer => {
+        let button = document.createElement('button') // create a new button for each answer using same button class/style
+        button.textContent = answer.text; // add answer content to each new button
+        button.classList.add('game-button')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct /** add correct dataset attribute only if answer is correct */
+        }
+        button.addEventListener('click', checkAnswer) // if player clicks on an answer, call checkAnswer function 
+        optionButtons.appendChild(button); // append new buttons as child of optionButtons
+    })
+}
+/**
+ * Will reset game-screen to default every time a new question is called
+ * next question button will disappear
+ * checks if optionButtons have any first children and if so, remove them. 
+ */
+function resetState(){
+    nextButton.style.display = 'none';
+
+    while (optionButtons.firstChild) {
+        optionButtons.removeChild (optionButtons.firstChild)
     }
+}
+function checkAnswer(event) {
+
 }

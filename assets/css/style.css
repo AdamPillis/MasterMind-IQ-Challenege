@@ -5,22 +5,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fleur De Leah', cursive;
+    font-family: 'Architects Daughter', cursive;
 }
 /*setting neutral color for body, red if answer is incorrect and green if answer is incorrect*/
 :root {
-    --hue-neutral: rgba(1, 1, 2, 0.541); 
-    --hue-wrong: rgba(255, 0, 0, 0.600);
-    --hue-correct: rgba(0, 128, 0, 0.600);
+    --hue-neutral: 300;
+    --hue-incorrect: 0;
+    --hue-correct: 145;
 }
 body {
     --hue: var(--hue-neutral); /*color of body set to neutral so that it can change based on user answer*/
     height: 100vh;
     width: 100vw;
-    background-color: rgba(1, 1, 2, 0.541);
+    background-color: hsl(var(--hue), 100%, 20%);
     font-family: 'Architects Daughter', cursive;  /*'Fleur De Leah', cursive; */
-    text-align: center;
-    
+    text-align: center;   
+}
+/* body color to be displayed if answer will be correct */
+body.correct {
+    --hue: var(--hue-correct);
+}
+/* body color to be displayed if answer will be incorrect */
+body.incorrect {
+    --hue: var(--hue-incorrect);
 }
 button:hover {
     box-shadow: 0px 0px 20px 4px red;
@@ -198,13 +205,41 @@ header p {
     height: 10vh;
     margin: auto;
     border-radius: 8px;
-    background-color: white;
+    font-size: 1rem;
+    background-color: hsl(var(--hue), 100%, 40%);
+    border: 1px solid hsl(var(--hue), 100%, 25%);
+    color: white;
 }
-.next-button {
-    width: 120px;
+.game-button:hover {
+    background-color: hsl(var(--hue), 100%, 10%);
+}
+.game-button.correct {
+    --hue: var(--hue-correct); 
+    color: black;
+    font-weight: 700;
+}
+.game-button.incorrect {
+    --hue: var(--hue-incorrect);
+}
+.controls-button {
+    width: 150px;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: hsl(var(--hue), 100%, 40%);
+    border: 1px solid hsl(var(--hue), 100%, 25%);
+    color: white;
+}
+.controls-button:hover {
+    background-color: hsl(var(--hue), 100%, 10%);
+}
+#next-button{
+    display: none;
+}
+#finish-button {
+    display: none;
 }
 /* exit-screen section to display questions and answers set to hide */
 #door-screen {

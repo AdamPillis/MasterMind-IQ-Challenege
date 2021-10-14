@@ -222,11 +222,11 @@ header p {
     --hue: var(--hue-incorrect);
 }
 .controls-button {
-    width: 150px;
+    width: 180px;
     padding: 5px;
     margin-top: 10px;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     background-color: hsl(var(--hue), 100%, 40%);
     border: 1px solid hsl(var(--hue), 100%, 25%);

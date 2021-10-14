@@ -151,6 +151,7 @@ function backToMenu() {
     menuScreen.style.display = 'unset';
     finishButton.style.display = 'none';
     resetQuestionNumber();
+    resetPlayerScore();
 }
 // when button on the right within the header is clicked during game.
 let headerButton = document.getElementById('header-button');
@@ -174,7 +175,8 @@ noButton.addEventListener('click', closeDoorScreen)
 
 function exitGame() {
     clearBodyClass(document.body);
-    resetQuestionNumber()
+    resetQuestionNumber();
+    resetPlayerScore();
     let doorScreen = document.getElementById('door-screen');
     let menuScreen = document.getElementById('menu-screen');
 
@@ -643,6 +645,11 @@ function incrementPlayerScore() {
  * function resets score number to 0 at the end of each game, when menu button is clicked in end-screen section
  *  also resets if user clicks yes in door-screen section
  */
+function resetPlayerScore() {
+    playerScore = parseInt(document.getElementById('score').innerHTML);
+    document.getElementById('score').innerHTML = 0;
+}
+
 
 
 

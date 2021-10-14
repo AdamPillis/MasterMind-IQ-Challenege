@@ -53,18 +53,22 @@ function checkMoviesLevel() {
 
     if (difficultyLevel == 'easy') {
         nextButton.innerText = 'Next Easy Movie Question'
+
         startEasyMovieQuestions();
 
-    } else if (difficultyLevel == 'medium') {
-        nextButton.innerText = 'Next Medium Movie Question';
+        } else if (difficultyLevel == 'medium') {
+            nextButton.innerText = 'Next Medium Movie Question';
 
-        startMediumMovieQuestions();
+            startMediumMovieQuestions();
 
-        } else if (difficultyLevel == 'hard') {
-            alert('You chose hard movies');
-        } else {
-            alert('Unknown category level');
-        }
+            } else if (difficultyLevel == 'hard') {
+                nextButton.innerText = 'Next Hard Movie Question'
+
+                startHardMovieQuestions();
+
+                } else {
+                    alert('Unknown category level');
+                    }
     }
 /**
  * displayRules function hides menu screen and calls rules screen to display
@@ -248,99 +252,192 @@ function closeDoorScreen() {
             ]
         }
     ];
-// variable including Medium Movie Question
+// variable including Medium Movie Questions
     let mediumMovieQuestionsArray = [
         {
-            question: "Wadsfhasiophf sifhsaihf  sisfh",
+            question: "'In space, no one can hear you scream' is the famous tagline from which film?",
             answers: [
-                {text: 'A Star is Born', correct: false},
-                {text: 'Vice', correct: false},
-                {text: 'Green Book', correct: true},
-                {text: 'The Favourite', correct: false}
+                {text: 'The Martian', correct: false},
+                {text: 'Alien', correct: true},
+                {text: 'Pitch Black', correct: false},
+                {text: 'Pitch Perfect', correct: false}
             ]
         },
         {
-            question: "asdfasfasf sdfas",
+            question: "What's the first dinosaur seen by the visitors in Jurassic Park?",
             answers: [
-                {text: 'Stephen King', correct: false},
-                {text: 'John Grisham', correct: false},
-                {text: 'Michael Crichton', correct: true},
-                {text: '"Harlan Coben', correct: false}
+                {text: 'Spinosaurus', correct: false},
+                {text: 'T.rex', correct: false},
+                {text: 'Brachiosaurus', correct: true},
+                {text: 'Velociraptor', correct: false}
             ]
         },
         {
-            question: "asfasifhasif iashf ",
+            question: "What does Neo first take to leave The Matrix?",
             answers: [
-                {text: 'Boston', correct: false},
-                {text: 'New York', correct: false},
-                {text: 'Chicago', correct: true},
-                {text: 'Pittsburgh', correct: false}
+                {text: 'A red pill', correct: true},
+                {text: 'A phone call', correct: false},
+                {text: 'A blue pill', correct: false},
+                {text: 'None of the above', correct: false}
             ]
         },
         {
-            question: "afsafasd on what?",
+            question: "What's the name of the necklace in Titanic?",
             answers: [
-                {text: 'Months', correct: false},
-                {text: 'Numbers', correct: false},
-                {text: 'Presidents', correct: false},
-                {text: 'Colours', correct: true}
+                {text: 'The Black Soul', correct: false},
+                {text: 'The Heart of the Ocean true', correct: true},
+                {text: 'The Jewel of the Night', correct: false},
+                {text: 'The Diamond of the Sea', correct: false}
             ]
         },
         {
-            question: "When wdfsdfdsfsdd?",
+            question: "In Lord of the Rings, how many Rings of Power are there?",
             answers: [
-                {text: '1967', correct: false},
-                {text: '1977', correct: true},
-                {text: '1987', correct: false},
-                {text: '1957', correct: false}
+                {text: '1', correct: false},
+                {text: '20', correct: true},
+                {text: '50', correct: false},
+                {text: '100', correct: false}
             ]
         },
         {
-            question: "Who sfdsdfdsfien?",
+            question: "In which James Bond film does Jane Seymour appear?",
             answers: [
-                {text: 'Ridley Scott', correct: true},
-                {text: 'James Cameron', correct: false},
-                {text: 'Brian De Palma', correct: false},
-                {text: '"Oliver Stone', correct: false}
+                {text: 'Live and Let Die true', correct: true},
+                {text: 'Octopussy', correct: false},
+                {text: 'Moonraker', correct: false},
+                {text: 'No Time to Die', correct: false}
             ]
         },
         {
-            question: "Umsdfsdfdsfce scene in which movie?",
+            question: "Which city is cop Axel Foley from in Beverly Hills Cop?",
             answers: [
-                {text: 'Saturday Night Fever', correct: false},
-                {text: 'Face Off', correct: false},
-                {text: 'Pulp Fiction', correct: true},
-                {text: 'Kill Bill', correct: false}
+                {text: 'Los Angeles', correct: false},
+                {text: 'Chicago', correct: false},
+                {text: 'Detriot', correct: true},
+                {text: 'New York', correct: false}
             ]
         },
         {
-            question: "Who plsdfsdfy Live Twice'",
+            question: "What movie did Steven Spielberg win his first Oscar for?",
             answers: [
-                {text: 'Sean Connery', correct: true},
-                {text: 'Roger Moore', correct: false},
-                {text: 'Timothy Dalton', correct: false},
-                {text: 'George Lazenby', correct: false}
+                {text: 'Savin Private Ryan', correct: false},
+                {text: 'The Sugarland Express', correct: false},
+                {text: 'Jaws', correct: false},
+                {text: 'Schindlers List', correct: true}
             ]
         },
         {
-            question: "For wsdfsdfsdd nomination?",
+            question: "How many 'Hunger Games' movies have been released up to date?",
             answers: [
-                {text: 'Saving Private Ryan', correct: false},
-                {text: 'Big', correct: true},
-                {text: 'Forrest Gump', correct: false},
-                {text: 'Cast Away', correct: false}
+                {text: '2', correct: false},
+                {text: '3', correct: false},
+                {text: '4', correct: true},
+                {text: '5', correct: false}
             ]
         },
         {
-            question: "In which sdfsdf’ released?",
+            question: "What is the famous actor, Jimmy Carrey's year of birth?",
             answers: [
-                {text: '1962', correct: false},
-                {text: '1972', correct: false},
-                {text: '1982', correct: true},
-                {text: '1992', correct: false}
+                {text: '1960', correct: false},
+                {text: '1962', correct: true},
+                {text: '1964', correct: false},
+                {text: '1966', correct: false}
             ]
         }
     ];
+// variable including Hard Movie Questions
+    let hardMovieQuestionsArray = [
+    {
+        question: "Which famous British comedian voiced Zazu in The Lion King?",
+        answers: [
+            {text: 'Stephen Fry', correct: false},
+            {text: 'Rowan Atkinson', correct: true},
+            {text: 'Jimmy Carr', correct: false},
+            {text: 'Alan Carr', correct: false}
+        ]
+    },
+    {
+        question: "Which of the following is NOT true about Star Wars: A New Hope?",
+        answers: [
+            {text: 'Almost every studio passed on making it', correct: false},
+            {text: 'Harrison Ford was one of the main actors.', correct: false},
+            {text: 'The film won the Best Picture Oscar at the 1978 Academy Awards', correct: true},
+            {text: 'George Lucas gave up extra directing fees for the merchandising and sequel rights', correct: false}
+        ]
+    },
+    {
+        question: "Which actor — in one of their first roles — played a young Wendy Darling in Hook?",
+        answers: [
+            {text: 'Emma Stone', correct: false},
+            {text: 'Gwyneth Paltrow', correct: true},
+            {text: 'Cameron Diaz', correct: false},
+            {text: 'Jennifer Garner', correct: false}
+        ]
+    },
+    {
+        question: "Who did Steven Spielberg originally want for the role of Dr. Alan Grant in Jurassic Park?",
+        answers: [
+            {text: 'Kevin Costner', correct: false},
+            {text: 'Harrison Ford', correct: true},
+            {text: 'Mark Hamill', correct: false},
+            {text: 'Tom Hanks', correct: false}
+        ]
+    },
+    {
+        question: "Which of these facts is true about film, 'The Departed?'",
+        answers: [
+            {text: 'Martin Scorsese had been wanting to make it since the early 90s', correct: false},
+            {text: 'It was released in 2004', correct: false},
+            {text: 'It is a remake of a Hong Kong film', correct: true},
+            {text: 'Robert Redford was the first choice to play Frank Costello', correct: false}
+        ]
+    },
+    {
+        question: "Which of these facts is true about The Nightmare Before Christmas?",
+        answers: [
+            {text: 'Tim Burton did not direct it', correct: true},
+            {text: 'Danny Elfman does the speaking voice for Jack Skellington', correct: false},
+            {text: 'Disney delayed the release of it because of Hocus Pocus', correct: false},
+            {text: 'The film ran out of budget and had to be delayed', correct: false}
+        ]
+    },
+    {
+        question: "Which year was the very first 'Home Alone' movie released?",
+        answers: [
+            {text: '1989', correct: false},
+            {text: '1990', correct: true},
+            {text: '1992', correct: false},
+            {text: '1994', correct: false}
+        ]
+    },
+    {
+        question: "Which actor was originally cast as Juliet opposite Leonardo DiCaprio in Romeo + Juliet?",
+        answers: [
+            {text: 'Liv Tyler', correct: false},
+            {text: 'Kate Winslet', correct: false},
+            {text: 'Marion Cotillard', correct: false},
+            {text: 'Natalie Portman', correct: true}
+        ]
+    },
+    {
+        question: "In what year was Morgan Freeman born?",
+        answers: [
+            {text: '1945', correct: false},
+            {text: '1943', correct: false},
+            {text: '1940', correct: false},
+            {text: '1937', correct: true}
+        ]
+    },
+    {
+        question: "The Wolf of Wall Street was directed by which of the following directors?",
+        answers: [
+            {text: 'Steven Spielberg', correct: false},
+            {text: 'Ridley Scott', correct: false},
+            {text: 'Martin Scorsese', correct: true},
+            {text: 'Quentin Tarantino', correct: false}
+        ]
+    }
+];
     // variable containing question and answers
     let quizContainer = document.getElementById('quiz-container');
     //setting variables to undefined for now
@@ -350,18 +447,21 @@ function closeDoorScreen() {
     let nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', () => {
         if(nextButton.innerText === 'Next Easy Movie Question') {
-        currentQuestionIndex++;
-        setNextEasyMovieQuestion();
-        } else if (nextButton.innerText === 'Next Medium Movie Question') {
-        currentQuestionIndex++;
-        setNextMediumMovieQuestion();
-        }
+            currentQuestionIndex++;
+            setNextEasyMovieQuestion();
+            } else if (nextButton.innerText === 'Next Medium Movie Question') {
+                currentQuestionIndex++;
+                setNextMediumMovieQuestion();
+                } else if (nextButton.innerText === 'Next Hard Movie Question') {
+                    currentQuestionIndex++;
+                    setNextHardMovieQuestion();
+                }
     })
 
-    let easyMovieQuestions, mediumMovieQuestions, currentQuestionIndex
+    let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions, currentQuestionIndex
 
 function startEasyMovieQuestions() {
-    //display easy movie questions randomly
+    //display easy movie questions in order, starting at index 0
     easyMovieQuestions = easyMovieQuestionsArray;
     currentQuestionIndex = 0;
 
@@ -370,13 +470,22 @@ function startEasyMovieQuestions() {
     setNextEasyMovieQuestion();
 }
 function startMediumMovieQuestions() {
-    //display easy movie questions randomly
+    //display medium movie questions  in order, starting at index 0
     mediumMovieQuestions = mediumMovieQuestionsArray;
     currentQuestionIndex = 0;
 
     displayRules();
 
     setNextMediumMovieQuestion();
+}
+function startHardMovieQuestions() {
+    //display easy movie questions randomly
+    hardMovieQuestions = hardMovieQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextHardMovieQuestion();
 }
 /**
  * sets next question and optional answers using a random index
@@ -392,6 +501,12 @@ function setNextMediumMovieQuestion() {
     resetState();
 
     showQuestion(mediumMovieQuestionsArray[currentQuestionIndex])
+}
+function setNextHardMovieQuestion() {
+
+    resetState();
+
+    showQuestion(hardMovieQuestionsArray[currentQuestionIndex])
 }
 
 function showQuestion(question) {

@@ -40,11 +40,11 @@ function checkDifficultyLevel() {
                 alert("Unknown difficulty level");
                 }
     }
-// call category buttons list by class name
-let categoryButtons = document.getElementsByClassName('answers-area');
-// indexing movies button and adding a click event listener to it
-let moviesButton = categoryButtons[0];
-moviesButton.addEventListener('click', checkMoviesLevel);
+    // call category buttons list by class name
+    let categoryButtons = document.getElementsByClassName('answers-area');
+    // indexing movies button and adding a click event listener to it
+    let moviesButton = document.getElementById('movies');
+    moviesButton.addEventListener('click', checkMoviesLevel);
 /** checkMoviesLevel() checks what the difficulty level is 
  * and calls an individual function for each category level
  */
@@ -65,6 +65,34 @@ function checkMoviesLevel() {
                 nextButton.innerText = 'Next Hard Movie Question'
 
                 startHardMovieQuestions();
+
+                } else {
+                    alert('Unknown category level');
+                    }
+    }
+    // indexing sport button and adding a click event listener to it
+    let sportButton = document.getElementById('sport');
+    sportButton.addEventListener('click', checkSportLevel);
+/** checkMoviesLevel() checks what the difficulty level is 
+ * and calls an individual function for each category level
+ */
+function checkSportLevel() {
+    checkDifficultyLevel(difficultyLevel);
+
+    if (difficultyLevel == 'easy') {
+        // nextButton.innerText = 'Next Easy Movie Question'
+          alert('easy sport questions')
+        // startEasyMovieQuestions();
+
+        } else if (difficultyLevel == 'medium') {
+           // nextButton.innerText = 'Next Medium Movie Question';
+            alert('medium sport questions')
+           // startMediumMovieQuestions();
+
+            } else if (difficultyLevel == 'hard') {
+                // nextButton.innerText = 'Next Hard Movie Question'
+             alert('hard sport questions')
+                // startHardMovieQuestions();
 
                 } else {
                     alert('Unknown category level');

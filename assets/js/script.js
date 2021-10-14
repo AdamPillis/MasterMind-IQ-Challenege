@@ -150,6 +150,7 @@ function backToMenu() {
     endScreen.style.display = 'none';
     menuScreen.style.display = 'unset';
     finishButton.style.display = 'none';
+    resetQuestionNumber();
 }
 // when button on the right within the header is clicked during game.
 let headerButton = document.getElementById('header-button');
@@ -173,6 +174,7 @@ noButton.addEventListener('click', closeDoorScreen)
 
 function exitGame() {
     clearBodyClass(document.body);
+    resetQuestionNumber()
     let doorScreen = document.getElementById('door-screen');
     let menuScreen = document.getElementById('menu-screen');
 
@@ -609,8 +611,18 @@ function clearBodyClass(element) {
     element.classList.remove('correct');
     element.classList.remove('incorrect');
 }
+/**
+ * increases question number in controls area when next button is clicked
+ */
 function incrementQuestionNumber() {
     let questionNumber = parseInt(document.getElementById('question-number').innerHTML);
     document.getElementById('question-number').innerHTML = questionNumber + 1;
+}
+/**
+ * resets questionNumber back to one for new game
+ */
+function resetQuestionNumber() {
+    questionNumber = parseInt(document.getElementById('question-number').innerHTML);
+    document.getElementById('question-number').innerHTML = 1;
 }
     

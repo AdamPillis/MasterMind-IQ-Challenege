@@ -281,6 +281,7 @@ header p {
 .smiley-image img {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
 }
 .end-feedback {
     width: 80%;

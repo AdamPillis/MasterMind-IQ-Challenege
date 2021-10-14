@@ -131,6 +131,7 @@ finishButton.addEventListener('click', displayEndScreen);
  */
 function displayEndScreen() {
     clearBodyClass(document.body);
+    endPlayerMessage();
     let gameScreen = document.getElementById('game-screen');
     let endScreen = document.getElementById('end-screen');
 
@@ -318,7 +319,7 @@ function closeDoorScreen() {
             question: "What's the name of the necklace in Titanic?",
             answers: [
                 {text: 'The Black Soul', correct: false},
-                {text: 'The Heart of the Ocean true', correct: true},
+                {text: 'The Heart of the Ocean', correct: true},
                 {text: 'The Jewel of the Night', correct: false},
                 {text: 'The Diamond of the Sea', correct: false}
             ]
@@ -649,7 +650,38 @@ function resetPlayerScore() {
     playerScore = parseInt(document.getElementById('score').innerHTML);
     document.getElementById('score').innerHTML = 0;
 }
+/**
+ * called when finish quiz button is pressed at the end of each game.
+ * Gets inner value of final score and displays it along with player's name
+ * final interactive message with the player is also presented depending on their final score. 
+ */
+function endPlayerMessage() {
+    let finalScore = document.getElementById('final-score');
+    let finalMessage = document.getElementById('end-comment');
+    let player = form.elements.playername;
 
+    finalScore.innerHTML = document.getElementById('score').innerHTML;
+
+    if (parseInt(finalScore.innerHTML) <= 3) {
+        finalMessage.innerHTML = `Don't be upset ${player.value}! You're probably just too tired or this category type may not be your strength. Take a break and come
+        back for another round!`
+      } else if (finalScore.innerHTML <= 5) {
+            finalMessage.innerHTML = `Your score may not be one of the highest ${player.value} but you're still scraping a pass!
+            Let's see if you're any better in a different category!`
+          } else if (finalScore.innerHTML <= 7) {
+                finalMessage.innerHTML = `Not too bad at all ${player.value}, still counts as a pass! Maybe your strength is awaiting
+                in a different category`
+              } else if (finalMessage.innerHTML <= 9) {
+                    finalMessage.innerHTML = `Very good score ${player.value}! 8 or not 9 out of 10 still counts as a top score! Let's try a different category and get
+                    ready for the next test!`
+                }  else {
+                        finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`
+                }
+}
+function resetPlayerMessage() {
+    finalScore = parseInt(document.getElementById('final-score').innerHTML);
+    document.getElementById('final-score').innerHTML = 0;
+}
 
 
 

@@ -478,12 +478,15 @@ function closeDoorScreen() {
         if(nextButton.innerText === 'Next Easy Movie Question') {
             currentQuestionIndex++;
             setNextEasyMovieQuestion();
+            incrementQuestionNumber();
             } else if (nextButton.innerText === 'Next Medium Movie Question') {
                 currentQuestionIndex++;
                 setNextMediumMovieQuestion();
+                incrementQuestionNumber();
                 } else if (nextButton.innerText === 'Next Hard Movie Question') {
                     currentQuestionIndex++;
                     setNextHardMovieQuestion();
+                    incrementQuestionNumber();
                 }
     })
 
@@ -576,9 +579,9 @@ function checkAnswer(event) {
     Array.from(optionButtons.children).forEach(button => {
         setBodyClass(button, button.dataset.correct)
     })
-    if (currentQuestionIndex <= 8) {
-    nextButton.style.display = 'unset'; 
-        } else {
+        if (currentQuestionIndex <= 8) {
+            nextButton.style.display = 'unset'; 
+            } else {
                 finishButton.style.display = 'unset';
                 nextButton.style.display = 'none';
             }
@@ -606,3 +609,8 @@ function clearBodyClass(element) {
     element.classList.remove('correct');
     element.classList.remove('incorrect');
 }
+function incrementQuestionNumber() {
+    let questionNumber = parseInt(document.getElementById('question-number').innerHTML);
+    document.getElementById('question-number').innerHTML = questionNumber + 1;
+}
+    

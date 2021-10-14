@@ -149,6 +149,7 @@ function backToMenu() {
 
     endScreen.style.display = 'none';
     menuScreen.style.display = 'unset';
+    finishButton.style.display = 'none';
 }
 // when button on the right within the header is clicked during game.
 let headerButton = document.getElementById('header-button');
@@ -204,7 +205,7 @@ function closeDoorScreen() {
                 {text: 'Stephen King', correct: false},
                 {text: 'John Grisham', correct: false},
                 {text: 'Michael Crichton', correct: true},
-                {text: '"Harlan Coben', correct: false}
+                {text: 'Harlan Coben', correct: false}
             ]
         },
         {
@@ -240,7 +241,7 @@ function closeDoorScreen() {
                 {text: 'Ridley Scott', correct: true},
                 {text: 'James Cameron', correct: false},
                 {text: 'Brian De Palma', correct: false},
-                {text: '"Oliver Stone', correct: false}
+                {text: 'Oliver Stone', correct: false}
             ]
         },
         {
@@ -578,8 +579,8 @@ function checkAnswer(event) {
     if (currentQuestionIndex <= 8) {
     nextButton.style.display = 'unset'; 
         } else {
-            finishButton.style.display = 'unset';
-            nextButton.style.display = 'none';
+                finishButton.style.display = 'unset';
+                nextButton.style.display = 'none';
             }
             
 }

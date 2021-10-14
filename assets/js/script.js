@@ -478,6 +478,7 @@ function closeDoorScreen() {
     let nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', () => {
         if(nextButton.innerText === 'Next Easy Movie Question') {
+            
             currentQuestionIndex++;
             setNextEasyMovieQuestion();
             incrementQuestionNumber();
@@ -587,7 +588,9 @@ function checkAnswer(event) {
                 finishButton.style.display = 'unset';
                 nextButton.style.display = 'none';
             }
-            
+    if (correct) {
+        incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
+    }   
 }
 /**
  * checks if option clicked is correct
@@ -613,6 +616,7 @@ function clearBodyClass(element) {
 }
 /**
  * increases question number in controls area when next button is clicked
+ * increases by one when nextButton is clicked
  */
 function incrementQuestionNumber() {
     let questionNumber = parseInt(document.getElementById('question-number').innerHTML);
@@ -620,9 +624,26 @@ function incrementQuestionNumber() {
 }
 /**
  * resets questionNumber back to one for new game
+ * called when menu button in end-screen section
+ * called when yes button in door-screen section
  */
 function resetQuestionNumber() {
     questionNumber = parseInt(document.getElementById('question-number').innerHTML);
     document.getElementById('question-number').innerHTML = 1;
 }
+/**
+ * increases score number by one if user answer is correct
+ * called in checkAnswer function if answer is correct
+ */
+function incrementPlayerScore() {
+    let playerScore = parseInt(document.getElementById('score').innerHTML);
+    document.getElementById('score').innerHTML = playerScore + 1;
+}
+/**
+ * function resets score number to 0 at the end of each game, when menu button is clicked in end-screen section
+ *  also resets if user clicks yes in door-screen section
+ */
+
+
+
     

@@ -590,10 +590,10 @@ function closeDoorScreen() {
         {
             question: "How many players are on a baseball team?",
             answers: [
-                {text: '8', correct: false},
-                {text: '9', correct: true},
-                {text: '10', correct: false},
-                {text: '11', correct: false}
+                {text: 'Eight', correct: false},
+                {text: 'Nine', correct: true},
+                {text: 'Ten', correct: false},
+                {text: 'Eleven', correct: false}
             ]
         },
         {
@@ -755,6 +755,285 @@ function closeDoorScreen() {
         ];
     // variable including Easy Science Questions
     let easyScienceQuestionsArray = [
+        {
+            question: "Which of the following gases is essential for us to breath?",
+            answers: [
+                {text: 'O2', correct: true},
+                {text: 'CO2', correct: false},
+                {text: 'CH4', correct: false},
+                {text: 'N2', correct: false}
+            ]
+        },
+        {
+            question: "What is the largest planet in our Solar System?",
+            answers: [
+                {text: 'Saturn', correct: false},
+                {text: 'Jupiter', correct: true},
+                {text: 'Neptune', correct: false},
+                {text: 'Uranus', correct: false}
+            ]
+        },
+        {
+            question: "How many teeth do adults have?",
+            answers: [
+                {text: '22', correct: false},
+                {text: '28', correct: false},
+                {text: '32', correct: true},
+                {text: '36', correct: false}
+            ]
+        },
+        {
+            question: "Oncology focuses on what disease?",
+            answers: [
+                {text: 'Autoimmune', correct: false},
+                {text: 'Diabetes', correct: false},
+                {text: 'Cancer', correct: true},
+                {text: 'Heart Disease', correct: false}
+            ]
+        },
+        {
+            question: "100 degrees Celsius is equal to what degreen in Fahrenheit?",
+            answers: [
+                {text: '0', correct: false},
+                {text: '100', correct: false},
+                {text: '112', correct: false},
+                {text: '212', correct: true}
+            ]
+        },
+        {
+            question: "An octopus can fit through any hole larger than its what?",
+            answers: [
+                {text: 'Trunk', correct: false},
+                {text: 'Beak', correct: true},
+                {text: 'Head', correct: false},
+                {text: 'Tenticles', correct: false}
+            ]
+        },
+        {
+            question: "How many bones are there in a human body?",
+            answers: [
+                {text: '186', correct: false},
+                {text: '206', correct: true},
+                {text: '226', correct: false},
+                {text: '246', correct: false}
+            ]
+        },
+        {
+            question: "What is NOT found in the Shark?",
+            answers: [
+                {text: 'Ligaments', correct: false},
+                {text: 'Skin Cells', correct: false},
+                {text: 'Bones', correct: true},
+                {text: 'Cartilage', correct: false}
+            ]
+        },
+        {
+            question: "How many valves are in the heart of human body?",
+            answers: [
+                {text: 'One', correct: false},
+                {text: 'Two', correct: false},
+                {text: 'Three', correct: false},
+                {text: 'Four', correct: true}
+            ]
+        },
+        {
+            question: "Which planet in the solar system has the most moons?",
+            answers: [
+                {text: 'Venus', correct: false},
+                {text: 'Earth', correct: false},
+                {text: 'Jupiter', correct: true},
+                {text: 'Saturn', correct: false}
+            ]
+        }
+        ];
+    // variable including Medium Science Questions
+    let mediumScienceQuestionsArray = [
+        {
+            question: "How many approximate days our moon takes to complete the orbit around the Earth?",
+            answers: [
+                {text: '10 days', correct: false},
+                {text: '20 days', correct: false},
+                {text: '30 days', correct: true},
+                {text: '40 days', correct: false}
+            ]
+        },
+        {
+            question: "Nucleons are made up of neutrons and ________?",
+            answers: [
+                {text: 'Nitrogen', correct: false},
+                {text: 'Atoms', correct: false},
+                {text: 'Protons', correct: true},
+                {text: 'Carbon', correct: false}
+            ]
+        },
+        {
+            question: "How many components made up the human blood?",
+            answers: [
+                {text: 'Two', correct: false},
+                {text: 'Three', correct: false},
+                {text: 'Four', correct: true},
+                {text: 'Five', correct: false}
+            ]
+        },
+        {
+            question: "What is the chemical symbol for Table Salt?",
+            answers: [
+                {text: 'Cl4', correct: false},
+                {text: 'Zn', correct: false},
+                {text: 'Fl', correct: false},
+                {text: 'NaCl', correct: true}
+            ]
+        },
+        {
+            question: "At what temperature are Celsius and Fahrenheit equal?",
+            answers: [
+                {text: '0', correct: false},
+                {text: '20', correct: false},
+                {text: '-20', correct: false},
+                {text: '-40', correct: true}
+            ]
+        },
+        {
+            question: "What was the first planet to be discovered by a telescope?",
+            answers: [
+                {text: 'Mercury', correct: false},
+                {text: 'Venus', correct: false},
+                {text: 'Uranus', correct: true},
+                {text: 'Pluto', correct: false}
+            ]
+        },
+        {
+            question: "How many pints of blood does the average adult human body contain (closest)?",
+            answers: [
+                {text: '10', correct: true},
+                {text: '15', correct: false},
+                {text: '20', correct: false},
+                {text: '25', correct: false}
+            ]
+        },
+        {
+            question: "What type of animal are frogs and toads?",
+            answers: [
+                {text: 'Amphibians', correct: true},
+                {text: 'Nocturnal', correct: false},
+                {text: 'Mammals', correct: false},
+                {text: 'Reptile', correct: false}
+            ]
+        },
+        {
+            question: "What is the most commonly diagnosed cancer in men?",
+            answers: [
+                {text: 'Testicular', correct: false},
+                {text: 'Lymphoma', correct: false},
+                {text: 'Colon', correct: false},
+                {text: 'Prostate', correct: true}
+            ]
+        },
+        {
+            question: "Which bone is the longest in the human body?",
+            answers: [
+                {text: 'Sternum', correct: false},
+                {text: 'Femur', correct: true},
+                {text: 'Fibula', correct: false},
+                {text: 'Tibia', correct: false}
+            ]
+        }
+        ];
+    // variable including Hard Science Questions
+    let hardScienceQuestionsArray = [
+        {
+            question: "If each time zone were one hour apart, how many time zones would there be in the world?",
+            answers: [
+                {text: '16', correct: false},
+                {text: '20', correct: false},
+                {text: '24', correct: true},
+                {text: '30', correct: false}
+            ]
+        },
+        {
+            question: "What is the chemical formula for Ozone?",
+            answers: [
+                {text: 'H2O', correct: false},
+                {text: 'O2', correct: false},
+                {text: 'O3', correct: true},
+                {text: 'H2O2', correct: false}
+            ]
+        },
+        {
+            question: "How many planets do we have in our solar system?",
+            answers: [
+                {text: '7', correct: false},
+                {text: '8', correct: true},
+                {text: '9', correct: false},
+                {text: '12', correct: false}
+            ]
+        },
+        {
+            question: "What is the medical term for low blood sugar?",
+            answers: [
+                {text: 'Diaphoresis', correct: false},
+                {text: 'Myocardial', correct: false},
+                {text: 'Syncope', correct: false},
+                {text: 'Hypoglycemia', correct: true}
+            ]
+        },
+        {
+            question: "Which animal has the logest tongue relative to its total size?",
+            answers: [
+                {text: 'Poison Dart Frog', correct: false},
+                {text: 'Anther', correct: false},
+                {text: 'Chameleon', correct: true},
+                {text: 'Pangolin', correct: false}
+            ]
+        },
+        {
+            question: "Which of the following is the world's largest active volcano?",
+            answers: [
+                {text: 'Mauna Loa', correct: true},
+                {text: 'Mount Helen', correct: false},
+                {text: 'Mount Yasur', correct: false},
+                {text: 'Mount Etna', correct: false}
+            ]
+        },
+        {
+            question: "How many elements are there in the periodic table?",
+            answers: [
+                {text: '98', correct: false},
+                {text: '118', correct: true},
+                {text: '128', correct: false},
+                {text: '132', correct: false}
+            ]
+        },
+        {
+            question: "What is the largest internal organ of the human body?",
+            answers: [
+                {text: 'Lungs', correct: false},
+                {text: 'Liver ', correct: true},
+                {text: 'Kidney', correct: false},
+                {text: 'Stomach', correct: false}
+            ]
+        },
+        {
+            question: "The inventor of the light bulb, Thomas Edison, was born in what year?",
+            answers: [
+                {text: '1820', correct: false},
+                {text: '1837', correct: false},
+                {text: '1847', correct: true},
+                {text: '1877', correct: false}
+            ]
+        },
+        {
+            question: "Which of the following animals has the largest ears?",
+            answers: [
+                {text: 'African Elephant', correct: true},
+                {text: 'Asian Elephant', correct: false},
+                {text: 'Rhinoceros', correct: false},
+                {text: 'Long-eared Jerboa', correct: false}
+            ]
+        }
+        ];
+    // variable including Easy Geography Questions
+    let easyGeographyQuestionsArray = [
         {
             question: "",
             answers: [

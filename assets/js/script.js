@@ -1070,279 +1070,279 @@ function closeDoorScreen() {
     // variable including Easy Geography Questions
     let easyGeographyQuestionsArray = [
         {
-            question: "",
+            question: "What is the center of the Earth called?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Crust', correct: false},
+                {text: 'Core', correct: true},
+                {text: 'Mantle', correct: false},
+                {text: 'Magma', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What is the capital of Sweden?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Copenhagen', correct: false},
+                {text: 'Stockholm', correct: false},
+                {text: 'Oslo', correct: true},
+                {text: 'Helsinki', correct: false}
             ]
         },
         {
-            question: "",
+            question: "A Coniferous tree adapts to its climate by having?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Broad leaves', correct: false},
+                {text: 'Deep roots', correct: false},
+                {text: 'Needle like leaves', correct: true},
+                {text: 'Wider brances', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What is Ireland's most common sedimentary rock?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true}
+                {text: 'Limestone', correct: true},
+                {text: 'Basalt', correct: false},
+                {text: 'Granite', correct: false},
+                {text: 'Sandstone', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What is the largest country in the world by surface area?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Russia', correct: true},
+                {text: 'Canada', correct: false},
+                {text: 'South America', correct: false},
+                {text: 'China', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which continent has the highest population in the world?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Europe', correct: false},
+                {text: 'Africa', correct: false},
+                {text: 'Asia', correct: true},
+                {text: 'South America', correct: false}
             ]
         },
         {
-            question: "",
+            question: "How many states does America have?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '48', correct: false},
+                {text: '50', correct: true},
+                {text: '52', correct: false},
+                {text: '54', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which European country borders east of Portugal?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'France', correct: false},
+                {text: 'Spain', correct: true},
+                {text: 'Switzerland', correct: false},
+                {text: 'Netherlands', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What is the name of the largest ocean on Earth?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false}
+                {text: 'Pacific Ocean', correct: true},
+                {text: 'Atlantic Ocean', correct: false},
+                {text: 'Arctic Ocean', correct: false},
+                {text: 'Indian Ocean', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What is the capital of the Czech Republic?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Bratislava', correct: false},
+                {text: 'Bucharest', correct: false},
+                {text: 'Prague', correct: true},
+                {text: 'Oslo', correct: false}
             ]
         }
         ];
     // variable including Medium Geography Questions
     let mediumGeographyQuestionsArray = [
         {
-            question: "",
+            question: "What metamorphic rock was once sandstone?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Quartzite', correct: true},
+                {text: 'Limestone', correct: false},
+                {text: 'Granite', correct: false},
+                {text: 'Basalt', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which country would you be in if you were visiting Mount Saint-Michel?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'France', correct: true},
+                {text: 'Germany', correct: false},
+                {text: 'Switzerland', correct: false},
+                {text: 'Italy', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What is the circumference of the earth at the equator (closest)?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '10,000km', correct: false},
+                {text: '20,000km', correct: false},
+                {text: '40,000km', correct: true},
+                {text: '80,000km', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What is the Fujita scale used to measure?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true}
+                {text: 'Rain Frequency', correct: false},
+                {text: 'Earthquake Frequency', correct: false},
+                {text: 'Tornado Intensity', correct: true},
+                {text: 'Pollution Levels', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In what year did contruction of the Eiffel Tower in Paris begin?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '1877', correct: false},
+                {text: '1887', correct: true},
+                {text: '1897', correct: false},
+                {text: '1907', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which famous beach is located just south of Brisbane, Australia?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Byron Bay', correct: false},
+                {text: 'Manly Beach', correct: false},
+                {text: 'Cable Beach', correct: false},
+                {text: 'Surfers Paradise', correct: true}
             ]
         },
         {
-            question: "",
+            question: "What is the capital of Chile?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Montevideo', correct: false},
+                {text: 'Buenos Aires', correct: false},
+                {text: 'Santiago', correct: true},
+                {text: 'Asunción', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Not including oceans, what is the largest sea body in the world?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Arabian Sea', correct: false},
+                {text: 'Mediterranean Sea', correct: false},
+                {text: 'Coral Sea', correct: false},
+                {text: 'South China Sea', correct: true}
             ]
         },
         {
-            question: "",
+            question: "What city is the capital of Massachusetts, USA?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false}
+                {text: 'Pierre', correct: false},
+                {text: 'Lincoln', correct: false},
+                {text: 'Boston', correct: true},
+                {text: 'Dakota', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which waterfall is the highest in the world?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Victoria Falls', correct: false},
+                {text: 'Tugela Falls', correct: false},
+                {text: 'Angel Falls', correct: true},
+                {text: 'Niagra Falls', correct: false}
             ]
         }
         ];
     // variable including Hard Geography Questions
     let hardGeographyQuestionsArray = [
         {
-            question: "",
+            question: "What is the capital of South Korea?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Lima', correct: false},
+                {text: 'Pyongyang', correct: false},
+                {text: 'Beijing', correct: false},
+                {text: 'Seoul', correct: true}
             ]
         },
         {
-            question: "",
+            question: "Which international river runs through Turkey, Armenia, Azerbaijan and Iran?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Aras', correct: true},
+                {text: 'Euphrates', correct: false},
+                {text: 'Syr Darya', correct: false},
+                {text: 'Salween', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Roughly, what percentage of the world population lives in the Northern Hemisphere?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '50', correct: false},
+                {text: '60', correct: false},
+                {text: '80', correct: false},
+                {text: '90', correct: true}
             ]
         },
         {
-            question: "",
+            question: "In which Indian city is the Taj Mahal?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true}
+                {text: 'Mumbai', correct: false},
+                {text: 'Kolkata', correct: false},
+                {text: 'Agra', correct: true},
+                {text: 'Delhi', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In which country would you find the Angkor Wat complex?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'China', correct: false},
+                {text: 'Thailand', correct: false},
+                {text: 'Vietnam', correct: false},
+                {text: 'Cambodia', correct: true}
             ]
         },
         {
-            question: "",
+            question: "Zambia was previously known as?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Eastern Rhodesia', correct: false},
+                {text: 'Western Rhodesia', correct: false},
+                {text: 'Southern Rhodesia', correct: false},
+                {text: 'Northern Rhodesia', correct: true}
             ]
         },
         {
-            question: "",
+            question: "What is the capital of Kosovo?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Victoria', correct: false},
+                {text: 'Pristina', correct: true},
+                {text: 'Lome', correct: false},
+                {text: 'Lima', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In which country is the Atacama Desert?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'U.S.A', correct: false},
+                {text: 'Chile', correct: true},
+                {text: 'Brazil', correct: false},
+                {text: 'Argentina', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Taiwan is located closest to the coast of which country?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false}
+                {text: 'Vietnam', correct: false},
+                {text: 'Japan', correct: false},
+                {text: 'China', correct: true},
+                {text: 'Mongolia', correct: false}
             ]
         },
         {
-            question: "",
+            question: "When was Sir David Attenborough knighted?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '1980', correct: false},
+                {text: '1985', correct: true},
+                {text: '1990', correct: false},
+                {text: '1995', correct: false}
             ]
         }
         ];

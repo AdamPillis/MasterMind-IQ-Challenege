@@ -166,6 +166,37 @@ function checkGeographyLevel() {
                     alert('Unknown category level');
                     }
     }
+    // getting history button from DOM and adding a click event listener to it
+    let historyButton = document.getElementById('history');
+    historyButton.addEventListener('click', checkHistoryLevel);
+/** calls and checks what the difficulty level is first
+ * calls startEasyHistory() function if easy
+ * calls startMediumHistory() function if medium
+ * calls startHardHistory() function if hard
+ * the innerText of next button changed in order to identify the correct question array when button with text is clicked
+ */
+function checkHistoryLevel() {
+    checkDifficultyLevel(difficultyLevel);
+
+    if (difficultyLevel == 'easy') {
+        nextButton.innerText = 'Next Easy History Question'
+                
+        startEasyHistoryQuestions();
+                  
+        } else if (difficultyLevel == 'medium') {
+            nextButton.innerText = 'Next Medium History Question';
+                    
+            startMediumHistoryQuestions();
+ 
+            } else if (difficultyLevel == 'hard') {
+                nextButton.innerText = 'Next Hard History Question'
+                    
+                startHardHistoryQuestions();
+
+                } else {
+                    alert('Unknown category level');
+                    }
+    }
 /**
  * displayRules function hides menu screen and calls rules screen to display
  */
@@ -1716,13 +1747,26 @@ function closeDoorScreen() {
                                                         currentQuestionIndex++;
                                                         setNextHardGeographyQuestion();
                                                         incrementQuestionNumber();   
-                                                      }
+                                                      } else if (nextButton.innerText === 'Next Easy History Question') {
+                                                            currentQuestionIndex++;
+                                                            setNextEasyHistoryQuestion();
+                                                            incrementQuestionNumber();   
+                                                          } else if (nextButton.innerText === 'Next Medium History Question') {
+                                                                currentQuestionIndex++;
+                                                                setNextMediumHistoryQuestion();
+                                                                incrementQuestionNumber();   
+                                                              } else if (nextButton.innerText === 'Next Hard History Question') {
+                                                                    currentQuestionIndex++;
+                                                                    setNextHardHistoryQuestion();
+                                                                    incrementQuestionNumber();   
+                                                                  }
     })
     
     let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions,
         easySportQuestions, mediumSportQuestions, hardSportQuestions,
         easyScienceQuestions, mediumScienceQuestions, hardScienceQuestions,
-        easyGeographyQuestions, mediumGeographyQuestions, hardGeographyQuestions, currentQuestionIndex
+        easyGeographyQuestions, mediumGeographyQuestions, hardGeographyQuestions,
+        easyHistoryQuestions, mediumHistoryQuestions, hardHistoryQuestions, currentQuestionIndex
 /**
  * starts quiz game according to difficulty level and category type
  * question array is matched with easyMoviesQuestionsArray 
@@ -1904,6 +1948,51 @@ function startHardGeographyQuestions() {
     setNextHardGeographyQuestion();
 }
 /**
+ * starts quiz game according to difficulty level and category type
+ * question array is matched with easyHistoryQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startEasyHistoryQuestions() {
+    //display easy history questions in order, starting at index 0
+    easyHistoryQuestions = easyHistoryQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextEasyHistoryQuestion();
+}
+/**
+ * starts quiz game
+ * question array is matched with mediumHistoryQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+function startMediumHistoryQuestions() {
+    //display history movie questions in order, starting at index 0
+    mediumHistoryQuestions = mediumHistoryQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextMediumHistoryQuestion();
+}
+/**
+ * starts quiz game
+ * question array is matched with hardHistoryQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+function startHardHistoryQuestions() {
+    //display hard history questions in order, starting at index 1
+    hardHistoryQuestions = hardHistoryQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextHardHistoryQuestion();
+}
+/**
  * sets next question from the easyMovieQuestionsArray
  */
 function setNextEasyMovieQuestion() {
@@ -2010,6 +2099,33 @@ function setNextHardGeographyQuestion() {
     resetState();
 
     showQuestion(hardGeographyQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the easyMovieQuestionsArray
+ */
+ function setNextEasyHistoryQuestion() {
+
+    resetState();
+
+    showQuestion(easyHistoryQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the mediumMovieQuestionsArray
+ */
+function setNextMediumHistoryQuestion() {
+
+    resetState();
+
+    showQuestion(mediumHistoryQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the hardHistoryQuestionsArray
+ */
+function setNextHardHistoryQuestion() {
+
+    resetState();
+
+    showQuestion(hardHistoryQuestionsArray[currentQuestionIndex])
 }
 /**
  * places question innerText inside question container

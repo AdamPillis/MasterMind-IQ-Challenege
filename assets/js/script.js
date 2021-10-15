@@ -82,9 +82,9 @@ function checkSportLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-        // nextButton.innerText = 'Next Easy Movie Question'
-          alert('easy sport questions')
-        // startEasyMovieQuestions();
+        nextButton.innerText = 'Next Easy Sport Question'
+        
+        startEasySportQuestions();
 
         } else if (difficultyLevel == 'medium') {
            // nextButton.innerText = 'Next Medium Movie Question';
@@ -580,19 +580,29 @@ let easySportQuestionsArray = [
             currentQuestionIndex++;
             setNextEasyMovieQuestion();
             incrementQuestionNumber();
-            } else if (nextButton.innerText === 'Next Medium Movie Question') {
+          } else if (nextButton.innerText === 'Next Medium Movie Question') {
                 currentQuestionIndex++;
                 setNextMediumMovieQuestion();
                 incrementQuestionNumber();
-                } else if (nextButton.innerText === 'Next Hard Movie Question') {
+              } else if (nextButton.innerText === 'Next Hard Movie Question') {
                     currentQuestionIndex++;
                     setNextHardMovieQuestion();
                     incrementQuestionNumber();
-                }
+                  } else if (nextButton.innerText === 'Next Easy Sport Question') {
+                        currentQuestionIndex++;
+                        setNextEasySportQuestion();
+                        incrementQuestionNumber();   
+                  }
     })
 
-    let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions, currentQuestionIndex
-
+    let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions,
+        easySportQuestions, currentQuestionIndex
+/**
+ * starts quiz game according to difficulty level and category type
+ * question array is matched with easyMoviesQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
 function startEasyMovieQuestions() {
     //display easy movie questions in order, starting at index 0
     easyMovieQuestions = easyMovieQuestionsArray;
@@ -602,8 +612,14 @@ function startEasyMovieQuestions() {
 
     setNextEasyMovieQuestion();
 }
+/**
+ * starts quiz game
+ * question array is matched with mediumMovieQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
 function startMediumMovieQuestions() {
-    //display medium movie questions  in order, starting at index 0
+    //display medium movie questions in order, starting at index 0
     mediumMovieQuestions = mediumMovieQuestionsArray;
     currentQuestionIndex = 0;
 
@@ -611,8 +627,14 @@ function startMediumMovieQuestions() {
 
     setNextMediumMovieQuestion();
 }
+/**
+ * starts quiz game
+ * question array is matched with hardMoviesQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
 function startHardMovieQuestions() {
-    //display easy movie questions randomly
+    //display hard movie questions in order, starting at index 1
     hardMovieQuestions = hardMovieQuestionsArray;
     currentQuestionIndex = 0;
 
@@ -621,7 +643,22 @@ function startHardMovieQuestions() {
     setNextHardMovieQuestion();
 }
 /**
- * sets next question and optional answers using a random index
+ * starts quiz game
+ * question array is matched with easySportQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startEasySportQuestions() {
+    //display easy sport questions in order, starting at index 1
+    easySportQuestions = easySportQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextEasySportQuestion();
+}
+/**
+ * sets next question from the easyMovieQuestionsArray
  */
 function setNextEasyMovieQuestion() {
 
@@ -629,17 +666,32 @@ function setNextEasyMovieQuestion() {
 
     showQuestion(easyMovieQuestionsArray[currentQuestionIndex])
 }
+/**
+ * sets next question from the mediumMovieQuestionsArray
+ */
 function setNextMediumMovieQuestion() {
 
     resetState();
 
     showQuestion(mediumMovieQuestionsArray[currentQuestionIndex])
 }
+/**
+ * sets next question from the hardMovieQuestionsArray
+ */
 function setNextHardMovieQuestion() {
 
     resetState();
 
     showQuestion(hardMovieQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the easySportQuestionsArray
+ */
+ function setNextEasySportQuestion() {
+
+    resetState();
+
+    showQuestion(easySportQuestionsArray[currentQuestionIndex])
 }
 
 function showQuestion(question) {

@@ -1,17 +1,16 @@
 //Calling the form element to collect player name and use within handleSubmit function
 let form = document.getElementById('login-form');
+form.elements.playername.focus();
+form.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        handleSubmit();
+    }
+});
 form.addEventListener('submit', handleSubmit);
 /**
  * upon loading starting page, this will focus on the player text-box
  */
-window.onload = function() {
-    document.getElementById('playername').focus();;
-  };
-document.getElementById('player-name').focus();
-document.getElementById('player-name').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        handleSubmit();
-    }})
+
 /**Function to collect playerName from form section in #start-screen.
  * Hides start-screen and opens menu-screens.
  * PlayerName added to welcome message. 

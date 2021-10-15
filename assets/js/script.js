@@ -252,6 +252,7 @@ function backToMenu() {
     finishButton.style.display = 'none';
     resetQuestionNumber();
     resetPlayerScore();
+    resetIncorrectNumber();
 }
 // when button on the right within the header is clicked during game.
 let headerButton = document.getElementById('header-button');
@@ -277,6 +278,7 @@ function exitGame() {
     clearBodyClass(document.body);
     resetQuestionNumber();
     resetPlayerScore();
+    resetIncorrectNumber();
     let doorScreen = document.getElementById('door-screen');
     let menuScreen = document.getElementById('menu-screen');
 
@@ -2178,7 +2180,9 @@ function checkAnswer(event) {
             }
     if (correct) {
         incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
-    }   
+    } else {
+        incrementIncorrectNumber();
+    }
 }
 /**
  * checks if option clicked is correct
@@ -2228,12 +2232,29 @@ function incrementPlayerScore() {
     document.getElementById('score').innerHTML = playerScore + 1;
 }
 /**
+ * increases incorrect number by one if user answer is incorrect
+ * called in checkAnswer function if answer is incorrect
+ * 
+ */
+function incrementIncorrectNumber() {
+    let incorrectNumber = parseInt(document.getElementById('incorrect').innerHTML);
+    document.getElementById('incorrect').innerHTML = incorrectNumber + 1;
+}
+/**
  * function resets score number to 0 at the end of each game, when menu button is clicked in end-screen section
  *  also resets if user clicks yes in door-screen section
  */
 function resetPlayerScore() {
     playerScore = parseInt(document.getElementById('score').innerHTML);
     document.getElementById('score').innerHTML = 0;
+}
+/**
+ * function resets incorrect number to 0 at the end of each game, when menu button is clicked in end-screen section
+ *  also resets if user clicks yes in door-screen section
+ */
+ function resetIncorrectNumber() {
+    incorrectScore = parseInt(document.getElementById('incorrect').innerHTML);
+    document.getElementById('incorrect').innerHTML = 0;
 }
 /**
  * called when finish quiz button is pressed at the end of each game.

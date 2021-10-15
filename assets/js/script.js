@@ -1380,279 +1380,279 @@ function closeDoorScreen() {
     // variable including Easy History Questions
     let easyHistoryQuestionsArray = [
         {
-            question: "",
+            question: "What is the name of the first human civilization?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Roman', correct: false},
+                {text: 'Mesopotamian', correct: true},
+                {text: 'Roman', correct: false},
+                {text: 'Aztec', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In what year did World War II. end?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '1942', correct: false},
+                {text: '1944', correct: false},
+                {text: '1945', correct: true},
+                {text: '1950', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which of the following ships was NOT part of Christopher Columbus' journey to America in 1492?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'the Santa Columbia ', correct: true},
+                {text: 'the Santa Maria', correct: false},
+                {text: 'the Nina', correct: false},
+                {text: 'the Pinta', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Roughly, when was the first printing press invented?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true}
+                {text: '1336', correct: false},
+                {text: '1436', correct: true},
+                {text: '1536', correct: false},
+                {text: '1636', correct: false}
             ]
         },
         {
-            question: "",
+            question: "During which century was the French Revolution?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '16th Century (1500-1599)', correct: false},
+                {text: '17th Century (1600-1699)', correct: false},
+                {text: '18th Century (1700-1799)', correct: true},
+                {text: '19th Century', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What was Turkey known as during World War 1?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'The Turkish Empire', correct: false},
+                {text: 'The German Empire', correct: false},
+                {text: 'The Roman Empire', correct: false},
+                {text: 'The Ottoman Empire', correct: true}
             ]
         },
         {
-            question: "",
+            question: "What does the R stand for in USSR?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Republics', correct: true},
+                {text: 'Russian', correct: false},
+                {text: 'Revolutionary', correct: false},
+                {text: 'Reunited', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In what year did Elizabeth II become Queen of England?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '1932', correct: false},
+                {text: '1942', correct: false},
+                {text: '1952', correct: true},
+                {text: '1962', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Of the following Greek buildings, which is dedicated to the goddess Athena?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false}
+                {text: 'Temple of Artemis', correct: false},
+                {text: 'Acropolis of Athens', correct: false},
+                {text: 'Parthenon', correct: true},
+                {text: 'Temple of Aphaea', correct: false}
             ]
         },
         {
-            question: "",
+            question: "John Fitzgerald Kennedy served in which US military armed force?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Navy', correct: true},
+                {text: 'Army', correct: false},
+                {text: 'Air Force', correct: false},
+                {text: 'Marine', correct: false}
             ]
         }
         ];
     // variable including Medium History Questions
     let mediumHistoryQuestionsArray = [
         {
-            question: "",
+            question: "In which country did the Easter Rising take place in 1916?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Kenya', correct: false},
+                {text: 'Burma', correct: false},
+                {text: 'Chile', correct: false},
+                {text: 'Ireland', correct: true}
             ]
         },
         {
-            question: "",
+            question: "What country was split into two parts along the 38th parallel in 1945?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Vietnam', correct: false},
+                {text: 'Spain', correct: false},
+                {text: 'Korea', correct: true},
+                {text: 'Turkey', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What was the family name of the Russian rulers from the 17th century until the 1917 revolution?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Ivanov', correct: false},
+                {text: 'Putin', correct: false},
+                {text: 'Romanov', correct: true},
+                {text: 'Brynner', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which country was invaded by the Turkish in 1974?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true}
+                {text: 'Bulgaria', correct: false},
+                {text: 'Hungary', correct: false},
+                {text: 'Cyprus', correct: true},
+                {text: 'Italy', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Eva Peron was the First Lady of which country?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Norway', correct: false},
+                {text: 'The Philippines', correct: false},
+                {text: 'Argentina', correct: true},
+                {text: 'South Africa', correct: false}
             ]
         },
         {
-            question: "",
+            question: "The Ptolemy Dynastry ruled which ancient kingdom?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Egyptian', correct: true},
+                {text: 'Chinese', correct: false},
+                {text: 'Mongolian', correct: false},
+                {text: 'United Kingdom', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Spanish explorer Juan Rodriguez Cabrillo discovered which US state in 1542?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'California', correct: true},
+                {text: 'Texas', correct: false},
+                {text: 'New Jersey', correct: false},
+                {text: 'Michigan', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which Soviet leader decided to place Nuclear Weapons in Cuba prior to the Missile Crisis?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Nikita Khrushchev', correct: true},
+                {text: 'Boris Yeltsin', correct: false},
+                {text: 'Mikhail Gorbachev', correct: false},
+                {text: 'Vladimir Lenin', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What was the name of the Ship which James Cook commanded upon discovering Australia?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false}
+                {text: 'HMS Discovery', correct: false},
+                {text: 'HMS Explorer', correct: false},
+                {text: 'HMS Endeavour', correct: true},
+                {text: 'HMS Australis', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In what year was Mahatma Gandhi assassinated?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '1940', correct: false},
+                {text: '1948', correct: true},
+                {text: '1956', correct: false},
+                {text: '1964', correct: false}
             ]
         }
         ];
     // variable including Hard History Questions
     let hardHistoryQuestionsArray = [
         {
-            question: "",
+            question: "Who invented penicillin in 1928?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'William T.G Morton', correct: false},
+                {text: 'Edward Jenner', correct: false},
+                {text: 'Hippocrates', correct: false},
+                {text: 'Alexander Fleming', correct: true}
             ]
         },
         {
-            question: "",
+            question: "The Khymer Rouge was a regime ruling which nation?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Cambodia', correct: true},
+                {text: 'Georgia', correct: false},
+                {text: 'Iran', correct: false},
+                {text: 'Yemen', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Who married Prince Albert of Saxe-Coburg-Gotha?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Queen Anne', correct: false},
+                {text: 'Mary Donaldson', correct: false},
+                {text: 'Queen Victoria', correct: true},
+                {text: 'Princess Stephanie', correct: false}
             ]
         },
         {
-            question: "",
+            question: "What date was the fall of Saignon during the Vietnam War?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true}
+                {text: '19 March 1968', correct: false},
+                {text: '20 August 1970', correct: false},
+                {text: '30 April 1975', correct: true},
+                {text: '6 June 1978', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Who preceded Ronal Regan as President of America?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Bill Clinton', correct: false},
+                {text: 'Jimmy Carter', correct: true},
+                {text: 'Gerald Ford', correct: false},
+                {text: 'George W Bush', correct: false}
             ]
         },
         {
-            question: "",
+            question: "The 1960s TV series Batman starred which actor?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'George Clooney', correct: false},
+                {text: 'Adam West', correct: true},
+                {text: 'John Wayne', correct: false},
+                {text: 'Neil Hamilton', correct: false}
             ]
         },
         {
-            question: "",
+            question: "During what year did the Form Model T enter production?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: '1898', correct: false},
+                {text: '1908', correct: true},
+                {text: '1918', correct: false},
+                {text: '1938', correct: false}
             ]
         },
         {
-            question: "",
+            question: "The Art of War from the 5th century military doctrine is attributed to which military strategist?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Guan Yu', correct: false},
+                {text: 'Ma Chung Ying', correct: false},
+                {text: 'Sun Tzu', correct: true},
+                {text: 'Genghis Khan', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In 1874, C.R. Alder Wright was the first person to synthesise ...",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false}
+                {text: 'Nicotine', correct: false},
+                {text: 'Caffeine', correct: false},
+                {text: 'LSD', correct: false},
+                {text: 'Heroin', correct: true}
             ]
         },
         {
-            question: "",
+            question: "In which country is the citadel Machu Picchu located?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Columbia', correct: false},
+                {text: 'Uruguay', correct: false},
+                {text: 'Bolivia', correct: false},
+                {text: 'Peru', correct: true}
             ]
         }
         ];

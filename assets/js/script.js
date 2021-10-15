@@ -45,10 +45,10 @@ function checkDifficultyLevel() {
     // getting movies button from DOM and adding a click event listener to it
     let moviesButton = document.getElementById('movies');
     moviesButton.addEventListener('click', checkMoviesLevel);
-/** calls and checks what the difficulty level is 
- * and calls startEasyMovies() function if easy
- * and calls startMediumMovies() function if medium
- * and calls startHardMovies() function if hard
+/** calls and checks what the difficulty level is first
+ * calls startEasyMovies() function if easy
+ * calls startMediumMovies() function if medium
+ * calls startHardMovies() function if hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkMoviesLevel() {
@@ -76,10 +76,10 @@ function checkMoviesLevel() {
     // getting sport button from DOM and adding a click event listener to it
     let sportButton = document.getElementById('sport');
     sportButton.addEventListener('click', checkSportLevel);
-/** calls and checks what the difficulty level is 
- * and calls startEasySport() function if easy
- * and calls startMediumSport() function if medium
- * and calls startHardSport() function if hard
+/** calls and checks what the difficulty level is first
+ * calls startEasySport() function if easy
+ * calls startMediumSport() function if medium
+ * calls startHardSport() function if hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkSportLevel() {
@@ -107,10 +107,10 @@ function checkSportLevel() {
     // getting science button from DOM and adding a click event listener to it
     let scienceButton = document.getElementById('science');
     scienceButton.addEventListener('click', checkScienceLevel);
-/** calls and checks what the difficulty level is 
- * and calls startEasyScience() function if easy
- * and calls startMediumScience() function if medium
- * and calls startHardScience() function if hard
+/** calls and checks what the difficulty level is first
+ * and startEasyScience() function if easy
+ * and startMediumScience() function if medium
+ * and startHardScience() function if hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkScienceLevel() {
@@ -130,6 +130,37 @@ function checkScienceLevel() {
                 nextButton.innerText = 'Next Hard Science Question'
                 
                 startHardScienceQuestions();
+
+                } else {
+                    alert('Unknown category level');
+                    }
+    }
+    // getting geography button from DOM and adding a click event listener to it
+    let geographyButton = document.getElementById('geography');
+    geographyButton.addEventListener('click', checkGeographyLevel);
+/** calls and checks what the difficulty level is  first 
+ * calls startEasyGeography() function if easy
+ * calls startMediumGeography() function if medium
+ * calls startHardGeography() function if hard
+ * the innerText of next button changed in order to identify the correct question array when button with text is clicked
+ */
+function checkGeographyLevel() {
+    checkDifficultyLevel(difficultyLevel);
+
+    if (difficultyLevel == 'easy') {
+        nextButton.innerText = 'Next Easy Geography Question'
+            
+        startEasyGeographyQuestions();
+
+        } else if (difficultyLevel == 'medium') {
+            nextButton.innerText = 'Next Medium Geography Question';
+            
+            startMediumGeographyQuestions();
+
+            } else if (difficultyLevel == 'hard') {
+                nextButton.innerText = 'Next Hard Geography Question'
+             
+                startHardGeographyQuestions();
 
                 } else {
                     alert('Unknown category level');
@@ -1673,12 +1704,25 @@ function closeDoorScreen() {
                                             currentQuestionIndex++;
                                             setNextHardScienceQuestion();
                                             incrementQuestionNumber();   
-                                          }
+                                          } else if (nextButton.innerText === 'Next Easy Geography Question') {
+                                                currentQuestionIndex++;
+                                                setNextEasyGeographyQuestion();
+                                                incrementQuestionNumber();   
+                                              } else if (nextButton.innerText === 'Next Medium Geography Question') {
+                                                    currentQuestionIndex++;
+                                                    setNextMediumGeographyQuestion();
+                                                    incrementQuestionNumber();   
+                                                  } else if (nextButton.innerText === 'Next Hard Geography Question') {
+                                                        currentQuestionIndex++;
+                                                        setNextHardGeographyQuestion();
+                                                        incrementQuestionNumber();   
+                                                      }
     })
     
     let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions,
         easySportQuestions, mediumSportQuestions, hardSportQuestions,
-        easyScienceQuestions, mediumScienceQuestions, hardScienceQuestions, currentQuestionIndex
+        easyScienceQuestions, mediumScienceQuestions, hardScienceQuestions,
+        easyGeographyQuestions, mediumGeographyQuestions, hardGeographyQuestions, currentQuestionIndex
 /**
  * starts quiz game according to difficulty level and category type
  * question array is matched with easyMoviesQuestionsArray 
@@ -1815,6 +1859,51 @@ function startHardMovieQuestions() {
     setNextHardScienceQuestion();
 }
 /**
+ * starts quiz game according to difficulty level and category type
+ * question array is matched with easyGeographyQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startEasyGeographyQuestions() {
+    //display easy geography questions in order, starting at index 0
+    easyGeographyQuestions = easyGeographyQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextEasyGeographyQuestion();
+}
+/**
+ * starts quiz game
+ * question array is matched with mediumGeographyQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+function startMediumGeographyQuestions() {
+    //display medium geography questions in order, starting at index 0
+    mediumGeographyQuestions = mediumGeographyQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextMediumGeographyQuestion();
+}
+/**
+ * starts quiz game
+ * question array is matched with hardGeographyQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+function startHardGeographyQuestions() {
+    //display hard movie questions in order, starting at index 1
+    hardGeographyQuestions = hardGeographyQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextHardGeographyQuestion();
+}
+/**
  * sets next question from the easyMovieQuestionsArray
  */
 function setNextEasyMovieQuestion() {
@@ -1894,6 +1983,33 @@ function setNextHardScienceQuestion() {
     resetState();
 
     showQuestion(hardScienceQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the easyGeographyQuestionsArray
+ */
+ function setNextEasyGeographyQuestion() {
+
+    resetState();
+
+    showQuestion(easyGeographyQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the mediumGeographyQuestionsArray
+ */
+function setNextMediumGeographyQuestion() {
+
+    resetState();
+
+    showQuestion(mediumGeographyQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the hardGeographyQuestionsArray
+ */
+function setNextHardGeographyQuestion() {
+
+    resetState();
+
+    showQuestion(hardGeographyQuestionsArray[currentQuestionIndex])
 }
 /**
  * places question innerText inside question container

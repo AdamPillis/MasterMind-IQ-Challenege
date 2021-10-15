@@ -46,7 +46,8 @@ function checkDifficultyLevel() {
     let moviesButton = document.getElementById('movies');
     moviesButton.addEventListener('click', checkMoviesLevel);
 /** checkMoviesLevel() checks what the difficulty level is 
- * and calls an individual function for each category level
+ * and calls an individual function for each category type and level
+ * the argument is the innerText of the next button and that's how the correct question array is located
  */
 function checkMoviesLevel() {
     checkDifficultyLevel(difficultyLevel);
@@ -73,8 +74,9 @@ function checkMoviesLevel() {
     // indexing sport button and adding a click event listener to it
     let sportButton = document.getElementById('sport');
     sportButton.addEventListener('click', checkSportLevel);
-/** checkMoviesLevel() checks what the difficulty level is 
- * and calls an individual function for each category level
+/** checkSportLevel() checks what the difficulty level is first
+ * and calls an individual function for each category type and level
+ * the argument is the innerText of the next button and that's how the correct question array is located
  */
 function checkSportLevel() {
     checkDifficultyLevel(difficultyLevel);
@@ -469,6 +471,99 @@ function closeDoorScreen() {
             {text: 'Ridley Scott', correct: false},
             {text: 'Martin Scorsese', correct: true},
             {text: 'Quentin Tarantino', correct: false}
+        ]
+    }
+];
+// variable including Easy Sport Questions
+let easySportQuestionsArray = [
+    {
+        question: "In motor racing, what color is the flag they wave to indicate the winner?",
+        answers: [
+            {text: 'White flag', correct: false},
+            {text: 'Striped flag', correct: false},
+            {text: 'Checkered flag', correct: true},
+            {text: 'Black flag', correct: false}
+        ]
+    },
+    {
+        question: "How many holes are played in an average round of golf?",
+        answers: [
+            {text: '15', correct: false},
+            {text: '18', correct: true},
+            {text: '20', correct: false},
+            {text: '21', correct: false}
+        ]
+    },
+    {
+        question: "What color are the goalposts in football?",
+        answers: [
+            {text: 'Yellow', correct: true},
+            {text: 'White', correct: false},
+            {text: 'Black and White', correct: false},
+            {text: 'None of the above', correct: false}
+        ]
+    },
+    {
+        question: "In what game is “love” a score?",
+        answers: [
+            {text: 'Ice Hockey', correct: false},
+            {text: 'Table Tennis', correct: false},
+            {text: 'Baseball', correct: false},
+            {text: 'Tennis', correct: true}
+        ]
+    },
+    {
+        question: "In meters, how long is an Olympic-sized swimming pool?",
+        answers: [
+            {text: '25 meters', correct: false},
+            {text: '50 meters', correct: true},
+            {text: '75 meters', correct: false},
+            {text: '100 meters', correct: false}
+        ]
+    },
+    {
+        question: "In soccer, what body part can’t touch the ball?",
+        answers: [
+            {text: 'Hands', correct: true},
+            {text: 'Fingers', correct: false},
+            {text: 'Shoulders', correct: false},
+            {text: 'Arms', correct: false}
+        ]
+    },
+    {
+        question: "What type of race is the Tour de France?",
+        answers: [
+            {text: 'Running Race', correct: false},
+            {text: 'Bicycle Race', correct: true},
+            {text: 'Motorbike Race', correct: false},
+            {text: 'Car Race', correct: false}
+        ]
+    },
+    {
+        question: "What number sets to the right of the number ‘20’ on a standard dartboard?",
+        answers: [
+            {text: '1', correct: true},
+            {text: '5', correct: false},
+            {text: '7', correct: false},
+            {text: '18', correct: false}
+        ]
+    },
+    {
+        question: "How long is a marathon?",
+        answers: [
+            {text: '6.2 miles', correct: false},
+            {text: '16.2 miles', correct: false},
+            {text: '26.2 miles', correct: true},
+            {text: '36.2 miles', correct: false}
+        ]
+    },
+    {
+        question: "How much does an NFL football weigh?",
+        answers: [
+            {text: '1 pound', correct: true},
+            {text: '3 pounds', correct: false},
+            {text: '5 pounds', correct: false},
+            {text: '10 pounds', correct: false}
         ]
     }
 ];

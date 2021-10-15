@@ -42,12 +42,14 @@ function checkDifficultyLevel() {
     }
     // call category buttons list by class name
     let categoryButtons = document.getElementsByClassName('answers-area');
-    // indexing movies button and adding a click event listener to it
+    // getting movies button from DOM and adding a click event listener to it
     let moviesButton = document.getElementById('movies');
     moviesButton.addEventListener('click', checkMoviesLevel);
-/** checkMoviesLevel() checks what the difficulty level is 
- * and calls an individual function for each category type and level
- * the argument is the innerText of the next button and that's how the correct question array is located
+/** calls and checks what the difficulty level is 
+ * and calls startEasyMovies() function if easy
+ * and calls startMediumMovies() function if medium
+ * and calls startHardMovies() function if hard
+ * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkMoviesLevel() {
     checkDifficultyLevel(difficultyLevel);
@@ -71,12 +73,14 @@ function checkMoviesLevel() {
                     alert('Unknown category level');
                     }
     }
-    // indexing sport button and adding a click event listener to it
+    // getting sport button from DOM and adding a click event listener to it
     let sportButton = document.getElementById('sport');
     sportButton.addEventListener('click', checkSportLevel);
-/** checkSportLevel() checks what the difficulty level is first
- * and calls an individual function for each category type and level
- * the argument is the innerText of the next button and that's how the correct question array is located
+/** calls and checks what the difficulty level is 
+ * and calls startEasySport() function if easy
+ * and calls startMediumSport() function if medium
+ * and calls startHardSport() function if hard
+ * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkSportLevel() {
     checkDifficultyLevel(difficultyLevel);
@@ -95,6 +99,37 @@ function checkSportLevel() {
                 nextButton.innerText = 'Next Hard Sport Question'
             
                 startHardSportQuestions();
+
+                } else {
+                    alert('Unknown category level');
+                    }
+    }
+    // getting science button from DOM and adding a click event listener to it
+    let scienceButton = document.getElementById('science');
+    scienceButton.addEventListener('click', checkScienceLevel);
+/** calls and checks what the difficulty level is 
+ * and calls startEasyScience() function if easy
+ * and calls startMediumScience() function if medium
+ * and calls startHardScience() function if hard
+ * the innerText of next button changed in order to identify the correct question array when button with text is clicked
+ */
+function checkScienceLevel() {
+    checkDifficultyLevel(difficultyLevel);
+
+    if (difficultyLevel == 'easy') {
+        nextButton.innerText = 'Next Easy Science Question'
+        
+        startEasyScienceQuestions();
+
+      } else if (difficultyLevel == 'medium') {
+            nextButton.innerText = 'Next Medium Science Question';
+            
+            startMediumScienceQuestions();
+
+          } else if (difficultyLevel == 'hard') {
+                nextButton.innerText = 'Next Hard Science Question'
+                
+                startHardScienceQuestions();
 
                 } else {
                     alert('Unknown category level');
@@ -287,7 +322,7 @@ function closeDoorScreen() {
                 {text: '1992', correct: false}
             ]
         }
-    ];
+        ];
     // variable including Medium Movie Questions
     let mediumMovieQuestionsArray = [
         {
@@ -380,7 +415,7 @@ function closeDoorScreen() {
                 {text: '1966', correct: false}
             ]
         }
-    ];
+        ];
     // variable including Hard Movie Questions
     let hardMovieQuestionsArray = [
     {
@@ -473,7 +508,7 @@ function closeDoorScreen() {
             {text: 'Quentin Tarantino', correct: false}
         ]
     }
-    ];
+        ];
     // variable including Easy Sport Questions
     let easySportQuestionsArray = [
     {
@@ -566,7 +601,7 @@ function closeDoorScreen() {
             {text: '10 pounds', correct: false}
         ]
     }
-    ];
+        ];
     // variable including Medium Sport Questions
     let mediumSportQuestionsArray = [
         {
@@ -1157,12 +1192,24 @@ function closeDoorScreen() {
                                 currentQuestionIndex++;
                                 setNextHardSportQuestion();
                                 incrementQuestionNumber();   
-                              }
+                              } else if (nextButton.innerText === 'Next Easy Science Question') {
+                                    currentQuestionIndex++;
+                                    setNextEasyScienceQuestion();
+                                    incrementQuestionNumber();   
+                                  } else if (nextButton.innerText === 'Next Medium Science Question') {
+                                        currentQuestionIndex++;
+                                        setNextMediumScienceQuestion();
+                                        incrementQuestionNumber();   
+                                      } else if (nextButton.innerText === 'Next Hard Science Question') {
+                                            currentQuestionIndex++;
+                                            setNextHardScienceQuestion();
+                                            incrementQuestionNumber();   
+                                          }
     })
-
+    
     let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions,
         easySportQuestions, mediumSportQuestions, hardSportQuestions,
-         currentQuestionIndex
+        easyScienceQuestions, mediumScienceQuestions, hardScienceQuestions, currentQuestionIndex
 /**
  * starts quiz game according to difficulty level and category type
  * question array is matched with easyMoviesQuestionsArray 
@@ -1254,6 +1301,51 @@ function startHardMovieQuestions() {
     setNextHardSportQuestion();
 }
 /**
+ * starts quiz game according to difficulty level and category type
+ * question array is matched with easyScienceQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startEasyScienceQuestions() {
+    //display easy science questions in order, starting at index 0
+    easyScienceQuestions = easyScienceQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextEasyScienceQuestion();
+}
+/**
+ * starts quiz game according to difficulty level and category type
+ * question array is matched with mediumScienceQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startMediumScienceQuestions() {
+    //display medium science questions in order, starting at index 0
+    mediumScienceQuestions = mediumScienceQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextMediumScienceQuestion();
+}
+/**
+ * starts quiz game according to difficulty level and category type
+ * question array is matched with mediumScienceQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startHardScienceQuestions() {
+    //display hard science questions in order, starting at index 0
+    hardScienceQuestions = hardScienceQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextHardScienceQuestion();
+}
+/**
  * sets next question from the easyMovieQuestionsArray
  */
 function setNextEasyMovieQuestion() {
@@ -1306,6 +1398,33 @@ function setNextHardMovieQuestion() {
     resetState();
 
     showQuestion(hardSportQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the easyScienceQuestionsArray
+ */
+ function setNextEasyScienceQuestion() {
+
+    resetState();
+
+    showQuestion(easyScienceQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the mediumScienceQuestionsArray
+ */
+function setNextMediumScienceQuestion() {
+
+    resetState();
+
+    showQuestion(mediumScienceQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the hardScienceQuestionsArray
+ */
+function setNextHardScienceQuestion() {
+
+    resetState();
+
+    showQuestion(hardScienceQuestionsArray[currentQuestionIndex])
 }
 /**
  * places question innerText inside question container

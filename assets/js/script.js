@@ -1,6 +1,17 @@
 //Calling the form element to collect player name and use within handleSubmit function
 let form = document.getElementById('login-form');
 form.addEventListener('submit', handleSubmit);
+/**
+ * upon loading starting page, this will focus on the player text-box
+ */
+window.onload = function() {
+    document.getElementById('playername').focus();;
+  };
+document.getElementById('player-name').focus();
+document.getElementById('player-name').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        handleSubmit();
+    }})
 /**Function to collect playerName from form section in #start-screen.
  * Hides start-screen and opens menu-screens.
  * PlayerName added to welcome message. 
@@ -2272,7 +2283,7 @@ function endPlayerMessage() {
         finalMessage.innerHTML = `Don't be upset ${player.value}! You're probably just too tired or this category type may not be your strength. Take a break and come
         back for another round!`
       } else if (finalScore.innerHTML <= 5) {
-            finalMessage.innerHTML = `Your score may not be one of the highest ${player.value} but you're still scraping a pass!
+            finalMessage.innerHTML = `EASY Your score may not be one of the highest ${player.value} but you're still scraping a pass!
             Let's see if you're any better in a different category!`
           } else if (finalScore.innerHTML <= 7) {
                 finalMessage.innerHTML = `Not too bad at all ${player.value}, still counts as a pass! Maybe your strength is awaiting
@@ -2280,15 +2291,7 @@ function endPlayerMessage() {
               } else if (finalMessage.innerHTML <= 9) {
                     finalMessage.innerHTML = `Very good score ${player.value}! 8 or not 9 out of 10 still counts as a top score! Let's try a different category and get
                     ready for the next test!`
-                }  else {
+                }  else  if (finalMessage.innerHTML <=10) {
                         finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`
                 }
 }
-function resetPlayerMessage() {
-    finalScore = parseInt(document.getElementById('final-score').innerHTML);
-    document.getElementById('final-score').innerHTML = 0;
-}
-
-
-
-    

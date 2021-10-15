@@ -86,15 +86,15 @@ function checkSportLevel() {
         
         startEasySportQuestions();
 
-        } else if (difficultyLevel == 'medium') {
-           // nextButton.innerText = 'Next Medium Movie Question';
-            alert('medium sport questions')
-           // startMediumMovieQuestions();
+      } else if (difficultyLevel == 'medium') {
+            nextButton.innerText = 'Next Medium Sport Question';
+            
+            startMediumSportQuestions();
 
-            } else if (difficultyLevel == 'hard') {
-                // nextButton.innerText = 'Next Hard Movie Question'
-             alert('hard sport questions')
-                // startHardMovieQuestions();
+          } else if (difficultyLevel == 'hard') {
+                nextButton.innerText = 'Next Hard Sport Question'
+            
+                startHardSportQuestions();
 
                 } else {
                     alert('Unknown category level');
@@ -663,93 +663,93 @@ function closeDoorScreen() {
     // variable including Hard Sport Questions
     let hardSportQuestionsArray = [
         {
-            question: "",
+            question: "What racing event is held on Phillip Island, Australia?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Australian MotoGP', correct: true},
+                {text: 'Sandown 500', correct: false},
+                {text: 'Penguin Spring', correct: false},
+                {text: 'Formula 1', correct: false}
             ]
         },
         {
-            question: "",
+            question: "How many consecutive misses eliminate a high jumper?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Two', correct: false},
+                {text: 'Three', correct: true},
+                {text: 'Four', correct: false},
+                {text: 'Five', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which team won the 2019 NFL Super Bowls?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'New England Patriots', correct: true},
+                {text: 'New York Giants', correct: false},
+                {text: 'Los Angeles Rams', correct: false},
+                {text: 'Dallas Cowboys', correct: false}
             ]
         },
         {
-            question: "",
+            question: "How many soccer players should be on the field at the same time?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true}
+                {text: '10', correct: false},
+                {text: '16', correct: false},
+                {text: '22', correct: true},
+                {text: '26', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Who was the first tennis player to achieve a Grand Slam?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Don Budge', correct: true},
+                {text: 'Fred Perry', correct: false},
+                {text: 'Jack Kramer', correct: false},
+                {text: 'Pancho Segura', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Members of the 'Texas Rangers' play which sport?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Baseball', correct: true},
+                {text: 'Ice Hockey', correct: false},
+                {text: 'Basketball', correct: false},
+                {text: 'Football', correct: false}
             ]
         },
         {
-            question: "",
+            question: "Which surfing champion escaped a Great White Shark attack in 2015, during the J-Bay Open in South Africa?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Kelly Slater', correct: false},
+                {text: 'Layne Beachley', correct: false},
+                {text: 'Stephanie Gilmore', correct: false},
+                {text: 'Mick Fanning', correct: true}
             ]
         },
         {
-            question: "",
+            question: "Patrick Dangerfield plays for which Australian Football League Club?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'Fremantle', correct: false},
+                {text: 'Essendon', correct: false},
+                {text: 'Geelong', correct: true},
+                {text: 'Collingwood', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In which team sport can a player be penalised for 'travelling'?",
             answers: [
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: true},
-                {text: '', correct: false}
+                {text: 'Cricket', correct: false},
+                {text: 'Basketball', correct: true},
+                {text: 'Ice Hockey', correct: false},
+                {text: 'Volleyball', correct: false}
             ]
         },
         {
-            question: "",
+            question: "In golf, how mnay strokes below par is an Albatross?",
             answers: [
-                {text: '', correct: true},
-                {text: '', correct: false},
-                {text: '', correct: false},
-                {text: '', correct: false}
+                {text: 'One under par', correct: false},
+                {text: 'Two under par', correct: false},
+                {text: 'Three under par', correct: true},
+                {text: 'Four under par', correct: false}
             ]
         }
         ];
@@ -870,11 +870,20 @@ function closeDoorScreen() {
                         currentQuestionIndex++;
                         setNextEasySportQuestion();
                         incrementQuestionNumber();   
-                  }
+                      } else if (nextButton.innerText === 'Next Medium Sport Question') {
+                            currentQuestionIndex++;
+                            setNextMediumSportQuestion();
+                            incrementQuestionNumber();   
+                          } else if (nextButton.innerText === 'Next Hard Sport Question') {
+                                currentQuestionIndex++;
+                                setNextHardSportQuestion();
+                                incrementQuestionNumber();   
+                              }
     })
 
     let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions,
-        easySportQuestions, currentQuestionIndex
+        easySportQuestions, mediumSportQuestions, hardSportQuestions,
+         currentQuestionIndex
 /**
  * starts quiz game according to difficulty level and category type
  * question array is matched with easyMoviesQuestionsArray 
@@ -936,6 +945,36 @@ function startHardMovieQuestions() {
     setNextEasySportQuestion();
 }
 /**
+ * starts quiz game
+ * question array is matched with mediumSportQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startMediumSportQuestions() {
+    //display medium sport questions in order, starting at index 1
+    mediumSportQuestions = mediumSportQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextMediumSportQuestion();
+}
+/**
+ * starts quiz game
+ * question array is matched with hardSportQuestionsArray 
+ * rules are displayed before next question is called
+ * set next question function is also called here
+ */
+ function startHardSportQuestions() {
+    //display hard sport questions in order, starting at index 1
+    hardSportQuestions = hardSportQuestionsArray;
+    currentQuestionIndex = 0;
+
+    displayRules();
+
+    setNextHardSportQuestion();
+}
+/**
  * sets next question from the easyMovieQuestionsArray
  */
 function setNextEasyMovieQuestion() {
@@ -970,6 +1009,24 @@ function setNextHardMovieQuestion() {
     resetState();
 
     showQuestion(easySportQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the mediumSportQuestionsArray
+ */
+ function setNextMediumSportQuestion() {
+
+    resetState();
+
+    showQuestion(mediumSportQuestionsArray[currentQuestionIndex])
+}
+/**
+ * sets next question from the hardSportQuestionsArray
+ */
+ function setNextHardSportQuestion() {
+
+    resetState();
+
+    showQuestion(hardSportQuestionsArray[currentQuestionIndex])
 }
 /**
  * places question innerText inside question container

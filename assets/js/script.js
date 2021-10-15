@@ -1160,12 +1160,481 @@ function closeDoorScreen() {
             ]
         }
         ];
+    // variable including Medium Geography Questions
+    let mediumGeographyQuestionsArray = [
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        }
+        ];
+    // variable including Hard Geography Questions
+    let hardGeographyQuestionsArray = [
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        }
+        ];
+    // variable including Easy History Questions
+    let easyHistoryQuestionsArray = [
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        }
+        ];
+    // variable including Medium History Questions
+    let mediumHistoryQuestionsArray = [
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        }
+        ];
+    // variable including Hard History Questions
+    let hardHistoryQuestionsArray = [
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        }
+        ];
     // variable containing question and answers
     let quizContainer = document.getElementById('quiz-container');
     //setting variables to undefined for now
     let questionContainer = document.getElementById('question');
     let optionButtons = document.getElementById('option-buttons');
-
+    /**
+     * if next button is clicked, the argument is the innerText of the text button
+     * based on this innerText, the correct next question function is called which uses the correct questions array
+     * each time, question index array and questionNumber goes up by one
+     */
     let nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', () => {
         if(nextButton.innerText === 'Next Easy Movie Question') {

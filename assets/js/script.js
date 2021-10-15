@@ -195,7 +195,7 @@ function closeDoorScreen() {
     gameScreen.style.display = 'unset';
 }
 
-// variable including Easy Movie Questions
+    // variable including Easy Movie Questions
     let easyMovieQuestionsArray = [
         {
             question: "Which film won the Oscar for ‘best picture’ in 2019?",
@@ -288,7 +288,7 @@ function closeDoorScreen() {
             ]
         }
     ];
-// variable including Medium Movie Questions
+    // variable including Medium Movie Questions
     let mediumMovieQuestionsArray = [
         {
             question: "'In space, no one can hear you scream' is the famous tagline from which film?",
@@ -381,7 +381,7 @@ function closeDoorScreen() {
             ]
         }
     ];
-// variable including Hard Movie Questions
+    // variable including Hard Movie Questions
     let hardMovieQuestionsArray = [
     {
         question: "Which famous British comedian voiced Zazu in The Lion King?",
@@ -473,9 +473,9 @@ function closeDoorScreen() {
             {text: 'Quentin Tarantino', correct: false}
         ]
     }
-];
-// variable including Easy Sport Questions
-let easySportQuestionsArray = [
+    ];
+    // variable including Easy Sport Questions
+    let easySportQuestionsArray = [
     {
         question: "In motor racing, what color is the flag they wave to indicate the winner?",
         answers: [
@@ -566,7 +566,286 @@ let easySportQuestionsArray = [
             {text: '10 pounds', correct: false}
         ]
     }
-];
+    ];
+    // variable including Medium Sport Questions
+    let mediumSportQuestionsArray = [
+        {
+            question: "In what year were women allowed to compete in the modern Olympic Games?",
+            answers: [
+                {text: '1888', correct: false},
+                {text: '1900', correct: true},
+                {text: '1924', correct: false},
+                {text: '1940', correct: false}
+            ]
+        },
+        {
+            question: "How old was Tiger Woods when he won the Masters?",
+            answers: [
+                {text: '14', correct: false},
+                {text: '21', correct: true},
+                {text: '30', correct: false},
+                {text: '36', correct: false}
+            ]
+        },
+        {
+            question: "How many players are on a baseball team?",
+            answers: [
+                {text: '8', correct: false},
+                {text: '9', correct: true},
+                {text: '10', correct: false},
+                {text: '11', correct: false}
+            ]
+        },
+        {
+            question: "In which winter sport are the terms “stale fish” and “mule kick” used?",
+            answers: [
+                {text: 'Skiing', correct: false},
+                {text: 'Snowboarding', correct: true},
+                {text: 'Ice Skating', correct: false},
+                {text: 'Ice Hockey', correct: false}
+            ]
+        },
+        {
+            question: "What is a 6:0 6:0 score in Tennis known as?",
+            answers: [
+                {text: 'Double Wheel', correct: false},
+                {text: 'Double Barrel', correct: false},
+                {text: 'Double Bagel', correct: true},
+                {text: 'Double Love', correct: false}
+            ]
+        },
+        {
+            question: "What African country was the first ever to qualify for a World Cup?",
+            answers: [
+                {text: 'Morocco', correct: false},
+                {text: 'Angola', correct: false},
+                {text: 'Egypt', correct: true},
+                {text: 'South Africa', correct: false}
+            ]
+        },
+        {
+            question: "What was the first city to host the Olympics twice?",
+            answers: [
+                {text: 'London', correct: false},
+                {text: 'Tokyo', correct: false},
+                {text: 'Beijing', correct: false},
+                {text: 'Paris', correct: true}
+            ]
+        },
+        {
+            question: "What sport starts with a tip-off or jump ball?",
+            answers: [
+                {text: 'Hand Ball', correct: false},
+                {text: 'Baseball', correct: false},
+                {text: 'Golf', correct: false},
+                {text: 'Basketball', correct: true}
+            ]
+        },
+        {
+            question: "How many rings are there on the Olympic flag?",
+            answers: [
+                {text: 'Three', correct: false},
+                {text: 'Four', correct: false},
+                {text: 'Five', correct: true},
+                {text: 'Six', correct: false}
+            ]
+        },
+        {
+            question: "What was the fastest goal in World Cup history?",
+            answers: [
+                {text: '5.8 seconds', correct: false},
+                {text: '10.8 seconds', correct: true},
+                {text: '15.8 seconds', correct: false},
+                {text: '20.8 seconds', correct: false}
+            ]
+        }
+        ];
+    // variable including Hard Sport Questions
+    let hardSportQuestionsArray = [
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        }
+        ];
+    // variable including Easy Science Questions
+    let easyScienceQuestionsArray = [
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: true},
+                {text: '', correct: false}
+            ]
+        },
+        {
+            question: "",
+            answers: [
+                {text: '', correct: true},
+                {text: '', correct: false},
+                {text: '', correct: false},
+                {text: '', correct: false}
+            ]
+        }
+        ];
     // variable containing question and answers
     let quizContainer = document.getElementById('quiz-container');
     //setting variables to undefined for now
@@ -576,7 +855,6 @@ let easySportQuestionsArray = [
     let nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', () => {
         if(nextButton.innerText === 'Next Easy Movie Question') {
-            
             currentQuestionIndex++;
             setNextEasyMovieQuestion();
             incrementQuestionNumber();
@@ -693,7 +971,11 @@ function setNextHardMovieQuestion() {
 
     showQuestion(easySportQuestionsArray[currentQuestionIndex])
 }
-
+/**
+ * places question innerText inside question container
+ * creates new button for each answer and existing game-button class to each 
+ * if player clicks on an answer, call checkAnswer function to see if correct
+ */
 function showQuestion(question) {
     questionContainer.textContent = question.question;
     question.answers.forEach(answer => {

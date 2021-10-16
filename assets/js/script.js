@@ -51,8 +51,6 @@ function checkDifficultyLevel() {
                 alert("Unknown difficulty level");
                 }
     }
-    // call category buttons list by class name
-    let categoryButtons = document.getElementsByClassName('answers-area');
     // getting movies button from DOM and adding a click event listener to it
     let moviesButton = document.getElementById('movies');
     moviesButton.addEventListener('click', checkMoviesLevel);
@@ -1700,8 +1698,6 @@ function closeDoorScreen() {
             ]
         }
         ];
-    // variable containing question and answers
-    let quizContainer = document.getElementById('quiz-container');
     //setting variables to undefined for now
     let questionContainer = document.getElementById('question');
     let optionButtons = document.getElementById('option-buttons');
@@ -2231,7 +2227,7 @@ function incrementQuestionNumber() {
  * called when yes button in door-screen section
  */
 function resetQuestionNumber() {
-    questionNumber = parseInt(document.getElementById('question-number').innerHTML);
+    
     document.getElementById('question-number').innerHTML = 1;
 }
 /**
@@ -2256,7 +2252,6 @@ function incrementIncorrectNumber() {
  *  also resets if user clicks yes in door-screen section
  */
 function resetPlayerScore() {
-    playerScore = parseInt(document.getElementById('score').innerHTML);
     document.getElementById('score').innerHTML = 0;
 }
 /**
@@ -2264,7 +2259,6 @@ function resetPlayerScore() {
  *  also resets if user clicks yes in door-screen section
  */
  function resetIncorrectNumber() {
-    incorrectScore = parseInt(document.getElementById('incorrect').innerHTML);
     document.getElementById('incorrect').innerHTML = 0;
 }
 /**

@@ -170,7 +170,7 @@ header p {
     margin: 15px auto;
     border-radius: 10px;
     background-color: hsl(27, 87%, 67%);
-    font-style: 'Architects Daughter', cursive;
+    font-family: 'Architects Daughter', cursive;
     font-size: 1.5rem;
     letter-spacing: 4px;
 }

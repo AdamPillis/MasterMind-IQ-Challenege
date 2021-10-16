@@ -123,8 +123,8 @@ header p {
 
 }
 #start-button {
-    height: 40px;
-    width: 150px;
+    height: 6vh;
+    width: 40%;
     margin: 20px auto;
     background: rgba(39, 69, 84, 0.3);
     font-size: 1rem;
@@ -344,7 +344,7 @@ header p {
     margin-top: 8vh;
 }
 #end-button {
-    width: 20%;
+    width: 30%;
     padding: 1%;
     margin: 0 auto;
     font-size: 1rem;
@@ -356,6 +356,36 @@ header p {
 /* media queries for several screens */
 /* For screen size less than 950px and smaller */
 @media screen and (max-width: 950px) {
+    .h1-text {
+        font-size: 3rem;
+    }
+    .paragraph-text {
+        font-size: 1.3rem;
+    }
+    #login-form label {
+        font-size: 1rem;
+    }
+    #start-button {
+        font-size: 0.8rem;
+    }
+    .welcome-message {
+        font-size: 1.6rem;
+    }
+    .menu-message {
+        font-size: 1rem;
+    }
+    .level-button {
+        font-size: 1rem;
+    }
+    .category-button {
+        margin: 10px auto;
+    }
+    .rules-box p {
+        font-size: 1rem;
+    }
+    #rules-button {
+        font-size: 1.4rem;
+    }
     .info-div p {
         font-size: 0.8rem;
     }
@@ -367,5 +397,215 @@ header p {
         }
     .controls-button {
         font-size: 0.8rem;
+    }
+    .header-icon i{
+        font-size: 1.4rem;
+    }
+    .end-text {
+        font-size: 1.5rem;
+    }
+    #end-comment {
+        font-size: 1.2rem;
+    }
+}
+/* media queries at 650px for several screens */
+@media screen and (max-width: 650px) {
+    header p {
+        font-size: 1rem;
+    }
+    .h1-text {
+        font-size: 1.5rem;
+    }
+    .paragraph-text {
+        font-size: 0.8rem;
+    }
+    #login-form label {
+        font-size: 0.7rem;
+    }
+    .playername {
+        height: 20vh;
+        width: 50%;
+    }
+    #start-button {
+        font-size: 0.5rem;
+        margin: 4px auto;
+    }
+    .welcome-message {
+        font-size: 1.2rem;
+    }
+    .menu-message {
+        font-size: 0.7rem;
+    }
+    .level-button {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+    .category-button {
+        margin: 8px auto;
+        width: 80%;
+        height: 8vh;
+    }
+    .rules-box p {
+        font-size: 0.8rem;
+    }
+    .rules-box strong {
+        font-size: 0.8rem;
+    }
+    #rules-button {
+        font-size: 1rem;
+    }
+    .question-area {
+        font-size: 1rem;
+    }
+    .game-button {
+        font-size: 1rem;
+        height: 9vh;
+        }
+    .controls-button {
+        font-size: 0.8rem;
+        width: 180px;
+        margin-top: 10px;
+    }
+    .header-icon i{
+        font-size: 1.2rem;
+    }
+    #exit-box {
+        height: 20vh;
+    }
+    .exit-text {
+        font-size: 1.2rem;
+    }
+    .exit-buttons {
+        margin: 10px auto;
+        width: 80%;
+    }
+    .exit-button {
+        font-size: 1rem;
+    }
+    .end-text {
+        font-size: 1.1rem;
+    }
+    .smiley-image {
+        margin: 10px auto;
+    }
+    .end-feedback p {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+    #end-comment {
+        font-size: 0.8rem;
+    }
+}
+    /* media queries at 450px for several screens */
+@media screen and (max-width: 450px) {
+    header p {
+        font-size: 0.7rem;
+    }
+    .h1-text {
+        font-size: 1.2rem;
+    }
+    .paragraph-text {
+        font-size: 0.6rem;
+    }
+    #login-form label {
+        font-size: 0.5rem;
+    }
+    #playername {
+        font-size: 0.7rem;
+        height: 4vh;
+        margin: 6px auto;
+    }
+    #start-button {
+        font-size: 0.5rem;
+        margin: 0 auto;
+        height: 4vh;
+    }
+    .welcome-message {
+        font-size: 0.6rem;
+    }
+    .menu-message {
+        font-size: 0.5rem;
+    }
+    .level-buttons-div {
+        width: 100%;
+    }
+    .level-button {
+        font-size: 0.6rem;
+    }
+    .category-button {
+        margin: 3px auto;
+        width: 100%;
+        height: 8vh;
+        font-size: 0.8rem;
+    }
+    .rules-box {
+        width: 70%;
+        height: 40vh;
+        margin: 5vh auto;
+    }
+    .rules-box p {
+        font-size: 0.5rem;
+        margin: 2px auto;
+    }
+    .rules-box br {
+        display: none;
+    }
+    .rules-box strong {
+        font-size: 0.5rem;
+    }
+    #rules-button {
+        font-size: 0.5rem;
+    }
+    .info-div p {
+        font-size: 0.5rem;
+    }
+    .question-area {
+        font-size: 0.6rem;
+    }
+    .game-button {
+        font-size: 0.6rem;
+        height: 9vh;
+        width: 100%;
+        }
+    .controls-button {
+        font-size: 0.7rem;
+        width: 160px;
+        margin-top: 10px;
+    }
+    .header-icon i{
+        font-size: 0.8rem;
+    }
+    #exit-box {
+        height: 35vh;
+        width: 70%;
+        margin: 15vh auto;
+    }
+    .exit-text {
+        font-size: 1rem;
+    }
+    .exit-buttons {
+        margin: 10px auto;
+        width: 80%;
+    }
+    .exit-button {
+        font-size: 0.8rem;
+    }
+    .end-text {
+        font-size: 0.6rem;
+    }
+    .smiley-image {
+        margin: 5px auto;
+        width: 50%;
+    }
+    .end-feedback p {
+        font-size: 0.6rem;
+        margin-top: 0;
+    }
+    #end-comment {
+        font-size: 0.6rem;
+    }
+    #end-button {
+        width: 40%;
+        font-size: 0.6rem;
     }
 }

@@ -22,7 +22,7 @@ function handleSubmit(event) {
 
     let player = form.elements.playername;
     let menuScreen = document.getElementById('menu-screen');
-    let startScreen = document.getElementById('start-screen')
+    let startScreen = document.getElementById('start-screen');
     let welcomeMessage = document.getElementsByClassName('welcome-message')[0];
 
      welcomeMessage.innerText = `Welcome to MasterMindsIQ ${player.value} !`;
@@ -66,7 +66,7 @@ function checkMoviesLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-        nextButton.innerText = 'Next Easy Movie Question'
+        nextButton.innerText = 'Next Easy Movie Question';
 
         startEasyMovieQuestions();
 
@@ -76,7 +76,7 @@ function checkMoviesLevel() {
             startMediumMovieQuestions();
 
             } else if (difficultyLevel == 'hard') {
-                nextButton.innerText = 'Next Hard Movie Question'
+                nextButton.innerText = 'Next Hard Movie Question';
 
                 startHardMovieQuestions();
 
@@ -97,7 +97,7 @@ function checkSportLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-        nextButton.innerText = 'Next Easy Sport Question'
+        nextButton.innerText = 'Next Easy Sport Question';
         
         startEasySportQuestions();
 
@@ -107,7 +107,7 @@ function checkSportLevel() {
             startMediumSportQuestions();
 
           } else if (difficultyLevel == 'hard') {
-                nextButton.innerText = 'Next Hard Sport Question'
+                nextButton.innerText = 'Next Hard Sport Question';
             
                 startHardSportQuestions();
 
@@ -128,7 +128,7 @@ function checkScienceLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-        nextButton.innerText = 'Next Easy Science Question'
+        nextButton.innerText = 'Next Easy Science Question';
         
         startEasyScienceQuestions();
 
@@ -138,7 +138,7 @@ function checkScienceLevel() {
             startMediumScienceQuestions();
 
           } else if (difficultyLevel == 'hard') {
-                nextButton.innerText = 'Next Hard Science Question'
+                nextButton.innerText = 'Next Hard Science Question';
                 
                 startHardScienceQuestions();
 
@@ -159,7 +159,7 @@ function checkGeographyLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-        nextButton.innerText = 'Next Easy Geography Question'
+        nextButton.innerText = 'Next Easy Geography Question';
             
         startEasyGeographyQuestions();
 
@@ -169,7 +169,7 @@ function checkGeographyLevel() {
             startMediumGeographyQuestions();
 
             } else if (difficultyLevel == 'hard') {
-                nextButton.innerText = 'Next Hard Geography Question'
+                nextButton.innerText = 'Next Hard Geography Question';
              
                 startHardGeographyQuestions();
 
@@ -190,7 +190,7 @@ function checkHistoryLevel() {
     checkDifficultyLevel(difficultyLevel);
 
     if (difficultyLevel == 'easy') {
-        nextButton.innerText = 'Next Easy History Question'
+        nextButton.innerText = 'Next Easy History Question';
                 
         startEasyHistoryQuestions();
                   
@@ -200,7 +200,7 @@ function checkHistoryLevel() {
             startMediumHistoryQuestions();
  
             } else if (difficultyLevel == 'hard') {
-                nextButton.innerText = 'Next Hard History Question'
+                nextButton.innerText = 'Next Hard History Question';
                     
                 startHardHistoryQuestions();
 
@@ -250,7 +250,7 @@ function displayEndScreen() {
 }
 // event listener attached to menu button to take user back to main menu
 let menuButton = document.getElementById('end-button');
-menuButton.addEventListener('click', backToMenu)
+menuButton.addEventListener('click', backToMenu);
 /**
  * function called when Menu button is clicked in end-screen
  */
@@ -267,7 +267,7 @@ function backToMenu() {
 }
 // when button on the right within the header is clicked during game.
 let headerButton = document.getElementById('header-button');
-headerButton.addEventListener('click', displayDoorScreen)
+headerButton.addEventListener('click', displayDoorScreen);
 /**
  * when headerButton is clicked above
  * function hides game-screen and shows door-screen section
@@ -281,9 +281,9 @@ function displayDoorScreen() {
 }
 
 let yesButton = document.getElementById('button-yes');
-yesButton.addEventListener('click', exitGame)
+yesButton.addEventListener('click', exitGame);
 let noButton = document.getElementById('button-no');
-noButton.addEventListener('click', closeDoorScreen)
+noButton.addEventListener('click', closeDoorScreen);
 
 function exitGame() {
     clearBodyClass(document.body);
@@ -1773,13 +1773,13 @@ function closeDoorScreen() {
                                                                     setNextHardHistoryQuestion();
                                                                     incrementQuestionNumber();   
                                                                   }
-    })
+    });
     
     let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions,
         easySportQuestions, mediumSportQuestions, hardSportQuestions,
         easyScienceQuestions, mediumScienceQuestions, hardScienceQuestions,
         easyGeographyQuestions, mediumGeographyQuestions, hardGeographyQuestions,
-        easyHistoryQuestions, mediumHistoryQuestions, hardHistoryQuestions, currentQuestionIndex
+        easyHistoryQuestions, mediumHistoryQuestions, hardHistoryQuestions, currentQuestionIndex;
 /**
  * starts quiz game according to difficulty level and category type
  * question array is matched with easyMoviesQuestionsArray 
@@ -2012,7 +2012,7 @@ function setNextEasyMovieQuestion() {
 
     resetState();
 
-    showQuestion(easyMovieQuestionsArray[currentQuestionIndex])
+    showQuestion(easyMovieQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the mediumMovieQuestionsArray
@@ -2021,7 +2021,7 @@ function setNextMediumMovieQuestion() {
 
     resetState();
 
-    showQuestion(mediumMovieQuestionsArray[currentQuestionIndex])
+    showQuestion(mediumMovieQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the hardMovieQuestionsArray
@@ -2030,7 +2030,7 @@ function setNextHardMovieQuestion() {
 
     resetState();
 
-    showQuestion(hardMovieQuestionsArray[currentQuestionIndex])
+    showQuestion(hardMovieQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the easySportQuestionsArray
@@ -2039,7 +2039,7 @@ function setNextHardMovieQuestion() {
 
     resetState();
 
-    showQuestion(easySportQuestionsArray[currentQuestionIndex])
+    showQuestion(easySportQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the mediumSportQuestionsArray
@@ -2048,7 +2048,7 @@ function setNextHardMovieQuestion() {
 
     resetState();
 
-    showQuestion(mediumSportQuestionsArray[currentQuestionIndex])
+    showQuestion(mediumSportQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the hardSportQuestionsArray
@@ -2057,7 +2057,7 @@ function setNextHardMovieQuestion() {
 
     resetState();
 
-    showQuestion(hardSportQuestionsArray[currentQuestionIndex])
+    showQuestion(hardSportQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the easyScienceQuestionsArray
@@ -2066,7 +2066,7 @@ function setNextHardMovieQuestion() {
 
     resetState();
 
-    showQuestion(easyScienceQuestionsArray[currentQuestionIndex])
+    showQuestion(easyScienceQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the mediumScienceQuestionsArray
@@ -2075,7 +2075,7 @@ function setNextMediumScienceQuestion() {
 
     resetState();
 
-    showQuestion(mediumScienceQuestionsArray[currentQuestionIndex])
+    showQuestion(mediumScienceQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the hardScienceQuestionsArray
@@ -2084,7 +2084,7 @@ function setNextHardScienceQuestion() {
 
     resetState();
 
-    showQuestion(hardScienceQuestionsArray[currentQuestionIndex])
+    showQuestion(hardScienceQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the easyGeographyQuestionsArray
@@ -2093,7 +2093,7 @@ function setNextHardScienceQuestion() {
 
     resetState();
 
-    showQuestion(easyGeographyQuestionsArray[currentQuestionIndex])
+    showQuestion(easyGeographyQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the mediumGeographyQuestionsArray
@@ -2102,7 +2102,7 @@ function setNextMediumGeographyQuestion() {
 
     resetState();
 
-    showQuestion(mediumGeographyQuestionsArray[currentQuestionIndex])
+    showQuestion(mediumGeographyQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the hardGeographyQuestionsArray
@@ -2111,7 +2111,7 @@ function setNextHardGeographyQuestion() {
 
     resetState();
 
-    showQuestion(hardGeographyQuestionsArray[currentQuestionIndex])
+    showQuestion(hardGeographyQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the easyMovieQuestionsArray
@@ -2120,7 +2120,7 @@ function setNextHardGeographyQuestion() {
 
     resetState();
 
-    showQuestion(easyHistoryQuestionsArray[currentQuestionIndex])
+    showQuestion(easyHistoryQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the mediumMovieQuestionsArray
@@ -2129,7 +2129,7 @@ function setNextMediumHistoryQuestion() {
 
     resetState();
 
-    showQuestion(mediumHistoryQuestionsArray[currentQuestionIndex])
+    showQuestion(mediumHistoryQuestionsArray[currentQuestionIndex]);
 }
 /**
  * sets next question from the hardHistoryQuestionsArray
@@ -2138,7 +2138,7 @@ function setNextHardHistoryQuestion() {
 
     resetState();
 
-    showQuestion(hardHistoryQuestionsArray[currentQuestionIndex])
+    showQuestion(hardHistoryQuestionsArray[currentQuestionIndex]);
 }
 /**
  * places question innerText inside question container
@@ -2148,15 +2148,15 @@ function setNextHardHistoryQuestion() {
 function showQuestion(question) {
     questionContainer.textContent = question.question;
     question.answers.forEach(answer => {
-        let button = document.createElement('button') // create a new button for each answer using same button class/style
+        let button = document.createElement('button'); // create a new button for each answer using same button class/style
         button.textContent = answer.text; // add answer content to each new button
-        button.classList.add('game-button')
+        button.classList.add('game-button');
         if (answer.correct) {
-            button.dataset.correct = answer.correct /** add correct dataset attribute only if answer is correct */
+            button.dataset.correct = answer.correct; /** add correct dataset attribute only if answer is correct */
         }
-        button.addEventListener('click', checkAnswer) // if player clicks on an answer, call checkAnswer function 
+        button.addEventListener('click', checkAnswer); // if player clicks on an answer, call checkAnswer function 
         optionButtons.appendChild(button); // append new buttons as child of optionButtons
-    })
+    });
 }
 /**
  * Will reset game-screen to default every time a new question is called
@@ -2168,7 +2168,7 @@ function resetState(){
     nextButton.style.display = 'none';
     
     while (optionButtons.firstChild) {
-        optionButtons.removeChild (optionButtons.firstChild)
+        optionButtons.removeChild (optionButtons.firstChild);
     }  
 }
 /**
@@ -2179,10 +2179,10 @@ function checkAnswer(event) {
     let playerAnswer = event.target;
     let correct = playerAnswer.dataset.correct;
 
-    setBodyClass(document.body, correct)
+    setBodyClass(document.body, correct);
     Array.from(optionButtons.children).forEach(button => {
-        setBodyClass(button, button.dataset.correct)
-    })
+        setBodyClass(button, button.dataset.correct);
+    });
         if (currentQuestionIndex <= 8) {
             nextButton.style.display = 'unset'; 
             } else {
@@ -2281,17 +2281,17 @@ function endPlayerMessage() {
 
     if (parseInt(finalScore.innerHTML) <= 3) {
         finalMessage.innerHTML = `Don't be upset ${player.value}! You're probably just too tired or this category type may not be your strength. Take a break and come
-        back for another round!`
+        back for another round!`;
       } else if (finalScore.innerHTML <= 5) {
             finalMessage.innerHTML = `Your score may not be one of the highest ${player.value} but you're still scraping a pass!
-            Let's see if you're any better in a different category!`
+            Let's see if you're any better in a different category!`;
           } else if (finalScore.innerHTML <= 7) {
                 finalMessage.innerHTML = `Not too bad at all ${player.value}, still counts as a pass! Maybe your strength is awaiting
-                in a different category`
+                in a different category`;
               } else if (finalMessage.innerHTML <= 9) {
                     finalMessage.innerHTML = `Very good score ${player.value}! 8 or not 9 out of 10 still counts as a top score! Let's try a different category and get
-                    ready for the next test!`
+                    ready for the next test!`;
                 }  else  if (finalMessage.innerHTML <=10) {
-                        finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`
+                        finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`;
                 }
 }

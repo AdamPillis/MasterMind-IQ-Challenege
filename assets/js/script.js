@@ -2145,13 +2145,14 @@ function showQuestion(question) {
     questionContainer.textContent = question.question;
     question.answers.forEach(answer => {
         let button = document.createElement('button'); // create a new button for each answer using same button class/style
-        button.textContent = answer.text; // add answer content to each new button
-        button.classList.add('game-button');
-        if (answer.correct) {
-            button.dataset.correct = answer.correct; /** add correct dataset attribute only if answer is correct */
-        }
-        button.addEventListener('click', checkAnswer); // if player clicks on an answer, call checkAnswer function 
-        optionButtons.appendChild(button); // append new buttons as child of optionButtons
+            button.textContent = answer.text; // add answer content to each new button
+            button.classList.add('game-button');
+            if (answer.correct) {
+                button.dataset.correct = answer.correct; /** add correct dataset attribute only if answer is correct */
+            }
+                button.addEventListener('click', checkAnswer); // if player clicks on an answer, call checkAnswer function 
+                optionButtons.appendChild(button); // append new buttons as child of optionButtons
+
     });
 }
 /**
@@ -2174,7 +2175,7 @@ function resetState(){
 function checkAnswer(event) {
     let playerAnswer = event.target;
     let correct = playerAnswer.dataset.correct;
-
+    
     setBodyClass(document.body, correct);
     Array.from(optionButtons.children).forEach(button => {
         setBodyClass(button, button.dataset.correct);
@@ -2184,13 +2185,15 @@ function checkAnswer(event) {
             } else {
                 finishButton.style.display = 'unset';
                 nextButton.style.display = 'none';
-            }
+     
+           }
     if (correct) {
         incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
     } else {
         incrementIncorrectNumber();
     }
 }
+
 /**
  * checks if option clicked is correct
  * if correct, set body class to correct (green)
@@ -2268,9 +2271,11 @@ function resetPlayerScore() {
  */
 function endPlayerMessage() {
     let finalScore = document.getElementById('final-score');
+    let incorrectAnswers = document.getElementById('final-incorrect')
     let finalMessage = document.getElementById('end-comment');
     let player = form.elements.playername;
-
+    
+    incorrectAnswers.innerHTML = document.getElementById('incorrect').innerHTML;
     finalScore.innerHTML = document.getElementById('score').innerHTML;
 
     if (parseInt(finalScore.innerHTML) <= 3) {
@@ -2287,5 +2292,5 @@ function endPlayerMessage() {
                     ready for the next test!`;
                 }  else  if (finalMessage.innerHTML <=10) {
                         finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`;
+                    }  
                 }
-}

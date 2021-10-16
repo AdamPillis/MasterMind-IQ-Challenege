@@ -9,25 +9,27 @@
 }
 /*setting neutral color for body, red if answer is incorrect and green if answer is incorrect*/
 :root {
-    --hue-neutral: 300;
-    --hue-incorrect: 0;
-    --hue-correct: 145;
+    --hue-neutral: 200;
+    --hue-incorrect: 12;
+    --hue-correct: 173;
 }
 body {
     --hue: var(--hue-neutral); /*color of body set to neutral so that it can change based on user answer*/
     height: 100vh;
     width: 100vw;
-    background-color: hsl(var(--hue), 100%, 20%);
+    background-color: hsl(var(--hue), 37%, 24%);
     font-family: 'Architects Daughter', cursive;  /*'Fleur De Leah', cursive; */
     text-align: center;   
 }
 /* body color to be displayed if answer will be correct */
 body.correct {
     --hue: var(--hue-correct);
+    background-color: hsl(var(--hue), 58%, 39%);
 }
 /* body color to be displayed if answer will be incorrect */
 body.incorrect {
     --hue: var(--hue-incorrect);
+    background-color: hsl(var(--hue), 76%, 61%);
 }
 button:hover {
     box-shadow: 0px 0px 20px 4px red;
@@ -47,7 +49,7 @@ header p {
     float: left;
     padding-left: 5px;
     color: white;
-    font-style: 'Fleur De Leah', cursive;
+    font-family: 'Fleur De Leah', cursive;  
 }
 .header-icon {
     width: 50px;
@@ -56,7 +58,7 @@ header p {
     float: right;
 }
 .div-box {
-    background-color: red;
+    background-color: #E9C46A;
     height: 89vh;
     width: 70%;
     max-width: 1000px;
@@ -70,41 +72,59 @@ header p {
 }
 /* styling #start-screen section */
 .h1-text {
-    font-size: 3rem;
+    font-size: 5rem;
     margin: 10vh 0;
     letter-spacing: 1px;
+    color: white;
+    font-family: 'Fleur De Leah', cursive;
 }
 .paragraph-text{
-    font-size: 1.5rem;
-    margin-bottom: 15vh;
+    font-size: 2rem;
+    margin-bottom: 10vh;
+    color: white;
 }
 .playername {
     height: 30vh;
     width: 30%;
-    background-color: red;
+    background: transparent;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 10px 4px;
+    background-color: #E9C46A;
+    border-radius: 10px;
 }
 .playername label {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 10px auto;
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin: 5px auto;
     width: 100%;
+    color: black;
 }
 #playername {
     height: 5vh;
     width: 70%;
     margin: 10px auto;
     background: transparent;
-    color: white;
+    border-radius: 10px;
+    color: black;
     font-size: 1.5rem;
+    box-shadow: 0 0 2px 1px;
+    background-color: rgba(39, 69, 84, 0.3); /* original hsl body color converted to rgba for ligher contrast in text box*/
+
 }
 #start-button {
     height: 40px;
-    width: 120px;
+    width: 150px;
     margin: 20px auto;
-    background: transparent;
+    background: rgba(39, 69, 84, 0.3);
+    font-size: 1rem;
+    border-radius: 10px;
+}
+#start-button:hover {
+    background-color: hsl(200, 37%, 24%);
+    color: white;
+    font-size: 110%;
 }
 /* menu-screen section which comes after player name submition */
 #menu-screen {

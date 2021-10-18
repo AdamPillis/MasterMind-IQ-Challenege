@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz game to test general knowledge through several difficulty levels and categories">
+    <meta name="keywords" content="play, quiz games, easy questions, medium questions, hard questions, four possible answers, free online game">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>MasterMindsIQ</title>
 </head>
 <body>
+    <!-- link to import icons from external source -->
     <script src="https://kit.fontawesome.com/3986f6a91b.js" crossorigin="anonymous"></script>
-    <!-- start screen section -->
+    <!-- landing page section (displayed first)-->
 <section id="start-screen" class="section-area">
     <header>
 
@@ -20,7 +23,7 @@
     <h1 class="h1-text">Welcome to MasterMindsIQ!</h1>
 
     <p class="paragraph-text">Are you ready to test your general knowledge?</p>
-
+    <!-- form element used to collect each players data entered and use to personalise messages on other pages -->
     <form id="login-form" method="POST" action="/login/">
         <div class="playername">
             
@@ -28,13 +31,13 @@
             <!-- user enters their player name which is then used in welcome message of #menu-screen -->
             <input id="playername" name="playername" type="text" required>
             
-            <input type="submit" value="Let's Go" id="start-button"/>
+            <input type="submit" value="Let's Go" id="start-button" aria-label="Click on the button to confirm player name entered"/>
 
         </div>
     </form>
 
 </section>
-    <!-- menu-screen section -->
+    <!-- menu-screen section (hidden)-->
 <section id="menu-screen" class="section-area">
     <header>
 
@@ -43,40 +46,40 @@
     </header>
 
     <div class="div-box">
-
+        <!-- JS attacks this element to create welcome message for each players -->
         <h1 class="welcome-message">welcome message</h1>
 
         <p class="menu-message">Please select your difficulty level followed by a category below and let's do this!</p>
-
+        <!-- difficulty level radio buttons (easy is set to be automatically checked) -->
         <div class="level-buttons-div">
 
             <div class="level-button">
                 <label for="easy-level">Easy</label>
-                <input type="radio" name="level-type" id="easy-level" value="easy" checked>
+                <input type="radio" name="level-type" id="easy-level" value="easy" aria-label="select for easy questions" checked>
             </div>
         
             <div class="level-button">
                 <label for="medium-level">Medium</label>
-                <input type="radio" name="level-type" id="medium-level" value="medium">
+                <input type="radio" name="level-type" id="medium-level" value="medium" aria-label="select for medium questions">
             </div>
 
             <div class="level-button">
                 <label for="hard-level">Hard</label>
-                <input type="radio" name="level-type" id="hard-level" value="hard">
+                <input type="radio" name="level-type" id="hard-level" value="hard" aria-label="select for hard questions">
             </div>
     
         </div>
-
+        <!-- button for each category below -->
         <div class="category-area">
-            <button class="category-button" id="movies">Movies <i class="fas fa-tv"></i></button>
-            <button class="category-button" id="sport"><i class="fas fa-running"></i> Sport</button>
-            <button class="category-button" id="science">Science <i class="fas fa-atom"></i></button>
-            <button class="category-button" id="geography"><i class="fas fa-globe-europe"></i> Geography</button>
-            <button class="category-button" id="history">History <i class="fab fa-fort-awesome"></i></button>
+            <button class="category-button" aria-label="Click this for movie related questions" id="movies">Movies <i class="fas fa-tv"></i></button>
+            <button class="category-button" aria-label="Click this for sport related questions" id="sport"><i class="fas fa-running"></i> Sport</button>
+            <button class="category-button" aria-label="Click this for science related questions" id="science">Science <i class="fas fa-atom"></i></button>
+            <button class="category-button" aria-label="Click this for geography related questions" id="geography"><i class="fas fa-globe-europe"></i> Geography</button>
+            <button class="category-button" aria-label="Click this for history related questions" id="history">History <i class="fab fa-fort-awesome"></i></button>
         </div>
     </div>
 </section>
-    <!-- rules-screen section -->
+    <!-- rules-screen section (hidden)-->
 <section id="rules-screen" class="section-area">
         <header>
     
@@ -88,26 +91,26 @@
             <p>1. Each game has 10 questions</p>
             <p>2. Each question has 4 possible answers</p>
             <p>3. The score shows the number of correct answers </p>
-            <p>4. The incorrect number represents your number of mistakes</p>
+            <p>4. The incorrect number represents your number of silly mistakes</p>
             
             <br>
 
             <p><strong>Are you ready?</strong></p>
         </div>
-
-        <button id="rules-button">I'm Ready!</button>
+        <!-- button to start game -->
+        <button id="rules-button" aria-label="click this button to start game">Let's do it!</button>
 </section>
-    <!-- in-game screen section -->
+    <!-- game screen section (hidden) -->
 <section id="game-screen" class="section-area">
     <header>
         <p><i class="far fa-question-circle"></i> MasterMindsIQ</p>
-
-        <button id ="header-button" class="header-icon"><i class="fas fa-door-closed"></i></button>
+        <!-- only header in this section contains door icon on the right (offers player to exit game any time) -->
+        <button id ="header-button" class="header-icon"><i class="fas fa-door-closed" aria-label="click this button to exit game"></i></button>
 
     </header>
     
     <div class="div-box">
-        <!-- score board and timer -->
+         <!-- score board, question number and number of mistakes displayed under header -->
         <div class="score-area">
 
             <div class="info-div">
@@ -123,7 +126,7 @@
             </div>
 
         </div>
-        <!-- to display question -->
+        <!-- quiz container to display each question and four possible answers -->
         <div id="quiz-container">
 
             <h1 id="question" class="question-area">Question one</h1>
@@ -131,21 +134,21 @@
         <!-- display 4 possible answers in each button -->
         <div class="answers-area" id="option-buttons">
             
-            <button class="game-button">Answer One</button>
-            <button class="game-button">Answer two</button>
-            <button class="game-button">Answer three</button>
-            <button class="game-button">Answer Four</button>
+            <button class="game-button" aria-label="option one">Answer One</button>
+            <button class="game-button" aria-label="option two">Answer two</button>
+            <button class="game-button" aria-label="option three">Answer three</button>
+            <button class="game-button" aria-label="option four">Answer Four</button>
         
         </div>
         
         <div class="controls">
-            <button class="controls-button" id="next-button">Next Question</button>
-            <button class="controls-button" id="finish-button">Finish Quiz</button>
+            <button class="controls-button" id="next-button" aria-label="next question">Next Question</button>
+            <button class="controls-button" id="finish-button" aria-label="check your final score">Finish Quiz</button>
         </div>
         </div>
     </div>
 </section>
-<!-- section for door icon within header during game -->
+<!-- page loads if door icon is pressed during game, offers two options to user - leave or resume -->
 <section id="door-screen" class="section-area">
     <header>
         <p><i class="far fa-question-circle"></i> MasterMindsIQ</p>
@@ -160,16 +163,17 @@
 
         <div class="exit-buttons">
 
-            <button class="exit-button" id="button-yes">Yes</button>
+            <button class="exit-button" id="button-yes" aria-label="click to exit game">Yes</button>
 
-            <button class="exit-button" id="button-no">No</button>
+            <button class="exit-button" id="button-no" aria-label="click to return to game">No</button>
 
         </div>
     </div>
 
 </section>
 
-<!-- section for door icon within header during game -->
+<!-- section for end-screen page once the finish button is pressed. Form data and scoreboard used to display a personalised,
+positive message for each player -->
 <section id="end-screen" class="section-area">
     <header>
 
@@ -179,10 +183,10 @@
     
     <div class="div-box">
 
-       <p class="end-text">Well Done for getting this far!</p>
+       <p class="end-text">Well Done to you! Not everyone finishes..</p>
        
        <div class="smiley-image">
-
+           <!-- smiley face image in final page -->
            <img src="assets/images/end-screen-smiley.jpg" alt="Smiley face at the end of the game">
 
        </div>
@@ -193,13 +197,14 @@
 
            <span id="end-comment">comment</span>
 
-           <button class="controls-button" id="end-button">Menu</button>
+           <button class="controls-button" id="end-button" aria-label="back to main menu">Menu</button>
 
        </div>
 
     </div>
 
 </section>
+    <!-- link to js-->
     <script src="assets/js/script.js"></script>
     
 </body>

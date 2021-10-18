@@ -2151,8 +2151,9 @@ function showQuestion(question) {
                 button.dataset.correct = answer.correct; /** add correct dataset attribute only if answer is correct */
             }
                 button.addEventListener('click', checkAnswer); // if player clicks on an answer, call checkAnswer function 
-                optionButtons.appendChild(button); // append new buttons as child of optionButtons
-
+                
+                optionButtons.appendChild(button);
+                 // append new buttons as child of optionButtons               
     });
 }
 /**
@@ -2192,6 +2193,7 @@ function checkAnswer(event) {
     } else {
         incrementIncorrectNumber();
     }
+    
 }
 
 /**

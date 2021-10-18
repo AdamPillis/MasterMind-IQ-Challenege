@@ -215,8 +215,8 @@ header p {
 /* styling for in-game screen only */
 .div-box {
     margin: 0 auto;
-    height: 100vh;
-    max-height: 100vh;
+    height: 95vh;
+    max-height: 95vh;
 }
 .score-area {
     height: 10vh;

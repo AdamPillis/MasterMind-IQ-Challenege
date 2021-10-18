@@ -1,108 +1,64 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [MasterMindIQ](https://adampillis.github.io/MasterMind-IQ-Challenege/)
 
-Welcome AdamPillis,
+## 1. **Introduction**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### **What is it?**
+MasterMindIQ is a general quiz designed to test the general knowledge of young adults from around the age of 16 and upwards. 
+- The quiz application has a difficulty section of three levels and five general categories for the players to chose from to their liking.
+- Each game consists of 10 questions with a player feedback at the end of each game which are score number specific. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The **Project Aim** was to design a game that most age groups of online user can play if they wish so. *MasterMindIQ* was also designed to be as *interactive *with its players as possible and allowing them to *fully control* the type of game they each wish to play.
+ A quiz game was chosen for this reason and five categories were included with three difficulty levels to match the interest and knowledge level of each player. The category topics are general rather than being specific to give players the opportunity and like the quiz game. If one can't answer any question because they're too related, they may lose interest and never return in the future. 
 
-## Gitpod Reminders
+ ### **How it works?**
+ 1. The landing page welcomes the user and automatically starts interacting with them by asking them to enter their player name and either click the button or press 'Enter'. 
+ 2. This is followed by the menu page with a personalised message at the top with details taken from the form of the landing page. Underneath, each player can chose a difficulty level (easy level is automatically checked) followed by five general categories to include the interest of most players. 
+ 3. Once the player has clicked on their chosen category, a rule page pops up to explain the rules of the game before the actual game begins. The game includes a player score board showing the score, question number and number of incorrect answers. This is followed by the question and four possible answers with only one correct answer.
+ 4. Once the game is finished, i.e 10 questions have been answered, each player jumps to the end user feedback page where a warm welcome message awaits followed by their score number and based on that, a specific end comment. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+ ### **Who is it for**
+The target audience is global and any user from the age of 16 has good potential to get a couple of questions correct. Another reason the creator build a quiz game was to include all age groups of the global target audience. 
 
-`python3 -m http.server`
+**New User** : Each new user has the ability to play up to 15 games with different questions if they so wish. Each of the 5 categories consist of 3 levels of 10 questions. A young adult with secondary school knowledge should have the knowledge to test themselves on easy levels while medium and hard levels are designed for older generations. The landing page asks each player to enter a player name to personalise the game. 
 
-A blue button should appear to click: _Make Public_,
+**Returning User** : The chances of playing all 15 games during their first visit is low which means that as a returning user, other categories can be played at several difficulty levels. One of the first updates of this potential quiz game would be to implement APIs and expand the question database of each category to enhance the number of returning users. 
 
-Another blue button should appear to click: _Open Browser_.
+**INCLUDE SCREENSHOT OF LANDING PAGE HERE**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **Planning**
 
-A blue button should appear to click: _Make Public_,
+The planning process started by designing one html page (**index.html**) with each page represented by a section. CSS and Javascript was then used to hide and display depending on what the user is clicking on. 
 
-Another blue button should appear to click: _Open Browser_.
+**1. Start-Screen Section**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**INCLUDE SCREENSHOT**
 
-To log into the Heroku toolbelt CLI:
+**2. Menu-Screen Section**
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+**INCLUDE SCREENSHOT**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+**3. Rule-Screen Section**
 
-------
+**INCLUDE SCREENSHOT**
 
-## Release History
+**4. Game-Screen Section**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**INCLUDE SCREENSHOT**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**5. Exit-Screen Section**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+**INCLUDE SCREENSHOT**
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+**6. End-Screen Section**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+**INCLUDE SCREENSHOT**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The creator has also made a rough sketch of functions he is going to use within his *script.js* to make the quiz game work. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+**Planning Functions Sketch**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**INCLUDE SCRENSHOT OF FUNCTIONS**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+In terms of screen sizes, the creator used *flex-display* through each section to ensure that the game looks identical on every screen-size. As a result, the sketches for each section above also represent smaller and bigger screens using flex and different font and buttons sizes. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## 2. **Features (existing)

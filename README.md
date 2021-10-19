@@ -68,6 +68,57 @@ In terms of screen sizes, the creator used *flex-display* through each section t
 
 ## 2. **Features (existing)
 
+### 1. **Landing Page**
+
+#### *Header*
+The *header* contains the quiz game's official name to the left and it is consistent by displaying in every page throughout the game.
+
+![header](assets/images/header-screenshot.PNG "Project header")
+
+#### *Landing page message*
+Each user is greeted with a warm 'welcome message' followed by an inspiring quote which outlines one of the main functions of this project, *to test each visitor's general knowledge*.
+
+![Landing page message](assets/images/landing-page-text-screenshot.PNG "Landing page message")
+
+#### *Landing page submit form*
+The quiz game starts interacting with each user as soon as they land on the page. The text input of the form is focused on to indicate the user their action is necessary to continue. They cannot proceed if the input is left empty. Above the text input, is a label to ensure the user knows what they need to enter. The language used is just in-between form and informal language for an equal balance. 
+Once the above step is complete and the **Let's go** button is pressed, JavaScript is used to hide the land-screen section and display the main menu. In terms of contrast and user friendly design, the body color is used to style the button and the font-size also increases when hovered over. Javascript has also been used to allow the **Enter button** to also work as this can be an automatic action by some users.
+
+![Form within landing page](assets/images/form-screenshot.PNG "Form within landing page")
+
+### 2. **Menu Page**
+
+#### *Menu - Personalised Message*
+Once the user submit's their form with their nickname, the *welcome message* will include their chosen name using JS followed by a brief guide as to what is expected from the user in order to continue. Warm language is used to inspire the player to *want* to play the quiz. 
+
+![Menu welcome message](assets/images/menu-message-screenshot.PNG "Menu welcome message")
+
+#### *Difficulty level area*
+Right under the welcoming message, there are three radio buttons - easy, medium and hard. The easy radio button is set to be checked automatically unless the user changes it to medium or hard. These radio buttons are used by JS to determine the difficulty level selected and this is one argument to source the correct array of questions. The styling has been kept clear and basic for ease of use by any age group. 
+
+![Menu difficulty buttons](assets/images/difficulty-levels-screenshot.PNG "Menu difficulty buttons")
+
+#### *Category Buttons*
+Once the difficulty button is selected by the user, they each get to chose one of the five categories which is the second argument to determine which array of questions to use. The buttons use the same class to look identical with the same margin and padding. Each of these buttons is aria-labelled and have a unique ID which is linked with an event listener through JS. When hovered over, the text color changes and also increases in size for better visuals from a user perspective. 
+
+![Menu category buttons](assets/images/category-buttons-screenshot.PNG "Menu category buttons")
+
+### 3. **Rules Page**
+
+#### *Rules Box*
+Consists of 4 rules altogether with an interactive message with the player to ensure they are all set and ready to play. The creator ensured that the user is also aware of current *in-game* features above the question container where their score, question number and incorrect answers are stored and monitored by JS in some functions. 
+
+#### *Let's Go Button*
+This button starts the game by hiding the rules-section and displaying the game-screen page with the first question and possible answers. 
+
+![Rules screen section](assets/images/rules-screen-screenshot.PNG "Rules screen section")
+
+### 4. **In-game Page**
+
+### 5. **Exit Page**
+
+### 6. **End Page**
+
 ## 4. Deployment
 
 For deployment, GitHub was used and the data was pushed from GitPod. 

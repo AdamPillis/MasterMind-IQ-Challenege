@@ -56,6 +56,7 @@ header h3 {
     color: white;
     font-family: 'Playfair Display', serif;  
 }
+/* icon within header is only available during a game to give the player the option to exit */
 .header-icon {
     margin-right: 5px;
     float: right;
@@ -67,6 +68,7 @@ header h3 {
 .header-icon i {
     font-size: 2rem;
 }
+/* used and modified in some sections to keep consistency high */
 .div-box {
     background-color: #E9C46A;
     height: 100vh;
@@ -93,6 +95,7 @@ header h3 {
     margin-bottom: 10vh;
     color: white;
 }
+/* form box where user enters their player name and the data is posted to be used in other sections */
 .playername {
     height: 30vh;
     width: 35%;
@@ -191,8 +194,7 @@ header h3 {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    background-color: hsl(43, 74%, 66%);
-    
+    background-color: hsl(43, 74%, 66%); 
 }
 .rules-box p {
     font-size: 1.2rem;
@@ -214,7 +216,7 @@ header h3 {
     color: white;
     background-color: grey;
 }
-/* in-game screen section to display questions and answers set to hide */
+/* in-game screen section to display questions and answers (set to hide and displayed using JS after rules-screen) */
 #game-screen {
     display: none;
 } 
@@ -261,11 +263,13 @@ header h3 {
 .game-button:hover {
     background-color: hsl(var(--hue), 37%, 10%);
 }
+/* if user is correct, hue correct color is used */
 .game-button.correct {
     --hue: var(--hue-correct); 
     font-weight: 900;
     font-size: 1.8rem;
 }
+/* if user is incorrect, hue incorrect color is used */
 .game-button.incorrect {
     --hue: var(--hue-incorrect);
 }
@@ -310,7 +314,6 @@ header h3 {
     display: flex;
     flex-direction: row;
     margin: 40px auto;
-
 }
 .exit-button{
     padding: 1%;
@@ -319,7 +322,7 @@ header h3 {
     font-size: 1.2rem;
     border-radius: 10px;
 }
-/* in-game screen section to display questions and answers set to hide */
+/* end-screen section which is displayed once the game is over */
 #end-screen {
     display: none;
 }
@@ -328,7 +331,6 @@ header h3 {
     font-size: 2rem;
     margin: 20px 0;
     font-family: 'Playfair Display', serif;
-
 }
 .smiley-image {
     height: 20vh;
@@ -349,7 +351,6 @@ header h3 {
     font-size: 1.5rem;
 }
 .end-feedback span {
-    
     margin-top: 8vh;
 }
 #end-button {
@@ -644,7 +645,7 @@ header h3 {
         font-size: 1.2rem;
     }
 }
-/* media queries at 450px for several screens */
+/* media queries at 320px for several screens */
 @media screen and (max-width: 320px) {
     .level-buttons-div {
         margin: 2px auto;

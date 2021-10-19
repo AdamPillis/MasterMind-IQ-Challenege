@@ -330,7 +330,7 @@ header h3 {
 .end-text {
     font-size: 2rem;
     margin: 20px 0;
-    padding: auto 10px;
+    padding: 0 10px;
     letter-spacing: 1px;
     font-family: 'Playfair Display', serif;
 }

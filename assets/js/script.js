@@ -2273,7 +2273,7 @@ function resetPlayerScore() {
  */
 function endPlayerMessage() {
     let finalScore = document.getElementById('final-score');
-    let incorrectAnswers = document.getElementById('final-incorrect')
+    let incorrectAnswers = document.getElementById('final-incorrect');
     let finalMessage = document.getElementById('end-comment');
     let player = form.elements.playername;
     

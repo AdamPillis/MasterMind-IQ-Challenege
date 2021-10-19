@@ -189,7 +189,11 @@ At the bottom of this page, the player will find the final feature which is a bu
 - Add **background images** rather than just colours.
 - Add *more specificity* to end user comments. i.e. different for each difficulty level. 
 
-## 3. Testing
+## 3. Testing and Bugs Fixed/Unfixed
+
+## **Validator Testing**
+
+
 
 ## 4. Deployment
 

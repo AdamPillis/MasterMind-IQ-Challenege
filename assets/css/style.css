@@ -409,6 +409,10 @@ header h3 {
     #rules-button {
         font-size: 1.4rem;
     }
+    .header-icon {
+        font-size: 1.6rem;
+        padding-top: 2px;
+    }
     .info-div p {
         font-size: 0.8rem;
     }
@@ -490,7 +494,8 @@ header h3 {
         margin-top: 10px;
     }
     .header-icon i{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        padding-top: 2px;
     }
     #exit-box {
         height: 20vh;

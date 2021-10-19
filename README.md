@@ -145,7 +145,15 @@ If the user clicks the incorrect answer, the same applies just displaying the **
 
 ![Incorrect - body style in game screen section](assets/images/game-incorrect-style.PNG "Incorrect - body style in game screen section")
 
+#### *Controls buttons*
 
+- **Next Button** - Different innerHTML for every category and difficulty level. Sets the next question from the correct array based on the specific innerHTML string of the button which is manipulated in JavaScript. It is set to be hidden and to only display once the user clicked on an answer for better game flow. The background changes with the body color (red for incorrect and green if correct for more visual interactivity with each player). The button disappears every time it is pressed and reappears after every click. 
+
+![Button setting next question in game screen section](assets/images/game-screen-next-button.PNG "Button setting next question in game screen section")
+
+- **Finish Button** - At the end of the 10th question, the *next button* is set to be hidden and this button to be displayed instead which takes the player to the end page ('end-screen). Again, for consistency, the background is appears red if the 10th question was answered incorrectly and green if it was correct. 
+
+![Button finishing quiz in game screen section](assets/images/game-screen-finish-button.PNG "Button finishing quiz in game screen section")
 
 ### 5. **Exit Page**
 Activated when the **door icon** is pressed in the top right-hand corner within the header (hides game-screen and displays rules-section).
@@ -160,8 +168,26 @@ or
 
 ![Exit screen section](assets/images/exit-section-screenshot.PNG "Exit screen section")
 
-
 ### 6. **End Page**
+This page is called by JS function once the **finish button** is pressed. 
+At the very top, an encouraging message highlights the player's effort for answering all of the questions to keep a warm atmosphere, even if they player scored very low. This is improved with an image of *smiley face* and a thumbs up.
+
+This is followed by a displaying the players total score and the number of incorrect answers.
+
+Based on the score number above, a personalised message is displayed to the player. For example, if they score 3 or less, the message displayed will be different as if they scored 9 or 10. 
+
+At the bottom of this page, the player will find the final feature which is a button to *end the game* and return them to the main menu to play again. In terms of color contrast, the background color matches the neutral body color. 
+
+![End screen section](assets/images/end-screen-screenshot.PNG "End screen section")
+
+## Features (new ideas) 
+- Instead of manually typing every question into several variables in script.js, **APIs** will be used to increase the data base and the length of code required to run the game. For now, the creator was happy to do it this way to learn JavaScript. 
+- Add two more **categories**
+- Add an **easier** difficulty level to increase the target audience from secondary school level down as far as 8 or 9 years of age!
+- Add a **challenging** difficulty level which will challenge most users.
+- Add a timer which counts down in seconds. (30 seconds per question). 
+- Add **background images** rather than just colours.
+- Add *more specificity* to end user comments. i.e. different for each difficulty level. 
 
 ## 3. Testing
 

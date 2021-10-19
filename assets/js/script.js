@@ -2281,7 +2281,7 @@ function endPlayerMessage() {
     finalScore.innerHTML = document.getElementById('score').innerHTML;
 
     if (parseInt(finalScore.innerHTML) <= 3) {
-        finalMessage.innerHTML = `Don't be upset ${player.value}! You're probably just too tired or this category type may not be your strength. Take a break and come
+        finalMessage.innerHTML = `Don't be upset ${player.value} ! You're probably just too tired or this category type may not be your strength. Take a break and come
         back for another round!`;
       } else if (finalScore.innerHTML <= 5) {
             finalMessage.innerHTML = `Your score may not be one of the highest ${player.value} but you're still scraping a pass!
@@ -2292,7 +2292,10 @@ function endPlayerMessage() {
               } else if (finalMessage.innerHTML <= 9) {
                     finalMessage.innerHTML = `Very good score ${player.value}! 8 or not 9 out of 10 still counts as a top score! Let's try a different category and get
                     ready for the next test!`;
-                }  else  if (finalMessage.innerHTML <=10) {
+                 }  else  if (finalMessage.innerHTML <=10) {
                         finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`;
-                    }  
+                      } else {
+                            finalMessage.innerHTML = `Unknown score number: ${player.value}`;
+                            throw `Unknown score number: ${player.value}. Aborting!`;
+                        }  
                 }

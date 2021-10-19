@@ -330,6 +330,8 @@ header h3 {
 .end-text {
     font-size: 2rem;
     margin: 20px 0;
+    padding: auto 10px;
+    letter-spacing: 1px;
     font-family: 'Playfair Display', serif;
 }
 .smiley-image {
@@ -355,6 +357,7 @@ header h3 {
 }
 #end-button {
     width: 30%;
+    height: 40px;
     padding: 1%;
     margin: 0 auto;
     font-size: 1rem;

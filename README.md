@@ -23,7 +23,7 @@ The target audience is global and any user from the age of 16 has good potential
 
 **Returning User** : The chances of playing all 15 games during their first visit is low which means that as a returning user, other categories can be played at several difficulty levels. One of the first updates of this potential quiz game would be to implement APIs and expand the question database of each category to enhance the number of returning users. 
 
-**INCLUDE SCREENSHOT OF LANDING PAGE HERE**
+![Introduction Image](assets/images/landing-page-screenshot.PNG "Introduction page/landing page")
 
 ### **Planning**
 
@@ -59,6 +59,42 @@ The creator has also made a rough sketch of functions he is going to use within 
 
 **INCLUDE SCRENSHOT OF FUNCTIONS**
 
+**Planning Colours**
+The creator used [coolors.co](https://coolors.co/palettes/trending) website to chose six colors including a neutral body color, red for incorrect, green for incorrect and the rest for other parts and buttons. The colors he chose are as follows and used **hsl** in this project to test it out. 
+
+![Project Colours](assets/images/project-colors-screenshot.PNG "Project colours")
+
 In terms of screen sizes, the creator used *flex-display* through each section to ensure that the game looks identical on every screen-size. As a result, the sketches for each section above also represent smaller and bigger screens using flex and different font and buttons sizes. 
 
 ## 2. **Features (existing)
+
+## 4. Deployment
+
+For deployment, GitHub was used and the data was pushed from GitPod. 
+
+The steps needed to take to deploy this project are as follows: 
+
+1. Visit GitHub's official website.
+
+2. In the top right-hand corner of the menu section, click on the **small array shown**, just above the icon. 
+
+3. Select **Your Repositaries**.
+
+4. Select **MasterMindsIQ Challenge Project**.
+
+5. Just above the GitPod button, click on **settings**.
+
+6. Scroll down to roughly 80% of the page and click on **GitHub Pages**.
+
+7. From the *source section*, select **main branch**.
+
+8. Click **save**.
+
+9. Update the page and once the project is deployed, the link will show in *green* and ready for use. 
+
+![Deployment stage of project](assets/images/deployment-screenshot.PNG "Deployment stage of project")
+
+Click here for the offical GitHub link for this project 
+[MasterMind-IQ-Challenege](https://adampillis.github.io/MasterMind-IQ-Challenege/)
+
+## 5. Credits

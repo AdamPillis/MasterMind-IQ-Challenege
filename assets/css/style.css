@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
 
 /* default settings including before and after elements also  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 /* styling text in rules screen and other bold text to stand out */
 strong {
@@ -22,7 +22,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: hsl(var(--hue), 37%, 24%);
-    font-family: 'Architects Daughter', cursive;  /*'Fleur De Leah', cursive; */
+    font-family: 'Montserrat', sans-serif;  
     text-align: center;   
 }
 /* body color to be displayed if answer will be correct */
@@ -48,12 +48,13 @@ header {
     width: 100%;
     background-color: black;
 }
-header p {
+header h3 {
     font-size: 1.5rem;
     float: left;
     padding-left: 5px;
+    padding-top: 2px;
     color: white;
-    font-family: 'Fleur De Leah', cursive;  
+    font-family: 'Playfair Display', serif;  
 }
 .header-icon {
     margin-right: 5px;
@@ -85,7 +86,7 @@ header p {
     margin: 10vh 0;
     letter-spacing: 1px;
     color: white;
-    font-family: 'Fleur De Leah', cursive;
+    font-family: 'Playfair Display', serif;
 }
 .paragraph-text{
     font-size: 2rem;
@@ -94,7 +95,7 @@ header p {
 }
 .playername {
     height: 30vh;
-    width: 50%;
+    width: 35%;
     background: transparent;
     margin: 0 auto;
     display: flex;
@@ -141,7 +142,7 @@ header p {
 }
 .welcome-message {
     margin: 10px auto;
-    font-family: 'Fleur De Leah', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
 }
 .menu-message {
@@ -168,14 +169,15 @@ header p {
     height: 8vh;
     width: 70%;
     margin: 15px auto;
-    border-radius: 10px;
-    background-color: hsl(27, 87%, 67%);
-    font-family: 'Architects Daughter', cursive;
-    font-size: 1.5rem;
+    border-radius: 15px;
+    background-color: hsl(12, 76%, 61%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
     letter-spacing: 4px;
 }
 .category-button:hover {
     color: white;
+    font-size: 2.2rem;
 }
 /* set display for rules screen to none */
 #rules-screen {
@@ -206,7 +208,11 @@ header p {
     font-size: 2rem;
     background: transparent;
     border-radius: 25px;
-    background-color: rgba(233, 196, 106, 0.8)
+    background-color: hsl(43, 74%, 66%);
+}
+#rules-button:hover {
+    color: white;
+    background-color: grey;
 }
 /* in-game screen section to display questions and answers set to hide */
 #game-screen {
@@ -257,8 +263,8 @@ header p {
 }
 .game-button.correct {
     --hue: var(--hue-correct); 
-    color: black;
-    font-weight: 700;
+    font-weight: 900;
+    font-size: 1.8rem;
 }
 .game-button.incorrect {
     --hue: var(--hue-incorrect);
@@ -277,6 +283,7 @@ header p {
 .controls-button:hover {
     background-color: hsl(var(--hue), 37%, 10%);
 }
+/* hiding both control buttons and controlling their display using JS */
 #next-button{
     display: none;
 }
@@ -299,10 +306,11 @@ header p {
     font-size: 1.8rem;
 }
 .exit-buttons{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     margin: 40px auto;
+
 }
 .exit-button{
     padding: 1%;
@@ -319,6 +327,7 @@ header p {
 .end-text {
     font-size: 2rem;
     margin: 20px 0;
+    font-family: 'Playfair Display', serif;
 
 }
 .smiley-image {
@@ -364,6 +373,9 @@ header p {
     }
     #login-form label {
         font-size: 1rem;
+    }
+    .playername {
+        width: 45%;
     }
     #start-button {
         font-size: 0.8rem;

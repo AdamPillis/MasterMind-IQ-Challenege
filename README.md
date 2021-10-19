@@ -109,15 +109,61 @@ Once the difficulty button is selected by the user, they each get to chose one o
 Consists of 4 rules altogether with an interactive message with the player to ensure they are all set and ready to play. The creator ensured that the user is also aware of current *in-game* features above the question container where their score, question number and incorrect answers are stored and monitored by JS in some functions. 
 
 #### *Let's Go Button*
-This button starts the game by hiding the rules-section and displaying the game-screen page with the first question and possible answers. 
+This button starts the game by hiding the rules-section and displaying the game-screen page with the first question and possible answers. When hovered over, the **color** of the text and background changes to enhance visual looks for the user. 
 
 ![Rules screen section](assets/images/rules-screen-screenshot.PNG "Rules screen section")
 
 ### 4. **In-game Page**
+#### *Game Screen Header*
+Within this page, a 'Door icon' is added to the *right-hand corner* of the header. This enables the user to exit the game whenever they wish while giving them full control of their time spent on the web application. This is the only section or page that is shown with an additional header feature. 
+
+![Header icon in game screen section](assets/images/game-header-screenshot.PNG "Header icon in game screen section")
+
+#### *Player Score Area*
+Just above the quiz container, as outlined to the user in the rules section, this area provides information to the user which is also used by Javascript to create a message at the end of each game. 
+The features it contains are:
+- **Score counter** - For each correct answer, the score number increases by one.
+- **Question Number** - This shows the question number being answer in the center and goes up to 10. 
+- **Incorrect counter** - Displays the number of incorrect answers. 
+
+Each of the above own a JS function to reset the number at the end of each game. 
+
+![Score Area in game screen section](assets/images/game-score-area-screenshot.PNG "Score Area in game screen section")
+
+#### *Quiz Container*
+Contains the question and four possible answers attached to it. 
+The possible answers are displayed in four buttons which are manipulated using JavaScript. The buttons are aria-labelled for better accessibility. 
+The innerHTML of the question area and each of the four buttons is used by JavaScript to display each question of each array. When hovered over, the background changes for improved user visuality.
+
+![Quiz container in game screen section](assets/images/game-quiz-container-screenshot.PNG "Quiz container in game screen section")
+
+If the user clicks the correct answer, a JavaScript function displays the **hue correct** body and button colors.
+
+![Correct - body style in game screen section](assets/images/game-correct-style.PNG "Correct - body style in game screen section")
+
+If the user clicks the incorrect answer, the same applies just displaying the **hue incorrect** color. 
+
+![Incorrect - body style in game screen section](assets/images/game-incorrect-style.PNG "Incorrect - body style in game screen section")
+
+
 
 ### 5. **Exit Page**
+Activated when the **door icon** is pressed in the top right-hand corner within the header (hides game-screen and displays rules-section).
+
+A small box pops up to double check the player wants to leave for sure. 
+
+The box contains two buttons:
+- Yes, to go back to the main menu.
+
+or
+- No, resume game by closing rules-screen and reopening game-screen section. 
+
+![Exit screen section](assets/images/exit-section-screenshot.PNG "Exit screen section")
+
 
 ### 6. **End Page**
+
+## 3. Testing
 
 ## 4. Deployment
 

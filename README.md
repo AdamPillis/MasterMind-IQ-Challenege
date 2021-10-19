@@ -1,4 +1,4 @@
-# [MasterMindIQ](https://adampillis.github.io/MasterMind-IQ-Challenege/)
+# [MasterMindIQ](https://adampillis.github.io/MasterMind-IQ-Challenge/)
 
 ## 1. **Introduction**
 
@@ -218,6 +218,6 @@ The steps needed to take to deploy this project are as follows:
 ![Deployment stage of project](assets/images/deployment-screenshot.PNG "Deployment stage of project")
 
 Click here for the offical GitHub link for this project 
-[MasterMind-IQ-Challenege](https://adampillis.github.io/MasterMind-IQ-Challenege/)
+[MasterMind-IQ-Challenge](https://adampillis.github.io/MasterMind-IQ-Challenge/)
 
 ## 5. Credits

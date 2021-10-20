@@ -472,3 +472,105 @@ Click here for the offical GitHub link for this project
 [MasterMind-IQ-Challenge](https://adampillis.github.io/MasterMind-IQ-Challenge/)
 
 ## 5. Credits
+
+### **Content**
+
+#### **Questions and answers**
+
+**Movie questions (easy, medium and hard)**
+
+Taken from a YouTube quiz game
+Name : MOVIE Trivia Quiz #1 | 40 Film Questions with Answers
+Link : [https://www.youtube.com/watch?v=Zm0b0-u6VmE](https://www.youtube.com/watch?v=Zm0b0-u6VmE)
+
+**Sports questions (easy, medium)**
+
+Taken from *www.parade.com*
+Name : 101 Sports Trivia Questions and Answers
+Link : [https://parade.com/1182514/marynliles/sports-trivia/](https://parade.com/1182514/marynliles/sports-trivia/)
+
+**Sports questions (hard)**
+
+Taken from YouTube quiz game
+Name : Sports Trivia Quiz | 10 Questions and Answers
+Link : [https://www.youtube.com/watch?v=GzB5OFgJV44](https://www.youtube.com/watch?v=GzB5OFgJV44)
+
+**Science questions (easy)**
+
+Taken from YouTube quiz game
+Name : 40 General Science Quiz General Knowledge Questions and Answers | Part - 1 (in English)
+Link : [https://www.youtube.com/watch?v=lXgSeXezs6k](https://www.youtube.com/watch?v=lXgSeXezs6k)
+
+**Science questions (medium and hard)**
+
+Taken from YouTube quiz game
+Name : 20 Trivia Questions (Science) No. 2
+Link : [https://www.youtube.com/watch?v=VuXZHLsPELY](https://www.youtube.com/watch?v=VuXZHLsPELY)
+
+**Geography questions (easy, medium and hard)**
+
+Taken from YouTube quiz game
+Name : 20 Trivia Questions (Geography) No. 1
+Link : [https://www.youtube.com/watch?v=Uikjx5hkzXg&t=3s](https://www.youtube.com/watch?v=Uikjx5hkzXg&t=3s)
+
+**Geography questions (hard)**
+
+Taken from YouTube quiz game
+Name : Geography Trivia (DIFFICULT)
+Link : [https://www.youtube.com/watch?v=lDdo19f0UAU&t=1123s](https://www.youtube.com/watch?v=lDdo19f0UAU&t=1123s)
+
+**History questions (easy)**
+
+Taken from YouTube quiz game
+Name : Quiz: History Questions and Answers | Fun Fact Trivia
+Link : [https://www.youtube.com/watch?v=HQ3qJD_V8O4](https://www.youtube.com/watch?v=HQ3qJD_V8O4)
+
+**History questions (medium and hard)**
+
+Taken from YouTube quiz game
+Name : 20 Trivia Questions (History) No. 1
+Link : [https://www.youtube.com/watch?v=Otq0lMCFBfk](https://www.youtube.com/watch?v=Otq0lMCFBfk)
+
+#### **Smiley-face image in end-section**
+
+**Owner**: News Talk WBCK 
+
+**Link** : [https://wbckfm.com/battle-creeks-smiley-face-tagger-says-he-is-ready-to-face-consequences/](https://wbckfm.com/battle-creeks-smiley-face-tagger-says-he-is-ready-to-face-consequences/)
+
+#### **Slack Community**
+- Inspiration for hiding and displaying sections using JavaScript came through interaction in #Portfolio two group chat. 
+
+#### **Idea Inspiration**
+1. YouTube video related to quiz
+
+**Name:** Build A Quiz App With JavaScript
+
+2. Love Maths Project inspired the creator how Javascript connects functions and buttons. 
+
+**Link:** [https://www.youtube.com/watch?v=riDzcEQbX6k&t=488s](https://www.youtube.com/watch?v=riDzcEQbX6k&t=488s)
+
+#### **Color Inspiration**
+
+**Name:** www.coolors.org
+
+**Link:** [https://coolors.co/palettes/trending](https://coolors.co/palettes/trending)
+
+#### **W3Schools.com**
+
+Used throughout the project 
+
+For example ==>
+
+**How to use arrow functions (short-hand)**
+*Link* - [https://www.w3schools.com/js/js_arrow_function.asp](https://www.w3schools.com/js/js_arrow_function.asp)
+
+#### **Code Institute's Online Learning System**
+
+Returned to and used throughout the project
+
+For example, firstly it helped with creating the form element within the landing section.
+
+**Name of module** : JavaScript & the DOM 
+
+**Name of lecture** : Working with Forms
+

@@ -2,7 +2,7 @@
 let form = document.getElementById('login-form');
 form.elements.playername.focus(); // focusing on text box
 /**
- * adds Enter event listener to form box
+ * adds Enter event listener to form box by pressing 'Enter' or clicking 'Submit'
  */
 form.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
@@ -43,21 +43,21 @@ function checkDifficultyLevel() {
 
     if (easyButton.checked) {
         difficultyLevel = 'easy';
-    } else if (mediumButton.checked) {
+      } else if (mediumButton.checked) {
             difficultyLevel = 'medium';
-        } else if (hardButton.checked) {
-                difficultyLevel = 'hard'; }
-            else {
-                alert("Unknown difficulty level");
+          } else if (hardButton.checked) {
+                difficultyLevel = 'hard'; 
+              } else {
+                    alert("Unknown difficulty level");
                 }
     }
     // getting movies button from DOM and adding a click event listener to it
     let moviesButton = document.getElementById('movies');
     moviesButton.addEventListener('click', checkMoviesLevel);
 /** calls and checks what the difficulty level is first
- * calls startEasyMovies() function if easy
- * calls startMediumMovies() function if medium
- * calls startHardMovies() function if hard
+ * calls startEasyMovies() function if difficultyLevel string = easy
+ * calls startMediumMovies() function if difficultyLevel string = medium
+ * calls startHardMovies() function if difficultyLevel string = hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkMoviesLevel() {
@@ -68,17 +68,17 @@ function checkMoviesLevel() {
 
         startEasyMovieQuestions();
 
-        } else if (difficultyLevel == 'medium') {
+      } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium Movie Question';
 
             startMediumMovieQuestions();
 
-            } else if (difficultyLevel == 'hard') {
+          } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard Movie Question';
 
                 startHardMovieQuestions();
 
-                } else {
+              } else {
                     alert('Unknown category level');
                     }
     }
@@ -86,9 +86,9 @@ function checkMoviesLevel() {
     let sportButton = document.getElementById('sport');
     sportButton.addEventListener('click', checkSportLevel);
 /** calls and checks what the difficulty level is first
- * calls startEasySport() function if easy
- * calls startMediumSport() function if medium
- * calls startHardSport() function if hard
+ * calls startEasySport() function if difficultyLevel string = easy
+ * calls startMediumSport() function if difficultyLevel string = medium
+ * calls startHardSport() function if difficultyLevel string = hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkSportLevel() {
@@ -109,17 +109,17 @@ function checkSportLevel() {
             
                 startHardSportQuestions();
 
-                } else {
-                    alert('Unknown category level');
+                  } else {
+                        alert('Unknown category level');
                     }
     }
     // getting science button from DOM and adding a click event listener to it
     let scienceButton = document.getElementById('science');
     scienceButton.addEventListener('click', checkScienceLevel);
 /** calls and checks what the difficulty level is first
- * and startEasyScience() function if easy
- * and startMediumScience() function if medium
- * and startHardScience() function if hard
+ * and startEasyScience() function if difficultyLevel string = easy
+ * and startMediumScience() function if difficultyLevel string = medium
+ * and startHardScience() function if difficultyLevel string = hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkScienceLevel() {
@@ -140,7 +140,7 @@ function checkScienceLevel() {
                 
                 startHardScienceQuestions();
 
-                } else {
+              } else {
                     alert('Unknown category level');
                     }
     }
@@ -148,9 +148,9 @@ function checkScienceLevel() {
     let geographyButton = document.getElementById('geography');
     geographyButton.addEventListener('click', checkGeographyLevel);
 /** calls and checks what the difficulty level is  first 
- * calls startEasyGeography() function if easy
- * calls startMediumGeography() function if medium
- * calls startHardGeography() function if hard
+ * calls startEasyGeography() function if difficultyLevel string = easy
+ * calls startMediumGeography() function if difficultyLevel string = medium
+ * calls startHardGeography() function ifdifficultyLevel string =  hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkGeographyLevel() {
@@ -161,17 +161,17 @@ function checkGeographyLevel() {
             
         startEasyGeographyQuestions();
 
-        } else if (difficultyLevel == 'medium') {
+      } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium Geography Question';
             
             startMediumGeographyQuestions();
 
-            } else if (difficultyLevel == 'hard') {
+          } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard Geography Question';
              
                 startHardGeographyQuestions();
 
-                } else {
+              } else {
                     alert('Unknown category level');
                     }
     }
@@ -179,9 +179,9 @@ function checkGeographyLevel() {
     let historyButton = document.getElementById('history');
     historyButton.addEventListener('click', checkHistoryLevel);
 /** calls and checks what the difficulty level is first
- * calls startEasyHistory() function if easy
- * calls startMediumHistory() function if medium
- * calls startHardHistory() function if hard
+ * calls startEasyHistory() function if difficultyLevel string = easy
+ * calls startMediumHistory() function if difficultyLevel string = medium
+ * calls startHardHistory() function if difficultyLevel string = hard
  * the innerText of next button changed in order to identify the correct question array when button with text is clicked
  */
 function checkHistoryLevel() {
@@ -192,22 +192,24 @@ function checkHistoryLevel() {
                 
         startEasyHistoryQuestions();
                   
-        } else if (difficultyLevel == 'medium') {
+      } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium History Question';
                     
             startMediumHistoryQuestions();
  
-            } else if (difficultyLevel == 'hard') {
+          } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard History Question';
                     
                 startHardHistoryQuestions();
 
-                } else {
+              } else {
                     alert('Unknown category level');
                     }
     }
 /**
  * displayRules function hides menu screen and calls rules screen to display
+ * once category has been selected
+ * start game function called right after
  */
 function displayRules() {
     
@@ -230,12 +232,12 @@ function hideRules() {
     rulesScreen.style.display = 'none';
     gameScreen.style.display = 'unset';
 }
-// finish button on final question of each game calling function to show end screen
-let finishButton = document.getElementById('finish-button');
-finishButton.addEventListener('click', displayEndScreen);
+    // finish button on final question of each game calling function to show end screen
+    let finishButton = document.getElementById('finish-button');
+    finishButton.addEventListener('click', displayEndScreen);
 /**
  * called when finish button is clicked on final question
- * shows a final score and a message with a button to the main menu
+ * shows a final score and a message with a button to the main menu (end-screen section displayed)
  */
 function displayEndScreen() {
     clearBodyClass(document.body);
@@ -246,11 +248,13 @@ function displayEndScreen() {
     gameScreen.style.display = 'none';
     endScreen.style.display = 'unset';
 }
-// event listener attached to menu button to take user back to main menu
-let menuButton = document.getElementById('end-button');
-menuButton.addEventListener('click', backToMenu);
+    // event listener attached to menu button to take user back to main menu
+    let menuButton = document.getElementById('end-button');
+    menuButton.addEventListener('click', backToMenu);
 /**
  * function called when Menu button is clicked in end-screen
+ * takes user back to the main menu during quiz game
+ * also resets scoreboard
  */
 function backToMenu() {
     let endScreen = document.getElementById('end-screen');
@@ -263,9 +267,9 @@ function backToMenu() {
     resetPlayerScore();
     resetIncorrectNumber();
 }
-// when button on the right within the header is clicked during game.
-let headerButton = document.getElementById('header-button');
-headerButton.addEventListener('click', displayDoorScreen);
+    // when button on the right within the header is clicked during game.
+    let headerButton = document.getElementById('header-button');
+    headerButton.addEventListener('click', displayDoorScreen);
 /**
  * when headerButton is clicked above
  * function hides game-screen and shows door-screen section
@@ -277,12 +281,18 @@ function displayDoorScreen() {
     doorScreen.style.display = 'unset';
     gameScreen.style.display = 'none';
 }
-
-let yesButton = document.getElementById('button-yes');
-yesButton.addEventListener('click', exitGame);
-let noButton = document.getElementById('button-no');
-noButton.addEventListener('click', closeDoorScreen);
-
+    // two buttons within exit-screen 
+    //Yes button calls exitGame function to end game
+    // No button calls closeDoorScreen to resume game
+    let yesButton = document.getElementById('button-yes');
+    yesButton.addEventListener('click', exitGame);
+    let noButton = document.getElementById('button-no');
+    noButton.addEventListener('click', closeDoorScreen);
+/**
+ * Called if the Yes button is pressed in exit-screen
+ * takes user back to the main menu
+ * resets player scoreboard
+ */
 function exitGame() {
     clearBodyClass(document.body);
     resetQuestionNumber();
@@ -294,7 +304,10 @@ function exitGame() {
     doorScreen.style.display = 'none';
     menuScreen.style.display = 'unset';
 }
-
+/**
+ * Called when the no button is pressed in exit-screen
+ * Resumes game by closing exit-screen and re-opening game-screen
+ */
 function closeDoorScreen() {
     let doorScreen = document.getElementById('door-screen');
     let gameScreen = document.getElementById('game-screen');
@@ -2170,6 +2183,7 @@ function resetState(){
     }  
 }
 /**
+ * Called if one of the answers has been clicked on
  * checks which button is selected
  * compares button clicked with correct answer
  */
@@ -2183,19 +2197,17 @@ function checkAnswer(event) {
     });
         if (currentQuestionIndex <= 8) {
             nextButton.style.display = 'unset'; 
-            } else {
-                finishButton.style.display = 'unset';
-                nextButton.style.display = 'none';
+              } else {
+                    finishButton.style.display = 'unset';
+                    nextButton.style.display = 'none';
      
            }
-    if (correct) {
-        incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
-    } else {
-        incrementIncorrectNumber();
-    }
-    
+        if (correct) {
+            incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
+          } else {
+                incrementIncorrectNumber();
+            }  
 }
-
 /**
  * checks if option clicked is correct
  * if correct, set body class to correct (green)

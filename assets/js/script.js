@@ -43,12 +43,12 @@ function checkDifficultyLevel() {
 
     if (easyButton.checked) {
         difficultyLevel = 'easy';
-      } else if (mediumButton.checked) {
-            difficultyLevel = 'medium';
-          } else if (hardButton.checked) {
-                difficultyLevel = 'hard'; 
-              } else {
-                    alert("Unknown difficulty level");
+    } else if (mediumButton.checked) {
+        difficultyLevel = 'medium';
+        } else if (hardButton.checked) {
+            difficultyLevel = 'hard'; 
+            } else {
+                alert("Unknown difficulty level");
                 }
     }
     // getting movies button from DOM and adding a click event listener to it
@@ -68,20 +68,20 @@ function checkMoviesLevel() {
 
         startEasyMovieQuestions();
 
-      } else if (difficultyLevel == 'medium') {
+    } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium Movie Question';
 
             startMediumMovieQuestions();
 
-          } else if (difficultyLevel == 'hard') {
+        } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard Movie Question';
 
                 startHardMovieQuestions();
 
-              } else {
+            } else {
                     alert('Unknown category level');
-                    }
-    }
+                }
+}
     // getting sport button from DOM and adding a click event listener to it
     let sportButton = document.getElementById('sport');
     sportButton.addEventListener('click', checkSportLevel);
@@ -99,17 +99,17 @@ function checkSportLevel() {
         
         startEasySportQuestions();
 
-      } else if (difficultyLevel == 'medium') {
+    } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium Sport Question';
             
             startMediumSportQuestions();
 
-          } else if (difficultyLevel == 'hard') {
+        } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard Sport Question';
             
                 startHardSportQuestions();
 
-                  } else {
+                } else {
                         alert('Unknown category level');
                     }
     }
@@ -130,20 +130,20 @@ function checkScienceLevel() {
         
         startEasyScienceQuestions();
 
-      } else if (difficultyLevel == 'medium') {
+    } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium Science Question';
             
             startMediumScienceQuestions();
 
-          } else if (difficultyLevel == 'hard') {
+        } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard Science Question';
                 
                 startHardScienceQuestions();
 
-              } else {
+            } else {
                     alert('Unknown category level');
                     }
-    }
+}
     // getting geography button from DOM and adding a click event listener to it
     let geographyButton = document.getElementById('geography');
     geographyButton.addEventListener('click', checkGeographyLevel);
@@ -161,20 +161,20 @@ function checkGeographyLevel() {
             
         startEasyGeographyQuestions();
 
-      } else if (difficultyLevel == 'medium') {
+    } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium Geography Question';
             
             startMediumGeographyQuestions();
 
-          } else if (difficultyLevel == 'hard') {
+        } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard Geography Question';
              
                 startHardGeographyQuestions();
 
-              } else {
+            } else {
                     alert('Unknown category level');
-                    }
-    }
+                }
+}
     // getting history button from DOM and adding a click event listener to it
     let historyButton = document.getElementById('history');
     historyButton.addEventListener('click', checkHistoryLevel);
@@ -192,20 +192,20 @@ function checkHistoryLevel() {
                 
         startEasyHistoryQuestions();
                   
-      } else if (difficultyLevel == 'medium') {
+    } else if (difficultyLevel == 'medium') {
             nextButton.innerText = 'Next Medium History Question';
                     
             startMediumHistoryQuestions();
  
-          } else if (difficultyLevel == 'hard') {
+        } else if (difficultyLevel == 'hard') {
                 nextButton.innerText = 'Next Hard History Question';
                     
                 startHardHistoryQuestions();
 
-              } else {
+            } else {
                     alert('Unknown category level');
-                    }
-    }
+                }
+}
 /**
  * displayRules function hides menu screen and calls rules screen to display
  * once category has been selected
@@ -1725,65 +1725,65 @@ function closeDoorScreen() {
             currentQuestionIndex++;
             setNextEasyMovieQuestion();
             incrementQuestionNumber();
-          } else if (nextButton.innerText === 'Next Medium Movie Question') {
+        } else if (nextButton.innerText === 'Next Medium Movie Question') {
                 currentQuestionIndex++;
                 setNextMediumMovieQuestion();
                 incrementQuestionNumber();
-              } else if (nextButton.innerText === 'Next Hard Movie Question') {
+            } else if (nextButton.innerText === 'Next Hard Movie Question') {
                     currentQuestionIndex++;
                     setNextHardMovieQuestion();
                     incrementQuestionNumber();
-                  } else if (nextButton.innerText === 'Next Easy Sport Question') {
+                } else if (nextButton.innerText === 'Next Easy Sport Question') {
                         currentQuestionIndex++;
                         setNextEasySportQuestion();
                         incrementQuestionNumber();   
-                      } else if (nextButton.innerText === 'Next Medium Sport Question') {
+                    } else if (nextButton.innerText === 'Next Medium Sport Question') {
                             currentQuestionIndex++;
                             setNextMediumSportQuestion();
                             incrementQuestionNumber();   
-                          } else if (nextButton.innerText === 'Next Hard Sport Question') {
+                        } else if (nextButton.innerText === 'Next Hard Sport Question') {
                                 currentQuestionIndex++;
                                 setNextHardSportQuestion();
                                 incrementQuestionNumber();   
-                              } else if (nextButton.innerText === 'Next Easy Science Question') {
+                            } else if (nextButton.innerText === 'Next Easy Science Question') {
                                     currentQuestionIndex++;
                                     setNextEasyScienceQuestion();
                                     incrementQuestionNumber();   
-                                  } else if (nextButton.innerText === 'Next Medium Science Question') {
+                                } else if (nextButton.innerText === 'Next Medium Science Question') {
                                         currentQuestionIndex++;
                                         setNextMediumScienceQuestion();
                                         incrementQuestionNumber();   
-                                      } else if (nextButton.innerText === 'Next Hard Science Question') {
+                                    } else if (nextButton.innerText === 'Next Hard Science Question') {
                                             currentQuestionIndex++;
                                             setNextHardScienceQuestion();
                                             incrementQuestionNumber();   
-                                          } else if (nextButton.innerText === 'Next Easy Geography Question') {
+                                        } else if (nextButton.innerText === 'Next Easy Geography Question') {
                                                 currentQuestionIndex++;
                                                 setNextEasyGeographyQuestion();
                                                 incrementQuestionNumber();   
-                                              } else if (nextButton.innerText === 'Next Medium Geography Question') {
+                                            } else if (nextButton.innerText === 'Next Medium Geography Question') {
                                                     currentQuestionIndex++;
                                                     setNextMediumGeographyQuestion();
                                                     incrementQuestionNumber();   
-                                                  } else if (nextButton.innerText === 'Next Hard Geography Question') {
+                                                } else if (nextButton.innerText === 'Next Hard Geography Question') {
                                                         currentQuestionIndex++;
                                                         setNextHardGeographyQuestion();
                                                         incrementQuestionNumber();   
-                                                      } else if (nextButton.innerText === 'Next Easy History Question') {
+                                                    } else if (nextButton.innerText === 'Next Easy History Question') {
                                                             currentQuestionIndex++;
                                                             setNextEasyHistoryQuestion();
                                                             incrementQuestionNumber();   
-                                                          } else if (nextButton.innerText === 'Next Medium History Question') {
+                                                        } else if (nextButton.innerText === 'Next Medium History Question') {
                                                                 currentQuestionIndex++;
                                                                 setNextMediumHistoryQuestion();
                                                                 incrementQuestionNumber();   
-                                                              } else if (nextButton.innerText === 'Next Hard History Question') {
+                                                            } else if (nextButton.innerText === 'Next Hard History Question') {
                                                                     currentQuestionIndex++;
                                                                     setNextHardHistoryQuestion();
                                                                     incrementQuestionNumber();   
-                                                                  }
-    });
-    
+                                                                }
+});
+    //defining each of these variables in each start function below
     let easyMovieQuestions, mediumMovieQuestions, hardMovieQuestions,
         easySportQuestions, mediumSportQuestions, hardSportQuestions,
         easyScienceQuestions, mediumScienceQuestions, hardScienceQuestions,
@@ -2197,15 +2197,15 @@ function checkAnswer(event) {
     });
         if (currentQuestionIndex <= 8) {
             nextButton.style.display = 'unset'; 
-              } else {
-                    finishButton.style.display = 'unset';
-                    nextButton.style.display = 'none';
-     
+        } else {
+                finishButton.style.display = 'unset';
+                nextButton.style.display = 'none';
            }
+
         if (correct) {
             incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
-          } else {
-                incrementIncorrectNumber();
+        } else {
+              incrementIncorrectNumber();
             }  
 }
 /**
@@ -2219,7 +2219,7 @@ function setBodyClass(element, correct) {
 
     if (correct) {
         element.classList.add('correct');
-        } else {
+    } else {
             element.classList.add('incorrect');
         }
 }
@@ -2295,18 +2295,18 @@ function endPlayerMessage() {
     if (parseInt(finalScore.innerHTML) <= 3) {
         finalMessage.innerHTML = `Don't be upset ${player.value} ! You're probably just too tired or this category type may not be your strength. Take a break and come
         back for another round!`;
-      } else if (finalScore.innerHTML <= 5) {
+    } else if (finalScore.innerHTML <= 5) {
             finalMessage.innerHTML = `Your score may not be one of the highest ${player.value} but you're still scraping a pass!
             Let's see if you're any better in a different category!`;
-          } else if (finalScore.innerHTML <= 7) {
+        } else if (finalScore.innerHTML <= 7) {
                 finalMessage.innerHTML = `Not too bad at all ${player.value}, still counts as a pass! Maybe your strength is awaiting
                 in a different category`;
-              } else if (finalMessage.innerHTML <= 9) {
+            } else if (finalMessage.innerHTML <= 9) {
                     finalMessage.innerHTML = `Very good score ${player.value}! 8 or not 9 out of 10 still counts as a top score! Let's try a different category and get
                     ready for the next test!`;
-                 }  else  if (finalMessage.innerHTML <=10) {
+                }  else  if (finalMessage.innerHTML <=10) {
                         finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`;
-                      } else {
+                    } else {
                             finalMessage.innerHTML = `Unknown score number: ${player.value}`;
                             throw `Unknown score number: ${player.value}. Aborting!`;
                         }  

@@ -430,6 +430,18 @@ For this online quiz game, [Am I Responsive](http://ami.responsivedesign.is/) we
 
 ![end section on several screens](assets/images/screens-end-section.PNG "end section on several screens")
 
+### **Other ways of testing responsiveness**
+
+Multiple family members were asked to play the game on their mobile phones and overall, the iPhoneX wasn't fully responsive. The menu section only displayed on half the screen and for the iPhone4, the buttons over filled the screen size. Once the bugs have been identified, they were fixed and responding well now. 
+
+### **Fixed Bugs**
+1. The option buttons did not display the answers as wanted half way through the project. At last, hiding the original buttons with an empty innerHTML and creating new buttons using the same class but instead, filling the innerHTML with the answer, it fixed the issue and answers were showing correctly. 
+
+2. The body.correct and body.incorrect color did not change back to neutral when the next question showed. A simple reset function fixed this issue. 
+
+### **Unfixed Bugs**
+No unfixed bugs to identify. 
+
 ## 4. Deployment
 
 For deployment, GitHub was used and the data was pushed from GitPod. 

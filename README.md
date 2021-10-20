@@ -193,6 +193,13 @@ At the bottom of this page, the player will find the final feature which is a bu
 
 ## **Validator Testing**
 
+This project, MasterMindIQ Challenge, has gone through several validation processes and passed with no issues or errors. 
+
+**index.html** 
+
+Validating site 
+[https://validator.w3.org/](https://validator.w3.org/)
+
 
 
 ## 4. Deployment

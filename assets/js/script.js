@@ -6,7 +6,7 @@ form.elements.playername.focus(); // focusing on text box
  */
 form.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        handleSubmit();
+        handleSubmit(event);
     }
 });
 form.addEventListener('submit', handleSubmit);

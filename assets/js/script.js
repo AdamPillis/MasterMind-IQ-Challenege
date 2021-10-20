@@ -2165,9 +2165,8 @@ function showQuestion(question) {
             }
                 button.addEventListener('click', checkAnswer); // if player clicks on an answer, call checkAnswer function 
                 
-                optionButtons.appendChild(button);
-                 // append new buttons as child of optionButtons               
-    });
+                optionButtons.appendChild(button); // append new buttons as child of optionButtons               
+    });  
 }
 /**
  * Will reset game-screen to default every time a new question is called
@@ -2190,23 +2189,22 @@ function resetState(){
 function checkAnswer(event) {
     let playerAnswer = event.target;
     let correct = playerAnswer.dataset.correct;
-    
+
     setBodyClass(document.body, correct);
     Array.from(optionButtons.children).forEach(button => {
         setBodyClass(button, button.dataset.correct);
-    });
+    }); 
         if (currentQuestionIndex <= 8) {
             nextButton.style.display = 'unset'; 
         } else {
                 finishButton.style.display = 'unset';
                 nextButton.style.display = 'none';
-           }
-
-        if (correct) {
-            incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
-        } else {
-              incrementIncorrectNumber();
-            }  
+            }
+                if (correct) {
+                    incrementPlayerScore(); // increment score by 1 if the button the user clicked has the value of correct
+                } else {
+                    incrementIncorrectNumber(); // increment incorrect number by 1
+                    } 
 }
 /**
  * checks if option clicked is correct
@@ -2243,8 +2241,7 @@ function incrementQuestionNumber() {
  * called when menu button in end-screen section
  * called when yes button in door-screen section
  */
-function resetQuestionNumber() {
-    
+function resetQuestionNumber() { 
     document.getElementById('question-number').innerHTML = 1;
 }
 /**
@@ -2295,19 +2292,18 @@ function endPlayerMessage() {
     if (parseInt(finalScore.innerHTML) <= 3) {
         finalMessage.innerHTML = `Don't be upset ${player.value} ! You're probably just too tired or this category type may not be your strength. Take a break and come
         back for another round!`;
-    } else if (finalScore.innerHTML <= 5) {
+    } else if (parseInt(finalScore.innerHTML) <= 5) {
             finalMessage.innerHTML = `Your score may not be one of the highest ${player.value} but you're still scraping a pass!
             Let's see if you're any better in a different category!`;
-        } else if (finalScore.innerHTML <= 7) {
+        } else if (parseInt(finalScore.innerHTML) <= 6) {
                 finalMessage.innerHTML = `Not too bad at all ${player.value}, still counts as a pass! Maybe your strength is awaiting
                 in a different category`;
-            } else if (finalMessage.innerHTML <= 9) {
-                    finalMessage.innerHTML = `Very good score ${player.value}! 8 or not 9 out of 10 still counts as a top score! Let's try a different category and get
+            } else if (parseInt(finalScore.innerHTML) <= 8) {
+                    finalMessage.innerHTML = `Very good score ${player.value}! 7 or 8 out of 10 still counts as a very good score! Let's try a different category and get
                     ready for the next test!`;
-                }  else  if (finalMessage.innerHTML <=10) {
+                }  else  if (parseInt(finalScore.innerHTML) <=10) {
                         finalMessage.innerHTML = `You could not have done any better ${player.value}! Ready to try out a different category?`;
                     } else {
                             finalMessage.innerHTML = `Unknown score number: ${player.value}`;
-                            throw `Unknown score number: ${player.value}. Aborting!`;
                         }  
                 }

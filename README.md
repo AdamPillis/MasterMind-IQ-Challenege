@@ -2,14 +2,14 @@
 
 ## 1. **Introduction**
 
-### **What is it?**
+### **What is MasterMindIQ?**
 MasterMindIQ is a general, online quiz game designed to test the general knowledge of young adults from around the age of 16 and upwards. 
 - The quiz game application has a difficulty section of three levels and five general categories for the players to chose from to their liking.
 - Each game consists of 10 questions with a player feedback at the end of each game which are score number specific. 
 
-The **Project Aim** was to design a game that most age groups of online user can play if they wish so. *MasterMindIQ Challenege* was also designed to be as *interactive *with its players as possible and allowing them to *fully control* the flow of the game they each wish to play.
+The **Project Aim** was to design a game that most age groups of online user can play if they wish so. *MasterMindIQ Challenge* was also designed to be as *interactive *with its players as possible and allowing them to *fully control* the flow of the game they each wish to play.
 
- A quiz game was chosen for this reason and five categories were included with three difficulty levels to match the interest and knowledge level of each player. The category topics are general rather than being specific to give all players a balanced opportunity. If one can't answer any question because they're too related and it happends to be their weakness, then they may lose interest and never return in the future. The flow of the game has also been designed to be simplistic and minimise user confusion. 
+ A quiz game was chosen for this reason and five categories were included with three difficulty levels to match the interest and knowledge level of each player. The category topics are general rather than being specific to give all players a balanced opportunity. If one can't answer any question because they're too related and it happens to be their weakness, then they may lose interest and never return in the future. The flow of the game has also been designed to be simplistic and minimise user confusion. 
 
  ### **How it works?**
 
@@ -446,7 +446,14 @@ Multiple family members were asked to play the game on their mobile phones and o
 2. The body.correct and body.incorrect color did not change back to neutral when the next question showed. A simple reset function fixed this issue. 
 
 ### **Unfixed Bugs**
-No unfixed bugs to identify. 
+
+Unfortunately, the project has one bug that the creator could not resolve before submission.
+
+The optionButton within the quiz container are created with the innerHTML of answers within and an event listener is attached to each so when the user clicks an answer, the **checkAnswer function** is called. 
+
+However, during testing, the creator realised that each button can be clicked on multiple times which affects the *score* and *incorrect counter*. He tried to use **.removeEventListener** in multiple places but the furthest he has got was he managed to disable them but then the score and incorrect score counter would not function and therefore, it further affects the end feedback. He tried to rearrange both the **checkAnswer** and **showQuestion** by implementing optionButtons.disable or optionButtons.removeEventListener but it caused futher glitches and bugs so in order for the game to be functual, he left the original project in place but unfortunately, this bug will need to solved at a later stage, post-submission. 
+
+Other than this, no bugs or issues have been identified with this project. 
 
 ## 4. Deployment
 

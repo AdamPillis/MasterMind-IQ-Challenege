@@ -21,7 +21,7 @@ The **Project Aim** was to design a game that most age groups of online user can
 
  4. Once the game is finished, i.e 10 questions have been answered, each player goes to the end user feedback section once the **finish quiz** button is clicked. Here, another cheerful welcome message awaits followed by their score number and based on that, a *specific end comment*. 
 
- ### **Who is it for**
+ ### **Who is it for?**
 The target audience is global and any user from the age of 16 has good potential to get a couple of questions correct. It is simple to use and follow while the question types and difficulty levels ensure that all IQ levels are challenged at the same time.
 
 **New User** : Each new user has the ability to play up to 15 games with different questions for now. Each of the 5 categories consist of 3 levels and 10 questions each per category. A young adult with secondary school knowledge should have the knowledge to test themselves on easy levels while medium and hard levels are designed for older generations. The landing page asks each player to enter a player name to personalise the game. In total, 150 questions should be enough to entertain each new user throughout their first visit to the game.

@@ -224,7 +224,73 @@ One yellow warning during the process which is to do with with user privacy and 
 
 ![Light-house report devTools](assets/images/light-house-validation.PNG "Light-house report devTools")
 
+### **Testing colour contrast**
 
+[https://webaim.org/resources/contrastchecker/](https://webaim.org/resources/contrastchecker/) was the site by the creator to ensure that the set of colors taken from *coolors.org* scored higher than 4. 
+
+### **Search Engine Testing**
+
+This project was tested through three several search engines including Google Chrome which is the creator's default search engine. Internet Explorer was not included below given its lack of popularity. 
+
+1. **Google Chrome (default)**
+
+2. **Mozilla Firefox**
+
+Each section displayed as a page was tested and checked through *Mozilla Firefox* and no issues detected.
+
+**Landing Section**
+
+![Mozilla Firefox landing page](assets/images/mozilla-firefox-landing-page.PNG "Mozilla Firefox landing page")
+
+**Menu Section**
+
+![Mozilla Firefox menu page](assets/images/mozilla-firefox-menu-page.PNG "Mozilla Firefox menu page")
+
+**Rules Section**
+
+![Mozilla Firefox rules page](assets/images/mozilla-firefox-rules-page.PNG "Mozilla Firefox rules page")
+
+**Game Section**
+
+![Mozilla Firefox game page](assets/images/mozilla-firefox-game-page.PNG "Mozilla Firefox game page")
+
+**Exit Section**
+
+![Mozilla Firefox exit page](assets/images/mozilla-firefox-exit-page.PNG "Mozilla Firefox exit page")
+
+**End Section**
+
+![Mozilla Firefox end page](assets/images/mozilla-firefox-end-page.PNG "Mozilla Firefox end page")
+
+3. **Microsoft Edge**
+
+Each section displayed as a page was tested and checked through *Microsoft Edge* and no issues detected.
+
+**Landing Section**
+
+![Microsoft Edge landing page](assets/images/microsoft-edge-landing-page.PNG "Microsoft Edge landing page")
+
+**Menu Section**
+
+![Microsoft Edge menu page](assets/images/microsoft-edge-menu-page.PNG "Microsoft Edge menu page")
+
+**Rules Section**
+
+![Microsoft Edge rules page](assets/images/microsoft-edge-rules-page.PNG "Microsoft Edge rules page")
+
+**Game Section**
+
+![Microsoft Edge game page](assets/images/microsoft-edge-game-page.PNG "Microsoft Edge game page")
+
+**Exit Section**
+
+![Microsoft Edge exit page](assets/images/microsoft-edge-exit-page.PNG "Microsoft Edge exit page")
+
+**End Section**
+
+![Microsoft Edge end page](assets/images/microsoft-edge-end-page.PNG "Microsoft Edge end page")
+
+### **Application Features Test**
 
 ## 4. Deployment
 

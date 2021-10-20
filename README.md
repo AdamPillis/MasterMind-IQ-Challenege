@@ -197,8 +197,32 @@ This project, MasterMindIQ Challenge, has gone through several validation proces
 
 **index.html** 
 
-Validating site 
+Validating site for HTML
 [https://validator.w3.org/](https://validator.w3.org/)
+
+![HTML validation for index.html](assets/images/index.html-validation.PNG "HTML validation for index.html")
+
+**style.css**
+
+Validating site for CSS
+[https://jigsaw.w3.org/css-validator/#validate_by_input](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+![CSS validation for style.css](assets/images/style.css-validation.PNG "CSS validation for style.css")
+
+**script.js**
+
+Validating site for JavaScript
+[https://jshint.com/](https://jshint.com/)
+
+![JS validation for script.js](assets/images/script.js-validation.PNG "JS validation for script.js")
+
+**Light-house Report**
+
+Within DevTools, the lighthouse report was almost 100% in every category.
+
+One yellow warning during the process which is to do with with user privacy and GitHub pages which I have no control of.
+
+![Light-house report devTools](assets/images/light-house-validation.PNG "Light-house report devTools")
 
 
 

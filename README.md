@@ -292,6 +292,144 @@ Each section displayed as a page was tested and checked through *Microsoft Edge*
 
 ### **Application Features Test**
 
+In terms of features and user interactivity, every showing section undergoes a test where the creator clicks and makes sure that everything works the way it should.
+
+He analysed the quiz game through [http://ami.responsivedesign.is/](http://ami.responsivedesign.is/) to ensure he can check features through several screen sizes also. 
+
+**1. landing-section features**
+
+- **Input Text Box**
+    - focused when page loads.
+    - Does not allow empty box to be submitted.
+    - Form submits when button clicked or if 'Enter' key is pressed.
+- **Lets Go Button**
+    - hides landing section and opening menu section === **true**
+    - interactive when hovered over (color changes to body color).
+
+**2. menu-section features**
+
+- **Welcome Message**
+    - name entered in form displays in welcome message correctly.
+
+- **Difficulty Buttons**
+    - Three radio buttons
+    - Easy Radio button default = checked == **true**
+    - Only one button can be checked == **true**
+
+- **Category Buttons**
+    - Each category button working perfectly (opening correct array)
+    - Color and font-size change when hovered over each == **true**
+    - When one is clicked, opens rules section == **true**
+
+**3. rules-section features**
+
+- **Let's do it button**
+    - closes rules section and opens game section == **true**.
+    - color change when hovered over == **true**
+
+**4. game-section features**
+
+- **header icon**
+    - appears in top right corner = **true**
+    - opens door screen section if clicked = **true**
+    - interactive when hovered over = **false** 
+    (altered and now styled)
+
+- **Question container**
+    - question changes when next button clicked = **true**
+
+- **Answers container**
+    - four buttons (manipulated by JS - hide original buttons and create new buttons with answers within) = **true**
+    - font size and light box shading when hovered = **true**
+    - button changes to body.correct or body.incorrect when one of the answers is clicked = **true** 
+
+- **Score-counter**
+    - number increases by one for every correct answer = **true**
+    - only increases if correct = **true**
+    - resets when game exited through exit screen = **true**
+    -resets when 'Menu' buttons is pressed in end section = **true**
+
+- **Question number counter**
+    - Question number increases by one with every question = **true**
+    - only increases if next button is clicked = **true**
+    - resets when game exited through exit screen = **true**
+    -resets when 'Menu' buttons is pressed in end section = **true**
+
+- **Incorrect-counter**
+    - number increases by one for every incorrect answer = **true**
+    - only increases if incorrect = **true**
+    - resets when game exited through exit screen = **true**
+    -resets when 'Menu' buttons is pressed in end section = **true**
+
+- **interactive body color change**
+    - body color on both sides change when question answered = **true**
+    - body.correct color applies if correct = **true**
+    - body.incorrect color applies if incorrect = **true**
+    - color resets to hue neutral when next question displayed = **true**
+
+- **controls buttons**
+    1. **Next Button**
+        - Only appears when answer is clicked and checked = **true**
+        - Changes color to body.correct or body.incorrect correctly = **true**
+        - color resets to hue neutral when next question displayed = **true**
+    
+    2. **Finish Button**
+        - only appears once 10th questions is answered = **true**
+        - closes game section and opens end section if clicked = **true**
+        - Changes color to body.correct or body.incorrect correctly = **true**
+        - color resets to hue neutral when next question displayed = **true**       
+
+**5. exit-section features**
+
+- **Yes Button**
+    - closes door section and opens menu section if clicked = **true**
+    - changes background color when hovered over = **true**
+
+- **No Button**
+    - closes door section and re-opens game section on the last question if clicked = **true**
+    - changes background color when hovered over = **true**
+ 
+**6. End section features**
+- Smiley image displaying and responsive to screen size = **true**
+- Score number displayed correctly = **true**
+- Incorrect number displayed correctly = **true**
+
+- **Personalised Comment**
+    - Responsive to score number = **true**
+    - displays player name correctly = **true**
+
+- **Menu Button**
+    - Closes end section and opens menu section if clicked = **true**
+    - background color changes when hovered over = **true**
+
+### **Screen Responsive Testing**
+
+For this online quiz game, [Am I Responsive](http://ami.responsivedesign.is/) website was used to test the application on several screen sizes. 
+
+#### **Landing Section**
+
+![landing section on several screens](assets/images/screens-landing-section.PNG "landing section on several screens")
+
+#### **Menu Section**
+
+![menu section on several screens](assets/images/screens-menu-section.PNG "menu section on several screens")
+
+#### **Rules Section**
+
+![rules section on several screens](assets/images/screens-rules-section.PNG "rules section on several screens")
+
+#### **Game Section**
+
+![game section on several screens](assets/images/screens-game-section.PNG "game section on several screens")
+
+#### **Exit Section**
+
+![exit section on several screens](assets/images/screens-exit-section.PNG "exit section on several screens")
+
+#### **End Section**
+
+![end section on several screens](assets/images/screens-end-section.PNG "end section on several screens")
+
 ## 4. Deployment
 
 For deployment, GitHub was used and the data was pushed from GitPod. 

@@ -1168,8 +1168,8 @@ function closeDoorScreen() {
             question: "What is the capital of Sweden?",
             answers: [
                 {text: 'Copenhagen', correct: false},
-                {text: 'Stockholm', correct: false},
-                {text: 'Oslo', correct: true},
+                {text: 'Stockholm', correct: true},
+                {text: 'Oslo', correct: false},
                 {text: 'Helsinki', correct: false}
             ]
         },

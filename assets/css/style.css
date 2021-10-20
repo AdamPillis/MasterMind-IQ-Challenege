@@ -65,6 +65,9 @@ header h3 {
 .header-icon i {
     font-size: 2rem;
 }
+.header-icon i:hover {
+    color:hsl(43, 74%, 66%);
+}
 /* used and modified in some sections to keep consistency high */
 .div-box {
     background-color: #E9C46A;

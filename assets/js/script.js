@@ -1476,7 +1476,7 @@ function closeDoorScreen() {
                 {text: '16th Century (1500-1599)', correct: false},
                 {text: '17th Century (1600-1699)', correct: false},
                 {text: '18th Century (1700-1799)', correct: true},
-                {text: '19th Century', correct: false}
+                {text: '19th Century (1800-1899)', correct: false}
             ]
         },
         {
